@@ -1,0 +1,16 @@
+<!--pages/projectdetail/projectdetail.wxml-->
+<wxs module="m1">
+  var getMax = function(array) {
+  var max = undefined;
+  for (var i = 0; i < array.length; ++i) {
+    max = max === undefined ? 
+      array[i] : 
+      (max >= array[i] ? max : array[i]);
+  }
+  return max;
+}
+
+module.exports.getMax = getMax;
+</wxs>
+<text>这里是项目详情页面{{projectId}}</text>
+<view>{{m1.getMax(array)}}</view>

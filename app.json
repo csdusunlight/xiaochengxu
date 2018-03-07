@@ -1,5 +1,11 @@
 {
   "pages":[
+    
+    "pages/project-list/project-list",
+    "pages/project-submitdata/project-submitdata",
+    "pages/project-quicksubmit/project-quicksubmit",
+    "pages/project-list/project-detail/project-detail",
+    
     "pages/index/index",
     "pages/logs/logs"
   ],

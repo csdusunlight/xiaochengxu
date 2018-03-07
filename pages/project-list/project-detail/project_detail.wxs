@@ -1,0 +1,2 @@
+var Data = 'jzy test wxs';
+module.exports.testData= Data;

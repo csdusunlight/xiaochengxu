@@ -1,0 +1,35 @@
+@import "./project-template/project-template.wxss";
+page {
+  background-color: #f0eff5;
+}
+.search {
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+  height: 40px;
+}
+.search__input {
+  width: 600rpx;
+  height: 100%;
+  margin-left: 20px;
+  
+}
+.placeholder {
+  font-size: 12px;
+}
+.search__icon {
+  margin: auto 0 auto 20px;
+}
+.search__cancel {
+  margin: auto 10px auto 10px;
+}
+.project-box {
+  background-color: #f0eff5;
+  height: 1200rpx;
+}
+.no-data {
+  display: block;
+  text-align: center;
+  margin: 20rpx 0;
+  color: #666;
+}
