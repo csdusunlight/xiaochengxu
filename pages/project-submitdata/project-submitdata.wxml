@@ -1,0 +1,20 @@
+<view class='data-box'>
+  <view class='container-left'>
+  <block wx:for='{{submitData}}'> 
+    <view class='line-left'>
+      <text>{{item.title}}</text>
+    </view>
+  </block>
+  </view>
+  <scroll-view class='container-right' scroll-x='true'>
+  <block wx:for='{{submitData}}'> 
+    <view class='line-right'>
+      <text class='item'>{{item.time}}</text>
+      <text class='item'>{{item.term}}</text>
+      <text class='item'>{{item.telnum}}</text>
+      <text class='item'>{{item.state}}</text>
+      <text class='item'>{{item.remark}}</text>
+    </view>
+    </block>
+  </scroll-view>
+</view>
