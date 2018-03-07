@@ -1,5 +1,4 @@
 // pages/megCenter/msgCenter.js
-var url ="https:"
 var page = 1;
 var pageSize = 8;
 //请求数据
