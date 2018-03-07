@@ -1,0 +1,15 @@
+<!--pages/megCenter/msgCenter.wxml-->
+<view class='wrapper'>
+  <scroll-view scroll-y="true" bindscrolltolower="loadMore" bindscroll="scroll">
+    <block wx:for="{{array}}" wx:key="title">
+      <view class='list' data-id='{{index}}' bindtap='intoMsg'>
+        <text class='txt'>{{item.title}}</text>
+        <text class='time'>{{item.time}}</text>
+        <text class='audit'>{{item.state}}</text>
+      </view>
+    </block>
+  </scroll-view>
+  <!-- <view class='bottom' hidden='{{hideBottom}}'>
+    <text>{{loadingMoreData}}</text>
+  </view> -->
+</view>

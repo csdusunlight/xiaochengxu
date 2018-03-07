@@ -1,0 +1,30 @@
+<!--pages/user/user.wxml-->
+<view class='wrapper'>
+  <view class='topBox'>
+    <view class='headPic'>
+      <image src="{{avatarUrl}}"></image>
+    </view>
+    <text class='userName'>{{nickName}}</text>
+  </view>
+
+  <view class='list'>
+    <view class='listBox' bindtap='tapOlder'>
+      <view class='go'>
+        <text>交单信息</text>
+        <image class='pic' src="/image/r-icon.png" />
+      </view>
+    </view>
+    <view class='listBox' bindtap='tapMsg'>
+      <view class='go'>
+        <text>消息中心</text>
+        <image class='pic' src="/image/r-icon.png" />
+      </view>
+    </view>
+    <view class='listBox' bindtap='service'>
+      <view class='go'>
+        <text>联系客服</text>
+        <image class='pic' src="/image/r-icon.png" />
+      </view>
+    </view>
+  </view>
+</view>

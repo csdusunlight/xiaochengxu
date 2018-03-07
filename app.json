@@ -1,18 +1,19 @@
 {
   "pages":[
-    
     "pages/project-list/project-list",
     "pages/project-submitdata/project-submitdata",
     "pages/project-quicksubmit/project-quicksubmit",
     "pages/project-list/project-detail/project-detail",
-    
+    "pages/msgCenter/msgCenter",
+    "pages/user/user",
     "pages/index/index",
+    "pages/msgDetails/msgDetails",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

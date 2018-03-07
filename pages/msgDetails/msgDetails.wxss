@@ -1,0 +1,15 @@
+/* pages/msgDetails/msgDetails.wxss */
+page{
+  background: #efeff4;
+}
+.wrapper{
+  width: 750rpx;
+}
+.c-Box{
+  width:720rpx;
+  margin: 20rpx auto;
+ background: #fff;
+ font-size: 14px;
+ border-radius: 5px;
+ padding: 10px 10px;
+}
