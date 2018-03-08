@@ -7,7 +7,7 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
   },
   //事件处理函数
   bindViewTap: function() {
@@ -53,9 +53,9 @@ Page({
     })
     var token = wx.getStorageSync('token')
     wx.request({
-      url: 'http://127.0.0.1:8000/xcx/update_userinfo/',
+      url: 'http://test.51fanshu.com/xcx/update_userinfo/',
       data: e.detail.userInfo,
-      method: 'POST',
+      method: 'PUT',
       header: {
         'app-id': app.globalData.app_id,
         'AUTHORIZATION': token

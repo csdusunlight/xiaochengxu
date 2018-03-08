@@ -6,36 +6,36 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    // // 登录
-    // wx.login({
-    //   success: res => {
-    //     // 发送 res.code 到后台换取 openId, sessionKey, unionId
-    //     console.log(res);
-    //     wx.request({
-    //       url: 'http://127.0.0.1:8000/xcx/login/',
-    //       data:{
-    //         code: res.code
-    //       },
-    //       header: {
-    //         'app-id': this.globalData.app_id
-    //       },
-    //       success: function (res) {
-    //         console.log(res);
-    //         if (res.data.code == 0){
-    //           wx.setStorage({
-    //             key: "token",
-    //             data: res.data.token
-    //           })
-    //         }
-    //         else{
-    //           wx.showToast({
-    //             title: res.data.msg,
-    //           })
-    //         }
-    //       }
-    //     })
-    //   }
-    // })
+    // 登录
+    wx.login({
+      success: res => {
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log(res);
+        wx.request({
+          url: 'http://test.51fanshu.com/xcx/login/',
+          data:{
+            code: res.code
+          },
+          header: {
+            'app-id': this.globalData.app_id
+          },
+          success: function (res) {
+            console.log(res);
+            if (res.data.code == 0){
+              wx.setStorage({
+                key: "token",
+                data: res.data.token
+              })
+            }
+            else{
+              wx.showToast({
+                title: res.data.msg,
+              })
+            }
+          }
+        })
+      }
+    })
     // 获取用户信息
     wx.getSetting({
       success: res => {
