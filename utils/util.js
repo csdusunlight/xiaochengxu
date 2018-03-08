@@ -14,6 +14,27 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+function http(url,method,callBack) {
+  const app = getApp();
+  var token = wx.getStorageSync('token');
+  wx.request({
+    url: url,
+    method: method,
+    header: {
+      'app-id': app.globalData.app_id,
+      'AUTHORIZATION': token
+      // "Content-Type": "json"
+    },
+    success: function (res) {
+      callBack(res.data);
+    },
+    fail: function (error) {
+      console.log(error);
+    }
+  })
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  http: http
 }

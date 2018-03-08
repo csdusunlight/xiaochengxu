@@ -1,0 +1,24 @@
+<import src="./project-template/project-template.wxml" />
+
+<scroll-view class='project-box' scroll-y='true' bindscrolltolower='onScrollLower'>
+  <view class='search'>
+    <icon class='search__icon' type='search' size='16'></icon>
+    <input class='search__input' placeholder-class='placeholder' placeholder='请输入要搜索的项目名称' bindfocus='onSearchFocus' bindinput='onSearchInput'></input>
+    <icon class='search__cancel' wx:if='{{searchBoxShow}}' type='cancel' catchtap='cancelSearch'></icon>
+  </view>
+  <view wx:if='{{listBoxShow}}'>
+    <block wx:for="{{listData}}" wx:for-item="item" wx:for-index="idx">
+      <view bindtap='onProjectTab' data-id='{{item.id}}'>
+        <template is='project' data='{{...item}}'></template>
+      </view>
+    </block>
+    <text class='no-data' wx:if='{{noDataShow}}'>———— 我可是有底线的 ————</text>
+  </view>
+  <view wx:if='{{searchBoxShow}}'>
+    <block wx:for="{{searchData}}" wx:for-item="item" wx:for-index="idx">
+      <view bindtap='onProjectTab' data-id='{{item.id}}'>
+        <template is='project' data='{{...item}}'></template>
+      </view>
+    </block>
+  </view>
+</scroll-view>
