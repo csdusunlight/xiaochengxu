@@ -1,39 +1,42 @@
-// pages/megCenter/msgCenter.js
-var page = 1;
+// pages/orderRecord/orderRecord.js
+// var util = require('../../utils/util.js');  
 
-
+var page =1;
+var pageSize = 8;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    array:'',
+    array:[]
+  },
 
-  },
-  intoMsg: function (e) {
-    wx.showToast({
-      title: '进入下一级消息详情',
-    })
-  },
-  scroll:function(event){
-    console.log(123)
-  },
-  loadMore:function(){
-    console.log("下拉");
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+    console.log("start");
+    wx.request({
+      url: 'http://127.0.0.1:8000/restapi/investlogs/?page=1&pageSize=pageSize',
+      data: {},
+      method: "get",
+      header: {
+        'app-id': app.globalData.app_id,
+        'AUTHORIZATION': token,
+        "Content-Type": "json"
+      },
+      success: function (res) {
+        console.log(res);
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+     
   },
 
   /**
@@ -61,15 +64,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    // console.log("update");
-    // wx.stopPullDownRefresh();
+    wx.stopPullDownRefresh()
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-     
+
   },
 
   /**

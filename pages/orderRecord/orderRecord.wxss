@@ -1,0 +1,72 @@
+/* pages/orderRecord/orderRecord.wxss */
+
+.wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.leftBox {
+  width: 150rpx;
+  height: 100rpx;
+  background: #91c11d;
+  /* float: left; */
+  font-size: 14px;
+  color: white;
+}
+
+.proHeader {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.proList {
+  color: #a6a6a6;
+  width: 150rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.r-header {
+  width: 600rpx;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 14px;
+  display: flex;
+}
+
+.dataList1 {
+  display: flex;
+  width: 1600rpx;
+}
+
+.headData {
+  width: 200rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+   background: #91c11d; 
+}
+
+.dataList {
+  display: flex;
+  width: 1600rpx;
+  color: #888;
+}
+.data {
+  display: inline-block;
+  width: 200rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background: #fff;
+}
+.derc{
+    width: 750rpx;
+    height: 150rpx;
+    text-align: center;
+    line-height: 150rpx;
+}

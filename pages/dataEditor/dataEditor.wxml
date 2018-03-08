@@ -1,0 +1,25 @@
+<view class='wrapper'>
+  <text class='descText'>项目名称</text>
+  <view class='pro'>
+    <text>{{proName}}</text>
+  </view>
+  <text class='descText'>提交时间</text>
+  <view class='ipt sub'>
+     <text>{{subTime}}</text>
+  </view>
+  <text class='descText'>投资标期</text>
+  <input class='ipt' type='text' placeholder='请输入投资日期'></input>
+  <text class='descText'>金额</text>
+  <input class='ipt' type='text' bindblur='checkAomunt' value="{{amount}}"></input>
+  <text class='descText'>返现金额</text>
+  <input class='ipt' type='text' bindblur='checkMoney' value='{{money}}'></input>
+   <text class='remark'>投资手机号</text>
+   <input class='ipt' type='text' bindblur='checkNum' value='{{phone}}'></input> 
+  <text class='remark'>投资日期</text>
+  <view class='investDate'>
+    <picker mode="date" value='{{date}}' star="2018-1-1" end="2025-12-31" bindchange='changeDate'>
+      <text>{{date}}</text>
+    </picker>
+  </view>
+  <button size='default' class='btn' bindtap='click'>确定</button>
+</view>

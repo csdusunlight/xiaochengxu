@@ -1,14 +1,16 @@
 {
-  "pages":[
+  "pages": [
+    "pages/orderRecord/orderRecord",
+    "pages/msgDetails/msgDetails",
+    "pages/dataEditor/dataEditor",
+    "pages/index/index",
+    "pages/user/user",
+    "pages/logs/logs",
     "pages/project-list/project-list",
     "pages/project-submitdata/project-submitdata",
     "pages/project-quicksubmit/project-quicksubmit",
     "pages/project-list/project-detail/project-detail",
-    "pages/msgCenter/msgCenter",
-    "pages/user/user",
-    "pages/index/index",
-    "pages/msgDetails/msgDetails",
-    "pages/logs/logs"
+    "pages/msgCenter/msgCenter"
   ],
   "window": {
     "backgroundTextStyle": "light",
