@@ -1,11 +1,12 @@
 {
   "pages":[
     "pages/project-list/project-list",
-    "pages/project-submitdata/project-submitdata",
+    "pages/project-submit/project-submit",
     "pages/project-quicksubmit/project-quicksubmit",
+    "pages/user/user",
+    "pages/project-submitdata/project-submitdata",
     "pages/project-list/project-detail/project-detail",
     "pages/msgCenter/msgCenter",
-    "pages/user/user",
     "pages/index/index",
     "pages/msgDetails/msgDetails",
     "pages/logs/logs"
@@ -15,5 +16,21 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/project-list/project-list",
+        "text": "项目列表"
+      },
+      {
+        "pagePath": "pages/project-quicksubmit/project-quicksubmit",
+        "text": "快速交单"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
   }
 }
