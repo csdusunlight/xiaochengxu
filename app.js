@@ -12,7 +12,7 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         console.log(res);
         wx.request({
-          url: 'http://127.0.0.1:8000/xcx/login/',
+          url: 'http://test.51fanshu.com/xcx/login/',
           data:{
             code: res.code
           },
