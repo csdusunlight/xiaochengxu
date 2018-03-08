@@ -1,6 +1,6 @@
 // pages/orderRecord/orderRecord.js
 // var util = require('../../utils/util.js');  
-
+var app = getApp();
 var page =1;
 var pageSize = 8;
 Page({
