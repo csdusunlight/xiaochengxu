@@ -15,5 +15,6 @@
         <text class='project__term'>投资标期：{{term}}</text>
       </view>
     </view>
+    <button class='go-kefu' catchtap open-type="contact" session-from="project_{{project}}" >查看攻略></button>
   </view>
 </template>

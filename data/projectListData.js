@@ -1,1637 +1,305 @@
 
 var projectNameList = [
   {
-    title:"热门项目",
-    type:'hot',
-    item: [
-
+    "item": [
       {
-        "name": "北京理财",
-        "key": "热门",
-        "test":"testValue",
-        'id':1
-      },
-      {
-        "name": "上海理财",
-        "key": "热门",
-        'id': 2
-      },
-      {
-        "name": "广州财",
-        "key": "热门",
-        'id': 3
-      },
-      {
-        "name": "深圳理财",
-        "key": "热门"
-      },
-      {
-        "name": "成都",
-        "key": "热门"
-      },
-
-      {
-        "name": "重庆",
-        "key": "热门"
-      },
-      {
-        "name": "天津",
-        "key": "热门"
-      },
-      {
-        "name": "杭州",
-        "key": "热门"
-      },
-      {
-        "name": "南京贷",
-        "key": "热门"
+        "name": "12qwas",
+        "key": "1",
+        "necessary_fields": "0,1,2,3,4,5",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/51%E4%BA%BA%E5%93%81.jpg",
+        "is_multisub_allowed": false,
+        "id": 6
       }
-    ]
+    ],
+    "title": "1"
   }, {
-    title:"A",
-    item: [
+    "item": [
       {
-        "name": "阿坝",
-        "key": "A",
-        'id': 5
-      },
-      {
-        "name": "阿拉善",
-        "key": "A",
-        'id': 6
-      },
-      {
-        "name": "阿里",
-        "key": "A",
-        'id': 7
+        "name": "\u86cb\u86cb1",
+        "key": "D",
+        "necessary_fields": "1,2,3,4,5,6",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/ppmoney.jpg",
+        "is_multisub_allowed": false,
+        "id": 29
       }
-      ,
-      {
-        "name": "安顺",
-        "key": "A"
-      }
-      ,
-      {
-        "name": "安阳",
-        "key": "A"
-      }
-      ,
-      {
-        "name": "澳门",
-        "key": "A"
-      }
-    ]
+    ],
+    "title": "D"
   }, {
-    title: "B",
-    item: [
-    ]
+    "item": [
+      {
+        "name": "dianrong",
+        "key": "D",
+        "necessary_fields": "0,1,2,3,4,5",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/%E7%82%B9%E8%9E%8D%E7%BD%91.jpg",
+        "is_multisub_allowed": false,
+        "id": 24
+      }
+    ],
+    "title": "D"
   }, {
-    title: "C",
-    item: [
+    "item": [
       {
-        "name": "重庆",
-        "key": "C"
-      },
-      {
-        "name": "成都",
-        "key": "C"
-      },
-      
-      {
-        "name": "昌都",
-        "key": "C"
+        "name": "\u653e\u5355\u9879\u76ee2",
+        "key": "F",
+        "necessary_fields": "1,2,3,4,5,6",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/%E5%AE%9C%E4%BA%BA%E8%B4%B7.jpg",
+        "is_multisub_allowed": false,
+        "id": 31
       }
-      ,
-      {
-        "name": "长治",
-        "key": "C"
-      }
-      ,
-      {
-        "name": "常州",
-        "key": "C"
-      }
-      ,
-      {
-        "name": "巢湖",
-        "key": "C"
-      }
-      ,
-      {
-        "name": "潮州",
-        "key": "C"
-      }
-      ,
-      {
-        "name": "承德",
-        "key": "C"
-      }
-      ,
-      {
-        "name": "郴州",
-        "key": "C"
-      }
-      ,
-      {
-        "name": "赤峰",
-        "key": "C"
-      }
-      ,
-      {
-        "name": "池州",
-        "key": "C"
-      }
-      ,
-      {
-        "name": "崇左",
-        "key": "C"
-      }
-      ,
-      {
-        "name": "楚雄",
-        "key": "C"
-      }
-      ,
-      {
-        "name": "滁州",
-        "key": "C"
-      }
-      ,
-      {
-        "name": "朝阳",
-        "key": "C"
-      }
-    ]
+    ],
+    "title": "F"
   }, {
-    title: "D",
-    item: [
+    "item": [
       {
-        "name": "大连",
-        "key": "D"
-      },
-      {
-        "name": "东莞",
-        "key": "D"
-      },
-      {
-        "name": "大理",
-        "key": "D"
-      },
-      {
-        "name": "丹东",
-        "key": "D"
-      },
-      {
-        "name": "大庆",
-        "key": "D"
-      },
-      {
-        "name": "大同",
-        "key": "D"
-      },
-      {
-        "name": "大兴安岭",
-        "key": "D"
+        "name": "\u653e\u5355\u9879\u76ee3",
+        "key": "F",
+        "necessary_fields": "1,2,3,4,5,6",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/%E4%BA%BA%E4%BA%BA%E8%81%9A%E8%B4%A2.jpg",
+        "is_multisub_allowed": false,
+        "id": 34
       }
-      ,
-      {
-        "name": "德宏",
-        "key": "D"
-      }
-      ,
-      {
-        "name": "德阳",
-        "key": "D"
-      }
-      ,
-      {
-        "name": "德州",
-        "key": "D"
-      }
-      ,
-      {
-        "name": "定西",
-        "key": "D"
-      }
-      ,
-      {
-        "name": "迪庆",
-        "key": "D"
-      }
-      ,
-      {
-        "name": "东营",
-        "key": "D"
-      }
-
-    ]
+    ],
+    "title": "F"
   }, {
-    title: "E",
-    item: [
+    "item": [
       {
-        "name": "鄂尔多斯",
-        "key": "E"
+        "name": "\u653e\u5355\u9879\u76ee5",
+        "key": "F",
+        "necessary_fields": "12",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/51%E4%BA%BA%E5%93%81_CTytq9L.jpg",
+        "is_multisub_allowed": false,
+        "id": 48
       }
-      ,
-      {
-        "name": "恩施",
-        "key": "E"
-      }
-      ,
-      {
-        "name": "鄂州",
-        "key": "E"
-      }
-    ]
+    ],
+    "title": "F"
   }, {
-    title: "F",
-    item: [
+    "item": [
       {
-        "name": "福州",
-        "key": "F"
+        "name": "\u56fd\u7f8e\u91d1\u878d",
+        "key": "G",
+        "necessary_fields": "1,2,3,4,5,6",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/%E5%AE%9C%E4%BA%BA%E8%B4%B7_iGaW8mw.jpg",
+        "is_multisub_allowed": false,
+        "id": 33
       }
-      ,
-      {
-        "name": "防城港",
-        "key": "F"
-      }
-      ,
-      {
-        "name": "佛山",
-        "key": "F"
-      }
-      ,
-      {
-        "name": "抚顺",
-        "key": "F"
-      }
-      ,
-      {
-        "name": "抚州",
-        "key": "F"
-      }
-      ,
-      {
-        "name": "阜新",
-        "key": "F"
-      }
-      ,
-      {
-        "name": "阜阳",
-        "key": "F"
-      }
-    ]
+    ],
+    "title": "G"
   }, {
-    title: "G",
-    item: [
+    "item": [
       {
-        "name": "广州",
-        "key": "G"
-      },
-      {
-        "name": "赣州",
-        "key": "G"
-      },
-      {
-        "name": "桂林",
-        "key": "G"
-      },
-      {
-        "name": "贵阳",
-        "key": "G"
-      },
-      {
-        "name": "甘南",
-        "key": "G"
-      },
-
-      {
-        "name": "甘孜",
-        "key": "G"
-      },
-      {
-        "name": "广安",
-        "key": "G"
+        "name": "\u8fc7\u4e00\u4e2a\u6708\u6545\u610f",
+        "key": "G",
+        "necessary_fields": "0,1,2,3,4,5,8",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/%E7%82%B9%E8%9E%8D%E7%BD%91.jpg",
+        "is_multisub_allowed": false,
+        "id": 26
       }
-      ,
-      {
-        "name": "广元",
-        "key": "G"
-      }
-      ,
-      {
-        "name": "果洛",
-        "key": "G"
-      }
-      ,
-      {
-        "name": "贵港",
-        "key": "G"
-      }
-
-    ]
+    ],
+    "title": "G"
   }, {
-
-    title: "H",
-    item: [
+    "item": [
       {
-        "name": "杭州",
-        "key": "H"
-      },
-      {
-        "name": "哈尔滨",
-        "key": "H"
-      },
-      {
-        "name": "合肥",
-        "key": "H"
-      },
-      {
-        "name": "海口",
-        "key": "H"
-      },
-      {
-        "name": "海东",
-        "key": "H"
-      },
-      {
-        "name": "海北",
-        "key": "H"
-      },
-      {
-        "name": "海南",
-        "key": "H"
+        "name": "\u5408\u65f6\u4ee3",
+        "key": "H",
+        "necessary_fields": "1,2,3,4,5,6",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/51%E4%BA%BA%E5%93%81_CTytq9L.jpg",
+        "is_multisub_allowed": false,
+        "id": 51
       }
-      ,
-      {
-        "name": "海西",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "邯郸",
-        "key": "H"
-      }
-
-      ,
-      {
-        "name": "汉中",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "鹤壁",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "河池",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "鹤岗",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "黑河",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "衡水",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "衡阳",
-        "key": "H"
-      }
-
-      ,
-      {
-        "name": "河源",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "贺州",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "红河",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "淮安",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "淮北",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "怀化",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "淮南",
-        "key": "H"
-      }
-      ,
-
-      {
-        "name": "黄冈",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "黄南",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "黄山",
-        "key": "H"
-      },
-      {
-        "name": "黄石",
-        "key": "H"
-      },
-      {
-        "name": "惠州",
-        "key": "H"
-      },
-      {
-        "name": "葫芦岛",
-        "key": "H"
-      },
-      {
-        "name": "呼伦贝尔",
-        "key": "H"
-      },
-      {
-        "name": "湖州",
-        "key": "H"
-      }
-      ,
-      {
-        "name": "菏泽",
-        "key": "H"
-      }
-
-    ]
+    ],
+    "title": "H"
   }, {
-    title: "J",
-    item: [
-
+    "item": [
       {
-        "name": "济南",
-        "key": "J"
-      },
-      {
-        "name": "佳木斯",
-        "key": "J"
-      },
-      {
-        "name": "吉安",
-        "key": "J"
-      },
-      {
-        "name": "江门",
-        "key": "J"
-      },
-      {
-        "name": "焦作",
-        "key": "J"
-      },
-      {
-        "name": "嘉兴",
-        "key": "J"
-      },
-      {
-        "name": "嘉峪关",
-        "key": "J"
+        "name": "\u5f00\u95e8\u7ea2",
+        "key": "K",
+        "necessary_fields": "0,1,2,3,4,5,6,7,8",
+        "logo": "/media/photos/2017/10/10/coupon-bg-xianjin.png",
+        "is_multisub_allowed": true,
+        "id": 13
       }
-      ,
-      {
-        "name": "揭阳",
-        "key": "J"
-      }
-      ,
-
-      {
-        "name": "吉林",
-        "key": "J"
-      }
-      ,
-      {
-        "name": "金昌",
-        "key": "J"
-      }
-      ,
-      {
-        "name": "晋城",
-        "key": "J"
-      }
-      ,
-      {
-        "name": "景德镇",
-        "key": "J"
-      }
-      ,
-      {
-        "name": "荆门",
-        "key": "J"
-      }
-      ,
-      {
-        "name": "荆州",
-        "key": "J"
-      }
-      ,
-      {
-        "name": "金华",
-        "key": "J"
-      }
-
-      ,
-      {
-        "name": "济宁",
-        "key": "J"
-      }
-      ,
-      {
-        "name": "晋中",
-        "key": "J"
-      }
-      ,
-      {
-        "name": "锦州",
-        "key": "J"
-      }
-      ,
-      {
-        "name": "九江",
-        "key": "J"
-      }
-      ,
-      {
-        "name": "酒泉",
-        "key": "J"
-      }
-    ]
+    ],
+    "title": "K"
   }, {
-    title: "K",
-    item: [
+    "item": [
       {
-        "name": "昆明",
-        "key": "K"
-
+        "name": "\u7565\u7565\u7565",
+        "key": "L",
+        "necessary_fields": "0,1,2,3,4,5,6,7,8",
+        "logo": "/media/photos/2017/10/11/1_fGeeK7r.jpg",
+        "is_multisub_allowed": true,
+        "id": 16
       }
-      ,
-      {
-
-        "name": "开封",
-        "key": "K"
-      }
-    ]
+    ],
+    "title": "L"
   }, {
-
-    title: "L",
-    item:[
+    "item": [
       {
-        "name": "兰州",
-        "key": "L"
-      },
-      {
-        "name": "拉萨",
-        "key": "L"
-      },
-      {
-        "name": "来宾",
-        "key": "L"
-      },
-      {
-        "name": "莱芜",
-        "key": "L"
-      },
-      {
-        "name": "廊坊",
-        "key": "L"
-      },
-      {
-        "name": "乐山",
-        "key": "L"
-      },
-      {
-        "name": "凉山",
-        "key": "L"
+        "name": "\u78e8\u53fd\u78e8\u53fd\u78e8\u53fd",
+        "key": "M",
+        "necessary_fields": "1,2,3,4,5,6",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/%E7%BF%BC%E9%BE%99%E8%B4%B7.jpg",
+        "is_multisub_allowed": false,
+        "id": 30
       }
-      ,
-      {
-        "name": "连云港",
-        "key": "L"
-      }
-
-      ,
-      {
-        "name": "聊城",
-        "key": "L"
-      }
-
-      ,
-      {
-        "name": "辽阳",
-        "key": "L"
-      }
-      ,
-      {
-        "name": "辽源",
-        "key": "L"
-      }
-      ,
-      {
-        "name": "丽江",
-        "key": "L"
-      }
-      ,
-      {
-        "name": "临沧",
-        "key": "L"
-      }
-      ,
-      {
-        "name": "临汾",
-        "key": "L"
-      }
-      ,
-      {
-        "name": "临夏",
-        "key": "L"
-      }
-      ,
-
-      {
-        "name": "临沂",
-        "key": "L"
-      }
-
-      ,
-      {
-        "name": "林芝",
-        "key": "L"
-      }
-      ,
-      {
-        "name": "丽水",
-        "key": "L"
-      }
-      ,
-      {
-        "name": "六安",
-        "key": "L"
-      }
-      ,
-      {
-        "name": "六盘水",
-        "key": "L"
-      }
-      ,
-      {
-        "name": "柳州",
-        "key": "L"
-      }
-      ,
-      {
-        "name": "陇南",
-        "key": "L"
-      }
-      ,
-
-      {
-        "name": "龙岩",
-        "key": "L"
-      }
-      ,
-
-      {
-        "name": "娄底",
-        "key": "L"
-      }
-      ,
-      {
-        "name": "漯河",
-        "key": "L"
-      }
-      ,
-      {
-        "name": "洛阳",
-        "key": "L"
-      },
-      {
-        "name": "泸州",
-        "key": "L"
-      },
-      {
-        "name": "吕梁",
-        "key": "L"
-      }
-
-    ]
+    ],
+    "title": "M"
   }, {
-
-    title: "M",
-    item: [
+    "item": [
       {
-        "name": "马鞍山",
-        "key": "M"
+        "name": "\u7f8e\u6613\u7406\u8d22",
+        "key": "M",
+        "necessary_fields": "0,1,2,3,4,5",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/%E5%AE%9C%E4%BA%BA%E8%B4%B7_iGaW8mw.jpg",
+        "is_multisub_allowed": false,
+        "id": 2
       }
-      ,
-      {
-        "name": "茂名",
-        "key": "M"
-      }
-      ,
-      {
-        "name": "眉山",
-        "key": "M"
-      }
-      ,
-      {
-        "name": "梅州",
-        "key": "M"
-      }
-      ,
-      {
-        "name": "绵阳",
-        "key": "M"
-      }
-      ,
-      {
-        "name": "牡丹江",
-        "key": "M"
-      }
-
-    ]
+    ],
+    "title": "M"
   }, {
-    title: "N",
-    item: [
-
+    "item": [
       {
-        "name": "南京",
-        "key": "N"
-      },
-      {
-        "name": "南昌",
-        "key": "N"
-      },
-      {
-        "name": "南宁",
-        "key": "N"
-      },
-      {
-        "name": "南充",
-        "key": "N"
-      },
-      {
-        "name": "南平",
-        "key": "N"
-      },
-      {
-        "name": "南通",
-        "key": "N"
-      },
-      {
-        "name": "南阳",
-        "key": "N"
+        "name": "\u4f60\u662f\u4e0d\u662f\u50bb",
+        "key": "N",
+        "necessary_fields": "1,2,3,4,5,6",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/%E9%BA%BB%E8%A2%8B%E7%90%86%E8%B4%A2.jpg",
+        "is_multisub_allowed": false,
+        "id": 32
       }
-      ,
-      {
-        "name": "那曲",
-        "key": "N"
-      }
-
-      ,
-      {
-        "name": "内江",
-        "key": "N"
-      }
-      ,
-      {
-        "name": "宁德",
-        "key": "N"
-      }
-      ,
-      {
-        "name": "怒江",
-        "key": "N"
-      }
-
-
-    ]
+    ],
+    "title": "N"
   }, {
-    title: "P",
-    item: [
-
+    "item": [
       {
-        "name": "盘锦",
-        "key": "P"
+        "name": "\u4f60\u6211\u91d1\u878d",
+        "key": "N",
+        "necessary_fields": "0,1,2,3,4,5",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/%E4%BD%A0%E6%88%91%E8%B4%B7.jpg",
+        "is_multisub_allowed": false,
+        "id": 27
       }
-      ,
-      {
-        "name": "攀枝花",
-        "key": "P"
-      }
-      ,
-      {
-        "name": "平顶山",
-        "key": "P"
-      }
-      ,
-      {
-        "name": "平凉",
-        "key": "P"
-      }
-      ,
-      {
-        "name": "萍乡",
-        "key": "P"
-      }
-      ,
-      {
-        "name": "莆田",
-        "key": "P"
-      }
-      ,
-      {
-        "name": "濮阳",
-        "key": "P"
-      }
-
-    ]
+    ],
+    "title": "N"
   }, {
-    title: "Q",
-    item:[
-
+    "item": [
       {
-        "name": "青岛",
-        "key": "Q"
-      },
-      {
-        "name": "黔东南",
-        "key": "Q"
-      },
-      {
-        "name": "黔南",
-        "key": "Q"
-      },
-      {
-        "name": "黔西南",
-        "key": "Q"
-      },
-      {
-        "name": "庆阳",
-        "key": "Q"
-      },
-      {
-        "name": "清远",
-        "key": "Q"
-      },
-      {
-        "name": "秦皇岛",
-        "key": "Q"
+        "name": "\u62cd\u62cd\u8d37",
+        "key": "P",
+        "necessary_fields": "0,1,2,3,4,5",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/%E6%8B%8D%E6%8B%8D%E8%B4%B7.jpg",
+        "is_multisub_allowed": true,
+        "id": 4
       }
-      ,
-      {
-        "name": "钦州",
-        "key": "Q"
-      }
-      ,
-      {
-        "name": "齐齐哈尔",
-        "key": "Q"
-      }
-      ,
-      {
-        "name": "泉州",
-        "key": "Q"
-      }
-      ,
-      {
-        "name": "曲靖",
-        "key": "Q"
-      }
-      ,
-      {
-        "name": "衢州",
-        "key": "Q"
-      }
-
-
-    ]
+    ],
+    "title": "P"
   }, {
-
-    title: "R",
-    item: [
+    "item": [
       {
-        "name": "日喀则",
-        "key": "R"
-      },
-      {
-        "name": "日照",
-        "key": "R"
+        "name": "ppmoney",
+        "key": "P",
+        "necessary_fields": "1,2,3,4,5,6,8",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/ppmoney.jpg",
+        "is_multisub_allowed": false,
+        "id": 25
       }
-    ]
+    ],
+    "title": "P"
   }, {
-
-    title: "S",
-    item:[
+    "item": [
       {
-        "name": "上海",
-        "key": "S"
-      },
-      {
-        "name": "深圳",
-        "key": "S"
-      },
-      {
-        "name": "苏州",
-        "key": "S"
-      },
-      {
-        "name": "沈阳",
-        "key": "S"
-      },
-      {
-        "name": "石家庄",
-        "key": "S"
-      },
-      {
-        "name": "三门峡",
-        "key": "S"
-      },
-      {
-        "name": "三明",
-        "key": "S"
+        "name": "ppppppppppppp",
+        "key": "P",
+        "necessary_fields": "1,2,3,4,5,6",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/%E7%88%B1%E9%92%B1%E8%BF%9B.jpg",
+        "is_multisub_allowed": false,
+        "id": 42
       }
-      ,
-      {
-        "name": "三亚",
-        "key": "S"
-      }
-
-      ,
-      {
-        "name": "商洛",
-        "key": "S"
-      }
-
-      ,
-      {
-        "name": "商丘",
-        "key": "S"
-      }
-      ,
-      {
-        "name": "上饶",
-        "key": "S"
-      }
-      ,
-      {
-        "name": "山南",
-        "key": "S"
-      }
-      ,
-      {
-        "name": "汕头",
-        "key": "S"
-      }
-      ,
-      {
-        "name": "汕尾",
-        "key": "S"
-      }
-      ,
-      {
-        "name": "韶关",
-        "key": "S"
-      }
-      ,
-
-      {
-        "name": "绍兴",
-        "key": "S"
-      }
-
-      ,
-      {
-        "name": "邵阳",
-        "key": "S"
-      }
-      ,
-      {
-        "name": "十堰",
-        "key": "S"
-      }
-      ,
-      {
-        "name": "朔州",
-        "key": "S"
-      }
-      ,
-      {
-        "name": "四平",
-        "key": "S"
-      }
-      ,
-      {
-        "name": "绥化",
-        "key": "S"
-      }
-      ,
-      {
-        "name": "遂宁",
-        "key": "S"
-      }
-      ,
-
-      {
-        "name": "随州",
-        "key": "S"
-      }
-      ,
-
-      {
-        "name": "娄底",
-        "key": "S"
-      }
-      ,
-      {
-        "name": "宿迁",
-        "key": "S"
-      }
-      ,
-      {
-        "name": "宿州",
-        "key": "S"
-      }
-
-    ]
+    ],
+    "title": "P"
   }, {
-    title: "T",
-    item: [
-
+    "item": [
       {
-        "name": "天津",
-        "key": "T"
-      },
-      {
-        "name": "太原",
-        "key": "T"
-      },
-      {
-        "name": "泰安",
-        "key": "T"
-      },
-      {
-        "name": "泰州",
-        "key": "T"
-      },
-      {
-        "name": "唐山",
-        "key": "T"
-      },
-      {
-        "name": "天水",
-        "key": "T"
-      },
-      {
-        "name": "铁岭",
-        "key": "T"
+        "name": "\u94b1\u5305\u91d1\u878d\uff08\u539f\u597d\u8d37\u5b9d\uff09",
+        "key": "Q",
+        "necessary_fields": "0,1,2,3,4,5",
+        "logo": "http://test.fuliunion.com/media/logo/2017/11/29/%E7%91%9E%E9%92%B1%E5%AE%9D.jpg",
+        "is_multisub_allowed": false,
+        "id": 28
       }
-      ,
-      {
-        "name": "铜川",
-        "key": "T"
-      }
-      ,
-
-      {
-        "name": "通化",
-        "key": "T"
-      }
-      ,
-      {
-        "name": "通辽",
-        "key": "T"
-      }
-      ,
-      {
-        "name": "铜陵",
-        "key": "T"
-      }
-      ,
-      {
-        "name": "铜仁",
-        "key": "T"
-      }
-      ,
-      {
-        "name": "台湾",
-        "key": "T"
-      }
-
-
-    ]
+    ],
+    "title": "Q"
   }, {
-    title: "W",
-    item: [
-
+    "item": [
       {
-        "name": "武汉",
-        "key": "W"
-      },
-      {
-        "name": "乌鲁木齐",
-        "key": "W"
-      },
-      {
-        "name": "无锡",
-        "key": "W"
-      },
-      {
-        "name": "威海",
-        "key": "W"
-      },
-      {
-        "name": "潍坊",
-        "key": "W"
-      },
-      {
-        "name": "文山",
-        "key": "W"
-      },
-      {
-        "name": "温州",
-        "key": "W"
+        "name": "\u5341\u591a\u4e2a\u90ed\u5fb7\u7eb2",
+        "key": "S",
+        "necessary_fields": "0,1,2,3,4,5,6,7,8",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/%E7%BF%BC%E9%BE%99%E8%B4%B7.jpg",
+        "is_multisub_allowed": false,
+        "id": 50
       }
-      ,
-      {
-        "name": "乌海",
-        "key": "W"
-      }
-      ,
-
-      {
-        "name": "芜湖",
-        "key": "W"
-      }
-      ,
-      {
-        "name": "乌兰察布",
-        "key": "W"
-      }
-      ,
-      {
-        "name": "武威",
-        "key": "W"
-      }
-      ,
-      {
-        "name": "梧州",
-        "key": "W"
-      }
-
-    ]
+    ],
+    "title": "S"
   }, {
-    title: "X",
-    item: [
-
+    "item": [
       {
-        "name": "厦门",
-        "key": "X"
-      },
-      {
-        "name": "西安",
-        "key": "X"
-      },
-      {
-        "name": "西宁",
-        "key": "X"
-      },
-      {
-        "name": "襄樊",
-        "key": "X"
-      },
-      {
-        "name": "湘潭",
-        "key": "X"
-      },
-      {
-        "name": "湘西",
-        "key": "X"
-      },
-      {
-        "name": "咸宁",
-        "key": "X"
+        "name": "\u7f51\u5229\u5b9d",
+        "key": "W",
+        "necessary_fields": "1,2,3,4,5,6",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/%E7%88%B1%E9%92%B1%E8%BF%9B.jpg",
+        "is_multisub_allowed": false,
+        "id": 43
       }
-      ,
-      {
-        "name": "咸阳",
-        "key": "X"
-      }
-      ,
-
-      {
-        "name": "孝感",
-        "key": "X"
-      }
-      ,
-      {
-        "name": "邢台",
-        "key": "X"
-      }
-      ,
-      {
-        "name": "新乡",
-        "key": "X"
-      }
-      ,
-      {
-        "name": "信阳",
-        "key": "X"
-      }
-      ,
-      {
-        "name": "新余",
-        "key": "X"
-      }
-      ,
-      {
-        "name": "忻州",
-        "key": "X"
-      }
-      ,
-      {
-        "name": "西双版纳",
-        "key": "X"
-      }
-
-      ,
-      {
-        "name": "宣城",
-        "key": "X"
-      }
-      ,
-
-      {
-        "name": "许昌",
-        "key": "X"
-      }
-      ,
-      {
-        "name": "徐州",
-        "key": "X"
-      }
-      ,
-      {
-        "name": "香港",
-        "key": "X"
-      }
-      ,
-      {
-        "name": "锡林郭勒",
-        "key": "X"
-      }
-      ,
-      {
-        "name": "兴安",
-        "key": "X"
-      }
-    ]
+    ],
+    "title": "W"
   }, {
-    title: "Y",
-    item: [
-
+    "item": [
       {
-        "name": "银川",
-        "key": "Y"
-      },
-      {
-        "name": "雅安",
-        "key": "Y"
-      },
-      {
-        "name": "延安",
-        "key": "Y"
-      },
-      {
-        "name": "延边",
-        "key": "Y"
-      },
-      {
-        "name": "盐城",
-        "key": "Y"
-      },
-      {
-        "name": "阳江",
-        "key": "Y"
-      },
-
-      {
-        "name": "阳泉",
-        "key": "Y"
+        "name": "wodee",
+        "key": "W",
+        "necessary_fields": "5,4,2,1,7",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/%E7%88%B1%E9%92%B1%E8%BF%9B.jpg",
+        "is_multisub_allowed": false,
+        "id": 20
       }
-      ,
-      {
-        "name": "扬州",
-        "key": "Y"
-      }
-      ,
-
-      {
-        "name": "烟台",
-        "key": "Y"
-      }
-      ,
-      {
-        "name": "宜宾",
-        "key": "Y"
-      }
-      ,
-      {
-        "name": "宜昌",
-        "key": "Y"
-      }
-      ,
-      {
-        "name": "宜春",
-        "key": "Y"
-      }
-      ,
-      {
-        "name": "营口",
-        "key": "Y"
-      }
-      ,
-
-      {
-        "name": "益阳",
-        "key": "Y"
-      }
-      ,
-      {
-        "name": "永州",
-        "key": "Y"
-      }
-
-      ,
-      {
-        "name": "岳阳",
-        "key": "Y"
-      }
-      ,
-
-      {
-        "name": "榆林",
-        "key": "Y"
-      }
-      ,
-      {
-        "name": "运城",
-        "key": "Y"
-      }
-      ,
-      {
-        "name": "云浮",
-        "key": "Y"
-      }
-      ,
-      {
-        "name": "玉树",
-        "key": "Y"
-      }
-      ,
-      {
-        "name": "玉溪",
-        "key": "Y"
-      }
-      ,
-      {
-        "name": "玉林",
-        "key": "Y"
-      }
-
-    ]
+    ],
+    "title": "W"
   }, {
-
-    title: "Z",
-    item: [
+    "item": [
       {
-        "name": "杂多县",
-        "key": "Z"
-      },
-      {
-        "name": "赞皇县",
-        "key": "Z"
-      },
-      {
-        "name": "枣强县",
-        "key": "Z"
-      },
-      {
-        "name": "枣阳市",
-        "key": "Z"
-      },
-      {
-        "name": "枣庄",
-        "key": "Z"
-      },
-      {
-        "name": "泽库县",
-        "key": "Z"
-      },
-      {
-        "name": "增城市",
-        "key": "Z"
+        "name": "\u94f6\u8c37\u5728\u7ebf",
+        "key": "Y",
+        "necessary_fields": "0,1,2,3,4,5",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/51%E4%BA%BA%E5%93%81_CTytq9L.jpg",
+        "is_multisub_allowed": false,
+        "id": 3
       }
-      ,
-
+    ],
+    "title": "Y"
+  }, {
+    "item": [
       {
-        "name": "曾都区",
-        "key": "Z"
+        "name": "\u94f6\u6e56\u7f512",
+        "key": "Y",
+        "necessary_fields": "1,2,3,4,5,6",
+        "logo": "http://test.fuliunion.com/media/logo/2017/11/29/%E7%91%9E%E9%92%B1%E5%AE%9D.jpg",
+        "is_multisub_allowed": false,
+        "id": 52
       }
-      ,
+    ],
+    "title": "Y"
+  }, {
+    "item": [
       {
-        "name": "泽普县",
-        "key": "Z"
+        "name": "\u53cb\u91d1\u6240",
+        "key": "Y",
+        "necessary_fields": "0,1,2,3,4,5",
+        "logo": "http://test.fuliunion.com/media/logo/2017/09/22/51%E4%BA%BA%E5%93%81.jpg",
+        "is_multisub_allowed": true,
+        "id": 12
       }
-
-      ,
-      {
-        "name": "泽州县",
-        "key": "Z"
-      }
-      ,
-      {
-        "name": "札达县",
-        "key": "Z"
-      }
-      ,
-      {
-        "name": "扎赉特旗",
-        "key": "Z"
-      }
-      ,
-      {
-        "name": "扎兰屯市",
-        "key": "Z"
-      }
-      ,
-      {
-        "name": "扎鲁特旗",
-        "key": "Z"
-      }
-      ,
-
-      {
-        "name": "扎囊县",
-        "key": "Z"
-      }
-      ,
-      {
-        "name": "张北县",
-        "key": "Z"
-      }
-
-      ,
-      {
-        "name": "张店区",
-        "key": "Z"
-      }
-      ,
-      {
-        "name": "章贡区",
-        "key": "Z"
-      }
-      ,
-      {
-        "name": "张家港",
-        "key": "Z"
-      }
-      ,
-      {
-        "name": "张家界",
-        "key": "Z"
-      }
-      ,
-      {
-        "name": "张家口",
-        "key": "Z"
-      }
-      ,
-      {
-        "name": "漳平市",
-        "key": "Z"
-      }
-      ,
-
-      {
-        "name": "漳浦县",
-        "key": "Z"
-      }
-      ,
-
-      {
-        "name": "章丘市",
-        "key": "Z"
-      }
-      ,
-      {
-        "name": "樟树市",
-        "key": "Z"
-      }
-      ,
-      {
-        "name": "张湾区",
-        "key": "Z"
-      },
-      {
-        "name": "彰武县",
-        "key": "Z"
-      },
-      {
-        "name": "漳县",
-        "key": "Z"
-      },
-      {
-        "name": "张掖",
-        "key": "Z"
-      },
-      {
-        "name": "漳州",
-        "key": "Z"
-      },
-      {
-        "name": "长子县",
-        "key": "Z"
-      }
-      ,
-
-      {
-        "name": "湛河区",
-        "key": "Z"
-      }
-      ,
-      {
-        "name": "湛江",
-        "key": "Z"
-      }
-      ,
-
-      {
-        "name": "站前区",
-        "key": "Z"
-      }
-      ,
-      {
-        "name": "沾益县",
-        "key": "Z"
-      }
-      ,
-      {
-        "name": "诏安县",
-        "key": "Z"
-      },
-      {
-        "name": "召陵区",
-        "key": "Z"
-      },
-      {
-        "name": "昭平县",
-        "key": "Z"
-      },
-      {
-        "name": "肇庆",
-        "key": "Z"
-      },
-      {
-        "name": "昭通",
-        "key": "Z"
-      },
-      {
-        "name": "赵县",
-        "key": "Z"
-      }
-
-    ]
+    ],
+    "title": "Y"
   }
 ]
 

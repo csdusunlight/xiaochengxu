@@ -30,8 +30,9 @@ Page({
 
   onProjectTab: function (event) {
     var projectId = event.currentTarget.dataset.id;
+    var need_str = event.currentTarget.dataset.needs;
     wx.navigateTo({
-      url: "project-detail/project-detail?id=" + projectId
+      url: "../project-submit/project-submit?id=" + projectId + "&need_str=" + need_str
     })
   },
   onSearchFocus: function () {
@@ -43,7 +44,7 @@ Page({
   onSearchInput: function (event) {
     var that = this;
     wx.showNavigationBarLoading();
-    var url = 'http://127.0.0.1:8000/restapi/sub/?is_on=true&project_title_contains=' + event.detail.value;
+    var url = get_project_data_url + '&project_title_contains=' + event.detail.value;
     util.http(url, 'get', function (res) {
       that.HandleData(res.results,'searchData')
     });
@@ -72,13 +73,15 @@ Page({
       for (var i in data) {
         var temp = {
           id: data[i].id,
+          project: data[i].project,
           title: data[i].project_title,
           year: data[i].project_intrest,
           return_amount: (data[i].shortprice ? data[i].shortprice : data[i].project_shortprice),
           range: data[i].project_investrange,
           term: data[i].project_term,
           project_state: data[i].project_state,
-          yuyue: data[i].project_is_book
+          yuyue: data[i].project_is_book,
+          necessary_fields: data[i].necessary_fields
         }
         
         if (settleKey == 'listData') {

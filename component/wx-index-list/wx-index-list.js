@@ -55,6 +55,11 @@ Component({
     // 基础搜索功能
     searchMt() {
       let data = this.data.data;
+      if (!this.value) {
+        this.resetRight(data);
+        return;
+      }
+      
       let newData = [];
       for (let i = 0; i < data.length; i++) {
         let itemArr = [];

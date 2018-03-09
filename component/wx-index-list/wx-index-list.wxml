@@ -16,7 +16,8 @@
         <view class='list-title'>{{item.title}}</view>
         <view class='{{index===0&&config.horizontal&&item.type==="hot"?"list-horizontal":""}}'>
           <view class='list-name {{idx === 0 ?"":"border"}}' wx:for="{{item.item}}" wx:for-item="project" wx:for-index="idx" wx:key="project" data-detail="{{project}}" catchtap='detailMt'>
-            {{project.name}}
+           <image class='list-logo' src='{{project.logo}}'></image> 
+            <text>{{project.name}}</text>
           </view>
         </view>
 

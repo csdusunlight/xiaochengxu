@@ -7,13 +7,13 @@
 }
 .project__state {
   position: absolute;
-  right: 70rpx;
+  left: 0rpx;
   top: 0;
   width: 72rpx;
   height: auto; 
 }
 .project__title {
-  padding-left: 12px;
+  padding-left: 30px;
   margin: 0 auto;
   width: 708rpx;
   height: 80rpx;
@@ -52,4 +52,12 @@ font-size: 12px;
 }
 .project__range {
   margin: 14rpx 0;
+}
+.go-kefu {
+  position: absolute;
+  width: 160rpx;
+  height: 30px;
+  top: 4px;
+  right: 10px;
+  font-size: 12px;
 }

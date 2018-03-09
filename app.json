@@ -1,7 +1,8 @@
 {
   "pages":[
-    "pages/project-list/project-list",
     "pages/project-submit/project-submit",
+    "pages/project-list/project-list",
+    
     "pages/project-quicksubmit/project-quicksubmit",
     "pages/user/user",
     "pages/project-submitdata/project-submitdata",
