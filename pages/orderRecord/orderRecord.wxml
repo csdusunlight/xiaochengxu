@@ -2,9 +2,9 @@
 <view class="wrapper">
     <view class="leftBox">
         <view class="proHeader">项目名称</view>
-        <block wx:for="{{results.results}}" wx:key="{{id}}">    
+        <block wx:for="{{array}}" wx:key="{{id}}">    
             <view class="proList">
-                {{item.project}}
+                {{item.project_title}}
             </view>
         </block>
     </view>
@@ -17,17 +17,21 @@
             <view class="headData">审核状态</view>
             <view class="headData">投资日期</view>
             <view class="headData">投资手机号</view>
-            <view class="headData">操作(删除/编辑)</view>
+            <view class="headData">操作</view>
         </view>
-        <block wx:for="{{results.results}}" wx:key="{{id}}">
+        <block wx:for="{{array}}" wx:key="{{id}}">
             <view class="dataList">
-                <view class="data">{{item.subTime}}</view>
-                <view class="data">{{item.subTime}}</view>
+                <view class="data">{{item.submit_time}}</view>
                 <view class="data">{{item.invest_term}}</view>
-                <view class="data">{{item.amount}}</view>
-                <view class="data">{{item.back_amount}}</view>
-                <view class="data">{{item.state}}</view>
+                <view class="data">{{item.invest_amount}}</view>
+                <view class="data">{{item.return_amount}}</view>
+                <block>
+                    <view class="data" wx:if="{{item.audit_state==2}}">审核未通过</view>
+                    <view class="data" wx:elif="{{item.audit_state==1}}">待审核</view>
+                    <view class="data" wx:else="{{item.audit_state==0}}">审核通过</view>
+                </block> 
                 <view class="data">{{item.invest_date}}</view>
+                <view class="data">{{item.invest_mobile}}</view>
                 <view wx:if="{{!resulrs.results.length}}" class="data">
                     <text bindtap='delete'>删除</text>
                     <text>/</text>
@@ -37,4 +41,4 @@
         </block>
     </scroll-view>
 </view>
-<view wx:if="{{!results.results.length}}" class="derc">---暂无数据！---</view>
+<view wx:if="{{!array.length}}" class="derc">--- 暂无数据! ---</view>

@@ -1,7 +1,4 @@
 // pages/megCenter/msgCenter.js
-var page = 1;
-
-
 Page({
 
   /**

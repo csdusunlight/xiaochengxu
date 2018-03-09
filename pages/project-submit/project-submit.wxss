@@ -1,0 +1,28 @@
+.submit-item-box {
+  padding: 0 30rpx;
+  margin-top: 10px;
+}
+.submit-item-txt {
+  display: block;
+  font-size: 16px;
+  line-height: 40px;
+  color: #383838;
+}
+.submit-item {
+  padding-left: 10px;
+  width: auto;
+  height: 76rpx;
+  border: 1px solid #888;
+  border-radius: 6px;
+}
+.submit-item-mark {
+  font-size: 16px;
+  color: red;
+}
+.submit-item-tips {
+  font-size: 12px;
+  color: red;
+}
+.weui-input {
+  height: 76rpx;
+}

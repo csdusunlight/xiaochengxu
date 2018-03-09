@@ -74,11 +74,6 @@ Page({
   onShow: function () {
   
   },
-  //金额和返现金额正则验证
-  checkAmount:function(){
-    console.log(123)
-  },
-
   /**
    * 生命周期函数--监听页面隐藏
    */

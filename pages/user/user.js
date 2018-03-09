@@ -9,8 +9,8 @@ Page({
     avatarUrl: ""
   },
   tapOlder: function (e) {
-    wx.showToast({
-      title: '跳转到交单信息',
+    wx.navigateTo({
+      url: '../orderRecord/orderRecord',
     })
   },
   tapMsg: function (e) {
@@ -20,6 +20,12 @@ Page({
   },
   service: function (e) {
     console.log("跳转到联系客服");
+  },
+  bindUser:function(){
+    console.log("绑定账号");
+  },
+  notice:function(){
+    console.log("通知公告")
   },
   /**
    * 生命周期函数--监听页面加载
