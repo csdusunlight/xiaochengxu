@@ -9,9 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: [
-      
-    ]
+    array: []
    
   },
 
@@ -43,14 +41,8 @@ Page({
       }
     })
   },
-  //跳转到编辑页面
-  editor: function () {
-    wx.navigateTo({
-      url: '../dataEditor/dataEditor',
-    });
-  },
   //删除数据
-  delete: function () {
+  delete: function (e) {
     wx.showModal({
       title: '提示',
       content: '是否要删除该条数据？',

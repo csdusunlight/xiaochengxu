@@ -2,10 +2,10 @@
   "pages": [
     "pages/orderRecord/orderRecord",
     "pages/dataEditor/dataEditor",
-    "pages/msgCenter/msgCenter",
     "pages/user/user",
-    "pages/index/index",
+    "pages/msgCenter/msgCenter",
     "pages/project-list/project-list",
+    "pages/index/index",
     "pages/msgDetails/msgDetails",
     "pages/logs/logs",
     "pages/project-submit/project-submit",

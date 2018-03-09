@@ -5,19 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-        proName:'友金所',
-        subTime:"2017-11-11",
-        date:"2017-11-12",
+        // proName:'友金所',
+        // subTime:"2017-11-11",
+        // date:"2017-11-12",
         amount:"",
         money:"",
-        phone:""
+        phone:"",
   },
   /**
    * 生命周期函数--监听页面加载
    */
 
   onLoad: function (options) {
-
+      console.log("---"+options.id);
+      wx.request({
+        url: 'http://test.51fanshu.com/xcx/investlogs/'+options.id,
+        method:"get",
+        success:function(res){
+          console.log("llc",res.data .results);
+        }
+      })
   },
   changeDate: function (e) {
     this.setData({

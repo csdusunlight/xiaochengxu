@@ -70,3 +70,9 @@
     text-align: center;
     line-height: 150rpx;
 }
+.del{
+  display: inline;
+}
+.edt{
+  display: inline;
+}
