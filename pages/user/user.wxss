@@ -53,3 +53,9 @@ page{
   height: 30rpx;
   position: absolute;right: 27rpx;top: 30rpx;
 }
+.msg{
+  border:none;
+}
+.cBtn{
+  position: absolute;right: 30rpx;top: 20rpx;
+}

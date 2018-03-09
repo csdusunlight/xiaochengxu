@@ -1,0 +1,6 @@
+{
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "交单记录",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh":true
+}

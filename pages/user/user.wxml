@@ -10,7 +10,7 @@
   <view class='list'>
     <view class='listBox' bindtap='tapOlder'>
       <view class='go'>
-        <text>交单信息</text>
+        <text>交单记录</text>
         <image class='pic' src="/image/r-icon.png" />
       </view>
     </view>
@@ -20,11 +20,27 @@
         <image class='pic' src="/image/r-icon.png" />
       </view>
     </view>
-    <view class='listBox' bindtap='service'>
-      <view class='go'>
-        <text>联系客服</text>
+    <view class='listBox' bindtap='notice'>
+      <view class='go msg'>
+        <text>通知公告</text>
         <image class='pic' src="/image/r-icon.png" />
       </view>
     </view>
   </view>
+  <view class='list'>
+    <view class='listBox' bindtap='bindUser'>
+      <view class='go'>
+        <text>账号绑定</text>
+        <image class='pic' src="/image/r-icon.png" />
+      </view>
+    </view>
+    <view class='listBox' bindtap='service'>
+      <view class='go'>
+        <text>联系客服</text>
+        <!-- <image class='pic' src="/image/r-icon.png" /> -->
+        <contact-button class='cBtn' type="default-dark" size="20" session-from="weapp"></contact-button>
+      </view>
+    </view>
+  </view>
+  
 </view>

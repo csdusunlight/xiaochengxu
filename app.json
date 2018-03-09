@@ -4,13 +4,15 @@
     "pages/project-list/project-list",
     
     "pages/project-quicksubmit/project-quicksubmit",
+    "pages/orderRecord/orderRecord",
+    "pages/dataEditor/dataEditor",
     "pages/user/user",
-    "pages/project-submitdata/project-submitdata",
-    "pages/project-list/project-detail/project-detail",
     "pages/msgCenter/msgCenter",
     "pages/index/index",
     "pages/msgDetails/msgDetails",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/project-submitdata/project-submitdata",
+    "pages/project-list/project-detail/project-detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

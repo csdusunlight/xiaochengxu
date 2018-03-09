@@ -1,0 +1,57 @@
+/* pages/dataEditor/dataEditor.wxss */
+
+.wrapper {
+  width: 688rpx;
+  margin: 0 auto;
+}
+
+.descText {
+  font-size: 16px;
+  display: block;
+  margin: 10px 0;
+}
+
+/* .descText::after {
+  content: "*";
+  color: #e8504f;
+} */
+
+.remark {
+  font-size: 16px;
+  display: block;
+  margin: 10px 0;
+}
+
+.ipt {
+  width: 668rpx;
+  height: 75rpx;
+  border: 1px solid #888;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.pro{
+  width: 688rpx;
+  height: 75rpx;
+  line-height: 60rpx;
+  border: 1px solid #888;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.sub{
+  width: 100%;
+  line-height: 60rpx;
+}
+.investDate{
+  width: 688rpx;
+  height: 75rpx;
+  line-height: 60rpx;
+  border: 1px solid #888;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.btn{
+  margin: 30px 0;
+  background: #09ba07;
+  color: white;
+}
