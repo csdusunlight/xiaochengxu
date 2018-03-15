@@ -5,6 +5,9 @@
   background-color: #fff; 
   position: relative;
 }
+.project:active {
+  background-color: #f0f0f0;
+}
 .project__state {
   position: absolute;
   right: 20rpx;

@@ -33,7 +33,9 @@
   padding-left: 30rpx;
   color: #999;
 }
-
+.list-name:active {
+  background-color: #f0f0f0;
+}
 .list-name.border::after {
   content: "";
   position: absolute;
