@@ -1,3 +1,4 @@
+@import '../../style/weui.wxss';
 .list-warpper {
   position: relative;
   width: 100%;
@@ -10,9 +11,9 @@
   height: 100%;
   box-sizing: border-box;
 }
-.list-scroll.top{
-  padding-top: 90rpx;
-}
+/* .list-scroll.top{
+   padding-top: 20rpx; 
+} */
 
 /* 样式控制  */
 

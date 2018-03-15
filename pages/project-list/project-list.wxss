@@ -2,6 +2,16 @@
 page {
   background-color: #f0eff5;
 }
+.page__bd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  z-index: 10;
+}
+.project-box {
+  margin-top: 48px;
+}
 .search {
   display: flex;
   flex-direction: row;

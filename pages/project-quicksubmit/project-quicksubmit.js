@@ -53,15 +53,16 @@ Page({
     })
   },
   onPullDownRefresh: function(){
-    wx.showNavigationBarLoading();
-    var that = this;
-    var url = app.globalData.server_domain + '/xcx/get_project_list/';
-    util.http(url, 'get', '', function (res) {
-      that.setData({
-        projectListData: []
-      })
-      that.HandleData(res);
-    });
+    console.log('下拉');
+    // wx.showNavigationBarLoading();
+    // var that = this;
+    // var url = app.globalData.server_domain + '/xcx/get_project_list/';
+    // util.http(url, 'get', '', function (res) {
+    //   that.setData({
+    //     projectListData: []
+    //   })
+    //   that.HandleData(res);
+    // });
   }
 
 })

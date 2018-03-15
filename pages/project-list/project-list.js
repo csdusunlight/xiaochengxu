@@ -11,6 +11,8 @@ var url_page = 1;
 Page({
 
   data: {
+    inputShowed: false,
+    inputVal: "",
     listData: [],
     searchData: [],
     listBoxShow: true,
@@ -29,7 +31,40 @@ Page({
       that.HandleData(res.results,'listData')
     });
   },
-
+  showInput: function () {
+    this.setData({
+      inputShowed: true,
+      listBoxShow: false,
+      searchBoxShow: true,
+      searchData: []
+    });
+  },
+  hideInput: function () {
+    this.setData({
+      inputVal: "",
+      inputShowed: false,
+      listBoxShow: true,
+      searchBoxShow: false,
+    });
+  },
+  clearInput: function () {
+    this.setData({
+      inputVal: ""
+    });
+  },
+  inputTyping: function (e) {
+    console.log('typing');
+    var that = this;
+    this.setData({
+      inputVal: e.detail.value,
+      searchData: []
+    });
+    wx.showNavigationBarLoading();
+    var url = get_project_data_url + '&project_title_contains=' + e.detail.value;
+    util.http(url, 'get', '', function (res) {
+      that.HandleData(res.results, 'searchData')
+    });
+  },
   onProjectTab: function (event) {
     var projectId = event.currentTarget.dataset.id;
     var title = event.currentTarget.dataset.title;

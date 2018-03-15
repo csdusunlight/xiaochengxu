@@ -1,22 +1,39 @@
 <wxs src="config.wxs" module="config" />
 
 <view class='list-warpper'>
-  <view wx:if="{{config.search}}" class='list-search'>
+  <!-- <view wx:if="{{config.search}}" class='list-search'>
     <view class='list-search-box'>
       <icon type="search" size="15" />
       <input placeholder="输入您要搜索的城市" bindinput='input' />
     </view>
     <button class='search-button' catchtap='searchMt'>搜索</button>
+  </view> -->
+  <view class="page__bd">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
   </view>
-  
   <block wx:if="{{list.length != 0 }}">
     <scroll-view class='list-scroll {{config.search?"top":""}}' scroll-y="true" scroll-into-view="{{jumpNum}}" scroll-with-animation="{{config.animation}}" bindscrolltoupper="onPullDownRefresh">
-      
+
       <view id="{{'index'+index}}" wx:for="{{list}}" wx:key="key">
         <view class='list-title'>{{item.title}}</view>
         <view class='{{index===0&&config.horizontal&&item.type==="hot"?"list-horizontal":""}}'>
           <view class='list-name {{idx === 0 ?"":"border"}}' wx:for="{{item.item}}" wx:for-item="project" wx:for-index="idx" wx:key="project" data-detail="{{project}}" catchtap='detailMt'>
-           <image class='list-logo' src='{{project.logo}}'></image> 
+            <image class='list-logo' src='{{project.logo}}'></image>
             <text>{{project.name}}</text>
           </view>
         </view>

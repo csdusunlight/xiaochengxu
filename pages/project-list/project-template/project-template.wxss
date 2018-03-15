@@ -35,11 +35,13 @@
   font-size: 12px;
 }
 .project__img {
-  width: 300rpx;
-  height: 200rpx;
+  margin-top: 60rpx;
+  margin-left: 10rpx;
+  width: 240rpx;
+  height: 100rpx;
 }
 .project__year {
-  width: 170rpx;
+  width: 200rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,7 +51,7 @@
 display: flex;
 flex-direction: column;
 justify-content: center;
-width: 280rpx;
+width: 290rpx;
 padding-left: 20rpx;
 font-size: 12px;
 }

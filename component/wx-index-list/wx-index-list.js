@@ -7,6 +7,8 @@ Component({
     data: {
       type: Object,
       value: {},
+      inputShowed: false,
+      inputVal: ""
     }
   },
 
@@ -21,6 +23,28 @@ Component({
     this.resetRight(data);
   },
   methods: {
+    showInput: function () {
+      this.setData({
+        inputShowed: true
+      });
+    },
+    hideInput: function () {
+      let data = this.data.data;
+      this.resetRight(data);
+      this.setData({
+        inputVal: "",
+        inputShowed: false
+      });
+    },
+    clearInput: function () {
+      this.setData({
+        inputVal: ""
+      });
+    },
+    inputTyping: function (e) {
+      this.value = e.detail.value;
+      this.searchMt()
+    },
     // 数据重新渲染
     resetRight(data) {
       let rightArr = []
