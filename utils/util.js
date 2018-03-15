@@ -35,7 +35,26 @@ function http(url,method,data,callBack) {
   })
 }
 
+//extend方法
+function extend(des, src, override) {
+  if (src instanceof Array) {
+    for (var i = 0; i < src.length; i++) {
+      extend(des, src[i], override);
+    }
+  }
+  else {
+    for (var i in src) {
+      if (override || !(i in des)) {
+        des[i] = src[i];
+      }
+    }
+  }
+
+  return des;
+}
+
 module.exports = {
   formatTime: formatTime,
-  http: http
+  http: http,
+  extend:extend
 }

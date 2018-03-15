@@ -14,8 +14,8 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    // var token = wx.getStorageSync('token');
-    var token = "";
+    var token = wx.getStorageSync('token');
+    // var token = "";
     wx.request({
       url: 'http://test.51fanshu.com/xcx/investlogs/?page='+pages+'&pageSize='+pageSize,
       method: "get",

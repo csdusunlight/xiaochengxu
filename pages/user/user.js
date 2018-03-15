@@ -52,13 +52,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("------nickName----",app.globalData.userInfo.nickName);
+    console.log("------nickName----",app.globalData);
     var that = this;
     if (app.globalData.userInfo.nickName) {
       that.setData({
         nickName: app.globalData.userInfo.nickName,
         avatarUrl: app.globalData.userInfo.avatarUrl,
-        show:false
+        show:true
       })
     } else {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -67,7 +67,7 @@ Page({
         this.setData({
           nickName: app.globalData.userInfo.nickName,
           avatarUrl: app.globalData.userInfo.avatarUrl,
-          show: true
+          show: false
         })
       }
     }
