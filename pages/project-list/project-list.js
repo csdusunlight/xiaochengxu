@@ -2,7 +2,8 @@ var projectsData = require('../../data/project-data.js')
 var projectsSearchData = require('../../data/project-search-data.js')
 var util = require('../../utils/util.js')
 var app =  getApp();
-var get_project_data_url = app.globalData.base_url + '/restapi/sub/?is_on=true';
+console.log(app.globalData);
+var get_project_data_url = app.globalData.server_domain + '/restapi/sub/?is_on=true';
 var projectListData = [];
 var searchListData = [];
 var url_page = 1;
@@ -31,13 +32,14 @@ Page({
 
   onProjectTab: function (event) {
     var projectId = event.currentTarget.dataset.id;
+    var title = event.currentTarget.dataset.title;
     var need_str = event.currentTarget.dataset.needs;
     var yuyue = event.currentTarget.dataset.yuyue;
     var project = event.currentTarget.dataset.project;
     var isfutou = event.currentTarget.dataset.isfutou;
     wx.navigateTo({
       // url: "../project-submit/project-submit?id=" + projectId + "&need_str=" + need_str
-      url: "./project-detail/project-detail?id=" + projectId + "&project=" + project + "&need_str=" + need_str + "&yuyue=" + yuyue + "&isfutou=" + isfutou
+      url: "./project-detail/project-detail?id=" + projectId + "&title=" + title + "&project=" + project + "&need_str=" + need_str + "&yuyue=" + yuyue + "&isfutou=" + isfutou
     })
   },
   onSearchFocus: function () {
@@ -63,7 +65,7 @@ Page({
       searchBoxShow: false
     })
   },
-  onScrollLower: function () {
+  onReachBottom: function () {
     wx.showNavigationBarLoading();
     var that = this;
     var url = get_project_data_url + '&page=' + url_page + '&pageSize=4';
@@ -89,7 +91,8 @@ Page({
           project_state: data[i].project_state,
           yuyue: data[i].project_is_book,
           necessary_fields: data[i].necessary_fields,
-          isfutou: data[i].project_is_multisub_allowed
+          isfutou: data[i].project_is_multisub_allowed,
+          img_url: data[i].project_picture
         }
         
         if (settleKey == 'listData') {
@@ -114,5 +117,16 @@ Page({
       })
     }
     wx.hideNavigationBarLoading();
+  },
+  onPullDownRefresh: function() {
+    var that = this;
+    url_page = 1;
+    var url = get_project_data_url + '&page=' + 1 + '&pageSize=4';
+    util.http(url, 'get', '', function (res) {
+      wx.stopPullDownRefresh();
+      projectListData = [];
+      url_page = 1;
+      that.HandleData(res.results, 'listData')
+    });
   }
 })

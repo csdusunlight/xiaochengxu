@@ -4,7 +4,7 @@
     <image wx:elif='{{project_state == 20}}' class='project__state' mode='widthFix' src='/images/bg-state-end.png'></image>
     <text class='project__title'>{{title}}</text>
     <view class='project__content'>
-      <image class='project__img' src='/images/project.jpg'></image>
+      <image class='project__img' src='{{img_url}}'></image>
       <view class='project__year'>
         <text>{{year}}%</text>
         <text>预计最高年化</text>
@@ -15,6 +15,5 @@
         <text class='project__term'>投资标期：{{term}}</text>
       </view>
     </view>
-    <button class='go-kefu' catchtap open-type="contact" session-from="project_{{project}}" >查看攻略></button>
   </view>
 </template>

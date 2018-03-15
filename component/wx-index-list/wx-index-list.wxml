@@ -10,7 +10,7 @@
   </view>
   
   <block wx:if="{{list.length != 0 }}">
-    <scroll-view class='list-scroll {{config.search?"top":""}}' scroll-y="true" scroll-into-view="{{jumpNum}}" scroll-with-animation="{{config.animation}}">
+    <scroll-view class='list-scroll {{config.search?"top":""}}' scroll-y="true" scroll-into-view="{{jumpNum}}" scroll-with-animation="{{config.animation}}" bindscrolltoupper="onPullDownRefresh">
       
       <view id="{{'index'+index}}" wx:for="{{list}}" wx:key="key">
         <view class='list-title'>{{item.title}}</view>

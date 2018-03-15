@@ -8,5 +8,5 @@
 
   -->
 <view wx:if='{{projectListData.length > 0}}' class='wrapper'>
-  <list-html data="{{projectListData}}" binddetail="bindtap"></list-html>
+  <list-html data="{{projectListData}}" bindDownRefresh="onPullDownRefresh" binddetail="bindtap"></list-html>
 </view>

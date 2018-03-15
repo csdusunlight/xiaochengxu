@@ -87,6 +87,9 @@ Component({
       }
       this.resetRight(newData);
 
+    },
+    onPullDownRefresh: function() {
+      this.triggerEvent('DownRefresh')
     }
 
   }

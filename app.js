@@ -17,7 +17,7 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         console.log(res);
         wx.request({
-          url: 'http://test.51fanshu.com/xcx/login/',
+          url: this.globalData.server_domain + '/xcx/login/',
           data:{
             code: res.code
           },

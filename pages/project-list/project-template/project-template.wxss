@@ -7,7 +7,7 @@
 }
 .project__state {
   position: absolute;
-  left: 0rpx;
+  right: 20rpx;
   top: 0;
   width: 72rpx;
   height: auto; 
@@ -52,12 +52,4 @@ font-size: 12px;
 }
 .project__range {
   margin: 14rpx 0;
-}
-.go-kefu {
-  position: absolute;
-  width: 160rpx;
-  height: 30px;
-  top: 4px;
-  right: 10px;
-  font-size: 12px;
 }

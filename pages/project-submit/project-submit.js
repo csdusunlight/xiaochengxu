@@ -24,6 +24,9 @@ Page({
    */
   onLoad: function (options) {
     console.log(options);
+    wx.setNavigationBarTitle({
+      title: options.title
+    })
     project_id = options.project;
     submit_arr = options.need_str.split(',');
     var itemShow_02 = [false, false, false, false, false, false, false, false, false];
@@ -231,7 +234,7 @@ Page({
     })
 
     
-    var submit_url = app.globalData.base_url + '/submitOrder/';
+    var submit_url = app.globalData.server_domain + '/submitOrder/';
     var submit_data = {
       project: project_id,
       invest_mobile: this.data.submitData[5],
@@ -273,7 +276,7 @@ Page({
         } else {
           wx.showModal({
             title: '提示',
-            content: res.data.msg,
+            content: res.data.msg ? res.data.msg : '网络错误',
           })
           wx.hideLoading();
         }
@@ -296,7 +299,7 @@ Page({
     console.log('prodImageOpt');
     var that = this;
     const ctx = wx.createCanvasContext('attendCanvasId');
-    ctx.drawImage(files[i-1], 0, 0, 120, 200);
+    ctx.drawImage(files[i-1], 0, 0, 50, 90);
     // ctx.draw();
     ctx.draw(false, function (e) {
       
@@ -329,12 +332,12 @@ Page({
   },
   uploadImg: function (investlog_id, filePaths, successUp, failUp, i, length) {
     var that = this;
-    
+    console.log(investlog_id);
     console.log(filePaths[i]);
     console.log('i=' + i + ',length=' + length);
     // var timetamp = new Date().getTime()
     wx.uploadFile({
-      url: app.globalData.base_url + '/xcx/submit_screenshot/',
+      url: app.globalData.server_domain + '/xcx/submit_screenshot/',
       filePath: filePaths[i],
       name: 'screenshot',
       header: {
@@ -342,7 +345,7 @@ Page({
       },
       formData: { 'id': investlog_id },
       success: function (res) {
-        console.log(res);
+        
         var data = JSON.parse(res.data);
         if (data.code == 0) {
           successUp++;
@@ -355,9 +358,10 @@ Page({
       },
       fail: function (res) {
         failUp++;
-        consoel.log('fail');
+        console.log('fail');
       },
       complete: function (res) {
+        console.log(res);
         i++;
         if (i == length) {
           wx.hideLoading();

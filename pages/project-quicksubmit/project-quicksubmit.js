@@ -9,8 +9,9 @@ Page({
     projectListData: []
   },
   onLoad: function (options) {
+    wx.showNavigationBarLoading();
     var that = this;
-    var url = app.globalData.base_url + '/xcx/get_project_list/';
+    var url = app.globalData.server_domain + '/xcx/get_project_list/';
     util.http(url, 'get', '', function (res) {
       that.HandleData(res);
     });
@@ -38,16 +39,29 @@ Page({
     this.setData({
       projectListData: res
     })
+    wx.hideNavigationBarLoading();
   },
 
-  bindtap(e) {
+  bindtap: function (e) {
     console.log(e.detail);
     var id = e.detail.id;
+    var title = e.detail.name;
     var need_str = e.detail.necessary_fields;
     var isfutou = e.detail.is_multisub_allowed;
     wx.navigateTo({
-      url: "../project-submit/project-submit?id=" + id + "&need_str=" + need_str + "&isfutou=" + isfutou
+      url: "../project-submit/project-submit?project=" + id + "&title=" + title + "&need_str=" + need_str + "&isfutou=" + isfutou
     })
+  },
+  onPullDownRefresh: function(){
+    wx.showNavigationBarLoading();
+    var that = this;
+    var url = app.globalData.server_domain + '/xcx/get_project_list/';
+    util.http(url, 'get', '', function (res) {
+      that.setData({
+        projectListData: []
+      })
+      that.HandleData(res);
+    });
   }
 
 })

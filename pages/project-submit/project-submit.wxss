@@ -118,7 +118,9 @@
   width: 80%;
   margin: 50rpx auto 30rpx;
 }
-canvas {
-  width: 200px;
-  height: 400px;
-}
+ canvas {
+  width: 50px;
+  height: 90px;
+  opacity: 0;
+  visibility: hidden;
+} 
