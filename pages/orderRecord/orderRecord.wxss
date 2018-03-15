@@ -22,11 +22,13 @@
 }
 
 .proList {
+  display: flex;
   color: #a6a6a6;
   width: 150rpx;
   height: 100rpx;
-  line-height: 100rpx;
-  text-align: center;
+   align-items:center; 
+   justify-content:center;
+   text-align: center;
 }
 
 .r-header {
@@ -70,7 +72,7 @@
     height: 150rpx;
     text-align: center;
     line-height: 150rpx;
-    position: absolute;top: 100rpx;
+    /* position: absolute;top: 100rpx; */
 }
 .del{
   display: inline;
