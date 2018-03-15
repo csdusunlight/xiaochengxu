@@ -1,18 +1,38 @@
 // pages/msgDetails/msgDetails.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+      array:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let that = this;
+    var token = wx.getStorageSync("token");
+        wx.request({
+          url: 'http://test.51fanshu.com/restapi/notice',
+          data: {},
+          header: {
+            'app-id': app.globalData.app_id,
+            'AUTHORIZATION': token
+          },
+          method: 'GET',
+          dataType: 'json',
+          responseType: 'text',
+          success: function(res) {
+            console.log("----", res.data.results);
+              let dataList = res.data.results;
+              that.setData({
+                array:dataList
+              })
+          }
+        })
   },
 
   /**

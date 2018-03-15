@@ -1,29 +1,45 @@
 // pages/megCenter/msgCenter.js
+var app = getApp();
+var token = wx.getStorageSync("token");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    array:'',
+    array: [
+     
+    ],
 
   },
-  intoMsg: function (e) {
-    wx.showToast({
-      title: '进入下一级消息详情',
-    })
-  },
-  scroll:function(event){
+  scroll: function (event) {
     console.log(123)
   },
-  loadMore:function(){
+  loadMore: function () {
     console.log("下拉");
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+    wx.request({
+      url: 'http://test.51fanshu.com/restapi/notice',
+      data: {
+
+      },
+      header: {
+        'app-id': app.globalData.app_id,
+        'AUTHORIZATION': token
+      },
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res) {
+        console.log("---",res.data.results);
+        let dataList = res.data.results;
+        
+      }
+    })
   },
 
   /**
@@ -66,7 +82,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-     
+
   },
 
   /**

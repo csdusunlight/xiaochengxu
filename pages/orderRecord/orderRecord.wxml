@@ -33,7 +33,7 @@
                 <view class="data">{{item.invest_date}}</view>
                 <view class="data">{{item.invest_mobile}}</view>
                 <view wx:if="{{!resulrs.results.length}}" class="data">
-                <text bindtap='delete'>删除</text> 
+                <text bindtap='delete' id="{{item.id}}">删除</text> 
                     <text>/</text>
                     <!-- <text bindtap="editor">编辑</text> -->
                     <navigator class='edt' url='../dataEditor/dataEditor?id={{item.id}}'>编辑</navigator>
@@ -41,5 +41,6 @@
             </view>
         </block>
     </scroll-view>
+    
 </view>
 <view wx:if="{{!array.length}}" class="derc">--- 暂无数据! ---</view>

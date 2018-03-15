@@ -7,7 +7,7 @@ page{
 }
 scroll-view{
   width: 100%;
-  height: 1000rpx;
+  height: 1200rpx;
 } 
 .topBox{
  width: 100%;
@@ -22,7 +22,6 @@ scroll-view{
 .list{
   margin:10px auto;
   width: 720rpx;
-  height: 160rpx;
    background: white; 
   border-radius: 10px;
   position: relative;
@@ -31,23 +30,30 @@ scroll-view{
   display: inline-block;
   margin-left: 60rpx;
   margin-top: 20rpx;
-  font-size: 18px;
+  font-size: 16px;
 }
 .time{
   position: absolute;right: 20rpx;top: 30rpx;
-  font-size: 12px;
+  font-size: 14px;
+  color: #b0b0b0;
 }
 .audit{
   display: block;
   margin-left: 60rpx;
-  margin-top: 30rpx;
+  margin-top: 20rpx;
   font-size: 14px;
-  overflow: hidden;
-  text-overflow:ellipsis;
-  white-space: nowrap;
+  padding-bottom: 20rpx;
+  color: #bdbdbd;
 }
 .bottom{
   width: 100%;
   height: 60rpx;
   background: yellow;
+}
+.hideBox{
+  width: 100%;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  margin-top: 30rpx;
 }

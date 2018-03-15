@@ -1,6 +1,9 @@
 <!--pages/msgDetails/msgDetails.wxml-->
 <view class='warpper'>
-  <view class='c-Box'>
-    啊啊啊啊啊啊啊啊啊啊啊啊啊奥奥奥奥奥所所所所所所所所所所所所所所所所所所所所所
-  </view>
+  <block wx:for="{{array}}" wx:key="{{id}}">
+    <view class='c-Box'>
+       {{item.content}} 
+    </view>
+  </block>
+  <view wx:if="{{!array.length}}" class='none'>--您没有通知公告--</view>
 </view>

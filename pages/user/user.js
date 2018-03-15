@@ -1,12 +1,13 @@
 // pages/user/user.js
-var app = getApp();
+var app = getApp();//获取全局变量
 Page({
   /**
    * 页面的初始数据
    */
   data: {
     nickName: "",
-    avatarUrl: ""
+    avatarUrl: "",
+    show: false
   },
   tapOlder: function (e) {
     wx.navigateTo({
@@ -18,35 +19,59 @@ Page({
       url: '../msgCenter/msgCenter',
     })
   },
-  service: function (e) {
-    console.log("跳转到联系客服");
+  bindUser: function () {
+    wx.navigateTo({
+      url: '../accountBind/accountBind',
+    })
   },
-  bindUser:function(){
-    console.log("绑定账号");
-  },
-  notice:function(){
+  notice: function () {
+    wx.navigateTo({
+      url: '../msgDetails/msgDetails',
+    })
     console.log("通知公告")
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    console.log("加载ing");
+  //点击登录
+  login: function (e) {
+	  console.log(123)
     var that = this;
     wx.getUserInfo({
       success: function (res) {
-        console.log('————数据' + res);
-        // var userStr = JSON.stringify(res);
-        // console.log("---"+userStr);
+        // console.log('————数据' , res);
         var userInfo = res.userInfo //用户基本信息
         var nickName = userInfo.nickName //用户名
         var avatarUrl = userInfo.avatarUrl //头像链接
         that.setData({
           nickName: nickName,
-          avatarUrl: avatarUrl
+          avatarUrl: avatarUrl,
+          show:true
         });
       }
     })
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    console.log("------nickName----",app.globalData.userInfo.nickName);
+    var that = this;
+    if (app.globalData.userInfo.nickName) {
+      that.setData({
+        nickName: app.globalData.userInfo.nickName,
+        avatarUrl: app.globalData.userInfo.avatarUrl,
+        show:false
+      })
+    } else {
+      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+      // 所以此处加入 callback 以防止这种情况
+      app.userInfoReadyCallback = res => {
+        this.setData({
+          nickName: app.globalData.userInfo.nickName,
+          avatarUrl: app.globalData.userInfo.avatarUrl,
+          show: true
+        })
+      }
+    }
+
   },
 
   /**

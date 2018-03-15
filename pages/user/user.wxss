@@ -1,61 +1,98 @@
 /* pages/user/user.wxss */
-page{
+
+page {
   background: #f4f4f4;
 }
-.wrapper{
+
+.wrapper {
   width: 750rpx;
   font-family: "Microsoft Yaei";
 }
-.topBox{
+
+.topBox {
   width: 100%;
   height: 235rpx;
   font-size: 15px;
   position: relative;
   background: white;
 }
-.headPic{
+
+.headPic {
   width: 152rpx;
   height: 152rpx;
   border-radius: 50%;
-  border: 1px solid black;
   /* margin:40rpx 50rpx; */
-  position: absolute;top: 40rpx;left: 50rpx;
+  position: absolute;
+  top: 40rpx;
+  left: 50rpx;
   overflow: hidden;
 }
-.headPic image{
+
+.headPic image {
   width: 100%;
   height: 100%;
 }
-.userName{
-  position: absolute;top: 80rpx;left: 242rpx;
+
+.userName {
+  position: absolute;
+  top: 80rpx;
+  left: 242rpx;
   font-size: 18px;
 }
-.list{
+
+.list {
   width: 750rpx;
   margin-top: 10px;
   background: white;
 }
-.listBox{
+
+.listBox {
   width: 750rpx;
   height: 86rpx;
   font-size: 14px;
   position: relative;
 }
-.go{
+
+.go {
   width: 720rpx;
   height: 100%;
-  border-bottom:1px solid #e5e5e5; 
+  border-bottom: 1px solid #e5e5e5;
   line-height: 86rpx;
   margin-left: 30rpx;
+  position: relative;
 }
-.pic{
+
+.pic {
   width: 30rpx;
   height: 30rpx;
-  position: absolute;right: 27rpx;top: 30rpx;
+  position: absolute;
+  right: 27rpx;
+  top: 30rpx;
 }
-.msg{
-  border:none;
+
+.msg {
+  border: none;
 }
-.cBtn{
-  position: absolute;right: 30rpx;top: 20rpx;
+
+.cBtn {
+  position: absolute;
+  right: 30rpx;
+  top: 20rpx;
+}
+
+ .btn {
+  width: 750rpx;
+  height: 100%;
+  border: none;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  background: #fff;
+} 
+
+.listBox>text {
+  position: absolute;
+  top: 20rpx;
+  left: 30rpx;
+  z-index: 9;
 }
