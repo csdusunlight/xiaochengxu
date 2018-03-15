@@ -17,16 +17,24 @@ Page({
 	onLoad: function (options) {
 		let that = this;
 		console.log("----", app.globalData.userInfo.qq_number);
-		if (app.globalData.userInfo.qq_number) {
+		if (!app.globalData.userInfo.qq_number) {
 			that.setData({
 				bind_qq: true
 			})
-		}
+		}else{
+      that.setData({
+        bind_qq: false
+      })
+    }
 		if (app.globalData.userInfo.zhifubao) {
 			that.setData({
-				bindAlipay: true
+				bindAlipay: false
 			})
-		}
+		}else{
+      that.setData({
+        bindAlipay: true
+      })
+    }
 	},
 	//点击跳转到绑定QQ页面
 	qqbind: function () {
