@@ -37,17 +37,17 @@
     <text class='submit-item-tips' wx:if='{{itemClass[6] == "no"}}'>不能为空</text>
   </view>
   <view wx:if='{{itemShow[7]}}' class='submit-item-box'>
-    <text class='submit-item-txt'>QQ</text>
+    <text class='submit-item-txt'>QQ<text class='submit-item-mark'>*</text></text>
     <input bindblur='formTest' type='number' data-type='qq' data-key='7' class='submit-item  pass-{{itemClass[7]}}' placeholder='请输入qq号码'></input>
     <text class='submit-item-tips' wx:if='{{itemClass[7] == "no"}}'>您输入的qq号码不正确</text>
   </view>
-  <view wx:if='{{isfutou}}' class='submit-item-box'>
-    <view class="page-section-title">radio</view>
+  <view wx:if='{{isfutou}}' class='submit-item-box submit-item-box-radio'>
+    <!-- <view class="page-section-title">是否复投</view> -->
     <radio-group name="submit_type">
-      <label>
-        <radio value="1" checked='{{true}}' />首投</label>
-      <label>
-        <radio value="2" checked='{{false}}' />复投</label>
+      <label class='type-item'>
+        <radio class='type-radio' value="1" checked='{{true}}' />首投</label>
+      <label class='type-item'>
+        <radio class='type-radio' value="2" checked='{{false}}' />复投</label>
     </radio-group>
   </view>
   <view wx:if='{{itemShow[8]}}' class='submit-item-box'>
