@@ -1,5 +1,5 @@
 var app = getApp();
-var pages = 1;     //设置分页
+var pages;     //设置分页
 var pageSize = 12; //加载数据的条数
 Page({
   /**
@@ -86,10 +86,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作   
    */
   onPullDownRefresh: function () {
-
+    wx.showNavigationBarLoading();
+    this.loadMore();
+    wx.hideNavigationBarLoading() //完成停止加载
+    wx.stopPullDownRefresh() //停止下拉刷新
   },
   loadMore: function () {
     var that = this;
+    pages = 1;
     var token = wx.getStorageSync('token');
     //判断用户是否登录，没有登陆，设置array没空；登陆了则进行request请求
     if (!app.globalData.userInfo.nickName) {
@@ -126,7 +130,6 @@ Page({
    */
   onReachBottom: function () {
     wx.showNavigationBarLoading();
-    // this.loadMore();
     wx.hideNavigationBarLoading()
 
     var token = wx.getStorageSync('token');

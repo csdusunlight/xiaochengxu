@@ -16,7 +16,7 @@ Page({
     pageId = options.id; //获取该条数据的id
     var that = this;
     wx.request({
-      url: 'http://test.51fanshu.com/xcx/investlogs/' + options.id,
+      url: 'http://test.51fanshu.com/xcx/investlogs/' + pageId,
       method: "get",
       header: {
         'app-id': app.globalData.app_id,
@@ -80,9 +80,28 @@ Page({
       dataType: 'json',
       responseType: 'text',
       success: function (res) {
-        wx.showToast({
-          title: '提交成功',
+
+
+        wx.showModal({
+          title: '提示',
+          content: '是否修改该数据',
+          success: function (event) {
+            if (event.confirm) {
+              wx.navigateTo({
+                url: '../orderRecord/orderRecord',
+              })
+            } else if (event.cancel) {
+              console.log("取消");
+            }
+
+          }
+
         })
+
+
+        // wx.showToast({
+        //   title: '提交成功',
+        // })
         // that.setData({
         //   'array.invest_amount': "",
         //   "array.invest_term": "",
