@@ -1,9 +1,12 @@
 <!--pages/msgDetails/msgDetails.wxml-->
 <view class='warpper'>
-  <block wx:for="{{array}}" wx:key="{{id}}">
-    <view class='c-Box'>
-       {{item.content}} 
-    </view>
-  </block>
-  <view wx:if="{{!array.length}}" class='none'>--您没有通知公告--</view>
+  <scroll-view scroll-y="true">
+    <block wx:for="{{array}}" wx:key="{{id}}">
+      <view class='c-Box'>
+        {{item.content}}
+      </view>
+    </block>
+  </scroll-view>
+  <view wx:if="{{xianshi}}" class='none'>——您没有通知公告——</view>
+   <view wx:if="{{!array}}" class='none'>——您没有通知公告——</view>
 </view>

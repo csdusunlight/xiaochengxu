@@ -41,5 +41,5 @@
     </block>
   </scroll-view>
 </view>
- <view wx:if="{{!array}}" class="derc">--- 暂无数据! ---</view>
-<view wx:else="{{xianshi}}" class="derc">--- 暂无数据! ---</view> 
+  <view wx:if="{{!array}}" class="derc">—— 暂无数据!——</view> 
+ <view wx:if="{{xianshi}}" class="derc">—— 暂无数据! ——</view>  

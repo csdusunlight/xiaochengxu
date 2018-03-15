@@ -45,7 +45,6 @@ Page({
               wx.showToast({
                 title: '删除成功！',
               })
-              console.error(e)
             },
           })
         } else if (event.cancel) {
@@ -127,7 +126,7 @@ Page({
    */
   onReachBottom: function () {
     wx.showNavigationBarLoading();
-    this.loadMore();
+    // this.loadMore();
     wx.hideNavigationBarLoading()
 
     var token = wx.getStorageSync('token');
@@ -159,10 +158,6 @@ Page({
             xianshi: true
           })
         }
-      },
-      fail: function () {
-        console.error(11111);
-
       }
     })
   },
