@@ -114,7 +114,6 @@ Page({
           that.setData({
             array: dataList,
           })
-          // console.log(that.data.array)自己做处理吧  
         },
         fail: function () {
           console.log(error);

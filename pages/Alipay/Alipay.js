@@ -34,6 +34,7 @@ Page({
             title: '提示',
             content: '修改成功',
           })
+          app.globalData.userInfo.zhifubao = Alipay;
       },
       fail: function () {
         wx.showModal({

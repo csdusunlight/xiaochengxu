@@ -33,7 +33,7 @@ App({
               })
               // console.log("---this.globalData---", res.data)
               util.extend(this.globalData.userInfo, res.data)
-              // console.log("---this.globalData2---", this.globalData.userInfo)
+              console.log("---this.globalData2---", this.globalData.userInfo)
             }
             else{
               wx.showToast({
