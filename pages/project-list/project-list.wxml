@@ -8,7 +8,7 @@
   </view>
   <view wx:if='{{listBoxShow}}'>
     <block wx:for="{{listData}}" wx:for-item="item" wx:for-index="idx">
-      <view bindtap='onProjectTab' data-id='{{item.id}}' data-needs='{{item.necessary_fields}}'>
+      <view bindtap='onProjectTab' data-id='{{item.id}}' data-needs='{{item.necessary_fields}}' data-yuyue='{{item.yuyue}}' data-project='{{item.project}}' data-isfutou='{{item.isfutou}}'>
         <template is='project' data='{{...item}}'></template>
       </view>
     </block>
@@ -16,7 +16,7 @@
   </view>
   <view wx:if='{{searchBoxShow}}'>
     <block wx:for="{{searchData}}" wx:for-item="item" wx:for-index="idx">
-      <view bindtap='onProjectTab' data-id='{{item.id}}'>
+      <view bindtap='onProjectTab' data-id='{{item.id}}' data-needs='{{item.necessary_fields}}' data-yuyue='{{item.yuyue}}' data-project='{{item.project}}' data-isfutou='{{item.isfutou}}'>
         <template is='project' data='{{...item}}'></template>
       </view>
     </block>

@@ -34,8 +34,12 @@ Component({
     },
     // 右侧字母点击事件
     jumpMt(e) {
+      console.log(e);
       let jumpNum = e.currentTarget.dataset.id;
       this.setData({ jumpNum });
+      wx.showToast({
+        title: e.currentTarget.dataset.value,
+      })
     },
     // 列表点击事件
     detailMt(e) {

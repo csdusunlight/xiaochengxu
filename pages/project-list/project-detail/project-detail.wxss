@@ -1,1 +1,23 @@
-/* pages/projectdetail/projectdetail.wxss */
+page {
+  background-color: #a8ced9;
+}
+.title-txt,.item-txt {
+  padding: 0 60rpx;
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+}
+.title-txt {
+  margin: 20px 0;
+}
+.item-txt {
+  margin: 15px 0;
+}
+.btn-wrapper {
+  margin-top: 200rpx;
+}
+.btn {
+  width: 690rpx;
+  margin-bottom: 26px;
+}

@@ -118,3 +118,7 @@
   width: 80%;
   margin: 50rpx auto 30rpx;
 }
+canvas {
+  width: 200px;
+  height: 400px;
+}

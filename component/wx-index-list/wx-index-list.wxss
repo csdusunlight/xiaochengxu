@@ -63,8 +63,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rpx 10rpx;
-  font-size: 26rpx;
+  padding: 6rpx 14rpx;
+  font-size: 30rpx;
   color: #666;
 }
 

@@ -12,7 +12,7 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         console.log(res);
         wx.request({
-          url: 'http://test.51fanshu.com/xcx/login/',
+          url: this.globalData.base_url + '/xcx/login/',
           data:{
             code: res.code
           },
@@ -59,6 +59,8 @@ App({
   },
   globalData: {
     userInfo: null,
-    app_id: 'wx5df1719e40e064f7'
+    app_id: 'wx5df1719e40e064f7',
+    base_url: 'http://127.0.0.1:8000'
+    // base_url: 'http://test.51fanshu.com'
   }
 })

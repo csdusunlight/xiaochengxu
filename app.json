@@ -1,9 +1,11 @@
 {
   "pages":[
-    "pages/project-submit/project-submit",
     "pages/project-list/project-list",
+    "pages/project-submit/project-submit",
     
+    "pages/project-list/project-detail/project-detail",
     "pages/project-quicksubmit/project-quicksubmit",
+    
     "pages/orderRecord/orderRecord",
     "pages/dataEditor/dataEditor",
     "pages/user/user",
@@ -11,8 +13,7 @@
     "pages/index/index",
     "pages/msgDetails/msgDetails",
     "pages/logs/logs",
-    "pages/project-submitdata/project-submitdata",
-    "pages/project-list/project-detail/project-detail"
+    "pages/project-submitdata/project-submitdata"
   ],
   "window": {
     "backgroundTextStyle": "light",

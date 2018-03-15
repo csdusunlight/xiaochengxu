@@ -14,12 +14,13 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
-function http(url,method,callBack) {
+function http(url,method,data,callBack) {
   const app = getApp();
   var token = wx.getStorageSync('token');
   wx.request({
     url: url,
     method: method,
+    data: data,
     header: {
       'app-id': app.globalData.app_id,
       'AUTHORIZATION': token
