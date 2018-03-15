@@ -2,10 +2,11 @@
   "pages":[
     "pages/project-list/project-list",
     "pages/project-submit/project-submit",
-    
+    "pages/QQ/QQ",
+    "pages/Alipay/Alipay",
     "pages/project-list/project-detail/project-detail",
     "pages/project-quicksubmit/project-quicksubmit",
-    
+    "pages/accountBind/accountBind",
     "pages/orderRecord/orderRecord",
     "pages/dataEditor/dataEditor",
     "pages/user/user",

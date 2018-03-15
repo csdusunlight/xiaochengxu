@@ -1,0 +1,78 @@
+/* pages/accountBind/accountBind.wxss */
+
+.wrapper {
+    width: 100%;
+    background: white;
+}
+
+.list {
+    width: 100%;
+    height: 80rpx;
+}
+
+.qqBox {
+    width: 720rpx;
+    height: 80rpx;
+    margin-left: 30rpx;
+    position: relative;
+    line-height: 75rpx;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.qqBox>image {
+    width: 29rpx;
+    height: 33rpx;
+    position: absolute;
+    top: 25rpx;
+}
+
+.qq {
+    margin-left: 45rpx;
+    font-size: 16px;
+}
+
+.bind {
+    margin-left: 470rpx;
+    font-size: 16px;
+    color: #888;
+}
+
+.bind1 {
+    margin-left: 470rpx;
+    font-size: 16px;
+    color: #888;
+}
+
+.r-icon {
+    width: 14rpx;
+    height: 14rpx;
+    margin-left: 10rpx;
+}
+
+.aliBind {
+    margin-left: 420rpx;
+    font-size: 16px;
+    color: #888;
+}
+
+.aliBox {
+    width: 720rpx;
+    height: 80rpx;
+    margin-left: 30rpx;
+    position: relative;
+    line-height: 75rpx;
+}
+
+.aliBox>image {
+    width: 35rpx;
+    height: 35rpx;
+    position: absolute;
+    top: 25rpx;
+}
+
+.yzhifubao {
+    display: inline;
+    color: #898989;
+    font-size: 16px;
+    margin-left: 425rpx;
+}

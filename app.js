@@ -31,7 +31,7 @@ App({
                 key: "token",
                 data: res.data.token
               })
-              // console.log("---this.globalData---",this.globalData.userInfo)
+              // console.log("---this.globalData---", res.data)
               util.extend(this.globalData.userInfo, res.data)
               // console.log("---this.globalData2---", this.globalData.userInfo)
             }
@@ -53,7 +53,7 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               util.extend(this.globalData.userInfo, res.userInfo);
-              // console.log("---this.globalData3---", this.globalData.userInfo)
+              console.log("---this.globalData3---", this.globalData.userInfo)
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
