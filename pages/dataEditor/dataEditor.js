@@ -80,9 +80,28 @@ Page({
       dataType: 'json',
       responseType: 'text',
       success: function (res) {
-        wx.showToast({
-          title: '提交成功',
+
+
+        wx.showModal({
+          title: '提示',
+          content: '是否修改该数据',
+          success: function (event) {
+            if (event.confirm) {
+              wx.navigateTo({
+                url: '../orderRecord/orderRecord',
+              })
+            } else if (event.cancel) {
+              console.log("取消");
+            }
+
+          }
+
         })
+
+
+        // wx.showToast({
+        //   title: '提交成功',
+        // })
         // that.setData({
         //   'array.invest_amount': "",
         //   "array.invest_term": "",
