@@ -1,9 +1,11 @@
 //导入extend方法
-var util = require('./utils/util.js');
+var util = require('./utils/util.js')
+var settings = require('settings.js')
 
 //app.js
 App({
   onLaunch: function () {
+    util.extend(this.globalData, settings.settings)
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -66,6 +68,5 @@ App({
   globalData: {
     // userInfo:"",
     userInfo: {},
-    app_id: 'wx5df1719e40e064f7'
   }
 })
