@@ -10,6 +10,7 @@ Page({
   data: {
     projectId: '',
     needs: '',
+    project: ''
   },
 
   onLoad: function (options) {
@@ -23,12 +24,12 @@ Page({
     wx.setNavigationBarTitle({
       title: title
     })
-      this.setData({
-        id: options.id,
-        project: options.project,
-        needs: options.need_str,
-        yuyue: options.yuyue,
-      })
+    this.setData({
+      id: options.id,
+      project: options.project,
+      needs: options.need_str,
+      yuyue: options.yuyue,
+    })
 
   },
 
