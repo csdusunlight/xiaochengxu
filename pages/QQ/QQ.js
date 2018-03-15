@@ -42,6 +42,7 @@ Page({
            title: '提示',
            content: '修改成功'
          })
+         app.globalData.userInfo.qq_number = qq;
        },
        fail:function(){
          wx.showModal({
