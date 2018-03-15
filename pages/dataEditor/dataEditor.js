@@ -16,7 +16,7 @@ Page({
     pageId = options.id; //获取该条数据的id
     var that = this;
     wx.request({
-      url: 'http://test.51fanshu.com/xcx/investlogs/' + options.id,
+      url: 'http://test.51fanshu.com/xcx/investlogs/' + pageId,
       method: "get",
       header: {
         'app-id': app.globalData.app_id,

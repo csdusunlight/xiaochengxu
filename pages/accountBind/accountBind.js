@@ -19,20 +19,20 @@ Page({
 		console.log("----", app.globalData.userInfo.qq_number);
 		if (!app.globalData.userInfo.qq_number) {
 			that.setData({
-				bind_qq: true
+				bind_qq: false
 			})
 		}else{
       that.setData({
-        bind_qq: false
+        bind_qq: true
       })
     }
 		if (app.globalData.userInfo.zhifubao) {
 			that.setData({
-				bindAlipay: false
+				bindAlipay: true
 			})
 		}else{
       that.setData({
-        bindAlipay: true
+        bindAlipay: false
       })
     }
 	},
