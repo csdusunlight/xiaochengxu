@@ -4,7 +4,7 @@
     <view class='containerBox'>
       <view class='qqBox'>QQ</view>
       <view class='txtBox'>
-        <input type='text' name="qq" value='{{array.qq}}'></input>
+        <input type='text' name="qq" value='{{qq}}'></input>
       </view>
     </view>
     <text class='desc'>该QQ号用于交单时自动填入。</text>

@@ -3,7 +3,7 @@
     <view class='containerBox'>
       <view class='qqBox'>支付宝</view>
       <view class='txtBox'>
-        <input type='text' name="qq"></input>
+        <input type='text' name="qq" value='{{zhifubao}}'></input>
       </view>
     </view>
     <text class='desc'>该支付宝用于交单时自动填入。</text>

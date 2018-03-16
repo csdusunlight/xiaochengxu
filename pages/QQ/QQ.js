@@ -1,22 +1,30 @@
 // pages/QQ/QQ.js
+var settings = require('../../settings.js');
 var app = getApp();
-var token = wx.getStorageSync("token");
+var url = app.globalData.server_domain;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      
+      qq:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('------------',app.globalData.userInfo)
+     let that = this;
+    //获取全局信息判断QQ号是否存在
+    if (app.globalData.userInfo.qq_number){
+        that.setData({
+          qq: app.globalData.userInfo.qq_number
+        })
+    }
   },
   submit:function(e){
+    var token = wx.getStorageSync("token");
      let qq = e.detail.value.qq;
      let regx = /^[1-9]\d{4,9}$/;
      if(!regx.test(qq)){
@@ -26,7 +34,8 @@ Page({
         })
      }
      wx.request({
-       url: 'http://test.51fanshu.com/xcx/update_userinfo/ ',
+      //  url: 'http://test.51fanshu.com/xcx/update_userinfo/ ',
+       url: url + "/xcx/update_userinfo/",
        data: {
          qq_number:qq
        },
@@ -40,7 +49,16 @@ Page({
          console.log(res);
          wx.showModal({
            title: '提示',
-           content: '修改成功'
+           content: '修改成功！',
+           success: function (event) {
+             if (event.confirm) {
+               wx.navigateBack({
+                 delta: 2
+               })
+             } else if (event.cancel) {
+               console.log("取消");
+             }
+           }
          })
          app.globalData.userInfo.qq_number = qq;
        },
