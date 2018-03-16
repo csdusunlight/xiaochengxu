@@ -89,7 +89,7 @@ Page({
     wx.showNavigationBarLoading();
     this.loadMore();
     wx.hideNavigationBarLoading() //完成停止加载
-    wx.stopPullDownRefresh() //停止下拉刷新
+    
   },
   loadMore: function () {
     var that = this;
@@ -117,6 +117,7 @@ Page({
           that.setData({
             array: dataList,
           })
+          wx.stopPullDownRefresh() //停止下拉刷新
         },
         fail: function () {
           console.log(error);
