@@ -32,6 +32,7 @@ Page({
           title: '提示',
           content: '请输入正确的QQ号码',
         })
+        return;
      }
      wx.request({
       //  url: 'http://test.51fanshu.com/xcx/update_userinfo/ ',
