@@ -140,7 +140,8 @@ Page({
     var that = this;
     console.log("下拉loading~");
     wx.request({
-      url: 'http://test.51fanshu.com/xcx/investlogs/?page=' + pages + '&pageSize=' + pageSize,
+      // url: 'http://test.51fanshu.com/xcx/investlogs/?page=' + pages + '&pageSize=' + pageSize,
+      url: url + '/xcx/investlogs/?page=' + pages + '&pageSize=' + pageSize,
       method: "get",
       header: {
         'app-id': app.globalData.app_id,
