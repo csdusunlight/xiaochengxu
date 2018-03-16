@@ -2,5 +2,5 @@
   "usingComponents": {
     "list-html": "/component/wx-index-list/wx-index-list"
   },
-  "navigationBarTitleText": "快速交单"
+  "navigationBarTitleText": ""
 }

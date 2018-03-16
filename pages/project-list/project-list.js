@@ -19,9 +19,9 @@ Page({
   },
 
   onLoad: function (options) {
-    // this.setData({
-    //   projectList: projectsData.projectData
-    // });
+    wx.setNavigationBarTitle({
+      title: app.globalData.app_name
+    })
     var url = get_project_data_url + '&page=' + url_page + '&pageSize=4';
     var that = this;
     wx.showNavigationBarLoading();
@@ -74,7 +74,6 @@ Page({
     var project = event.currentTarget.dataset.project;
     var isfutou = event.currentTarget.dataset.isfutou;
     wx.navigateTo({
-      // url: "../project-submit/project-submit?id=" + projectId + "&need_str=" + need_str
       url: "./project-detail/project-detail?id=" + projectId + "&title=" + title + "&project=" + project + "&need_str=" + need_str + "&yuyue=" + yuyue + "&isfutou=" + isfutou
     })
   },
@@ -92,9 +91,6 @@ Page({
     util.http(url, 'get', '', function (res) {
       that.HandleData(res.results,'searchData')
     });
-    // this.setData({
-    //   projectSearchList: projectsSearchData.projectData
-    // })
   },
   cancelSearch: function () {
     this.setData({
@@ -168,6 +164,7 @@ Page({
   },
   onPullDownRefresh: function() {
     if (!this.data.listBoxShow) {
+      wx.stopPullDownRefresh();
       return;
     }
     wx.showNavigationBarLoading();

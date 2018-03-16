@@ -17,24 +17,22 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    that.loadMore()
-
+    that.loadMore();
   },
+  
   //删除数据
   delete: function (e) {
     console.log(e);
-
     let that = this;
     var token = wx.getStorageSync('token');//获取token
     var dId = e.currentTarget.id;//获取当前数据的id
-    // console.log("-- did --",dId);
     wx.showModal({
       title: '提示',
       content: '是否要删除该条数据？',
       success: function (event) {
         if (event.confirm) {
           wx.request({
-            url: url + dId,
+            url: server_domain +'/xcx/investlogs/' + dId,
             method: "delete",
             data: {
               // id:dId
@@ -88,10 +86,9 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作   
    */
   onPullDownRefresh: function () {
+    console.log("update");
     wx.showNavigationBarLoading();
     this.loadMore();
-    wx.hideNavigationBarLoading() //完成停止加载
-    
   },
   loadMore: function () {
     var that = this;
@@ -120,21 +117,21 @@ Page({
             array: dataList,
           })
           wx.stopPullDownRefresh() //停止下拉刷新
+          wx.hideNavigationBarLoading() //完成停止加载
         },
         fail: function () {
-          console.log()
+          console.log(1111111)
         }
       })
     }
   },
 
   /**
-   * 页面上拉触asd底事件的处理函数
+   * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
     wx.showNavigationBarLoading();
     wx.hideNavigationBarLoading()
-
     var token = wx.getStorageSync('token');
     var that = this;
     console.log("下拉loading~");

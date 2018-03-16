@@ -8,6 +8,9 @@ Page({
     projectListData: []
   },
   onLoad: function (options) {
+    wx.setNavigationBarTitle({
+      title: app.globalData.app_name
+    })
     wx.showNavigationBarLoading();
     var that = this;
     var url = app.globalData.server_domain + '/xcx/get_project_list/';
@@ -15,25 +18,6 @@ Page({
       that.HandleData(res);
     });
   },
-  // http: function(url, method, callBack) {
-  //   const app = getApp();
-  //   var token = wx.getStorageSync('token');
-  //   wx.request({
-  //     url: url,
-  //     method: method,
-  //     header: {
-  //       'app-id': app.globalData.app_id,
-  //       'AUTHORIZATION': token
-  //       // "Content-Type": "json"
-  //     },
-  //     success: function (res) {
-  //       callBack(res.data);
-  //     },
-  //     fail: function (error) {
-  //       console.log(error);
-  //     }
-  //   })
-  // },
   HandleData: function(res) {
     this.setData({
       projectListData: res
@@ -53,15 +37,5 @@ Page({
   },
   onPullDownRefresh: function(){
     console.log('下拉');
-    // wx.showNavigationBarLoading();
-    // var that = this;
-    // var url = app.globalData.server_domain + '/xcx/get_project_list/';
-    // util.http(url, 'get', '', function (res) {
-    //   that.setData({
-    //     projectListData: []
-    //   })
-    //   that.HandleData(res);
-    // });
   }
-
 })
