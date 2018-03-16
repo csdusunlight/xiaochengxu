@@ -168,6 +168,7 @@ Page({
   },
   onPullDownRefresh: function() {
     if (!this.data.listBoxShow) {
+      wx.stopPullDownRefresh();
       return;
     }
     wx.showNavigationBarLoading();
