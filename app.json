@@ -11,8 +11,7 @@
     "pages/dataEditor/dataEditor",
     "pages/user/user",
     "pages/msgCenter/msgCenter",
-    "pages/msgDetails/msgDetails",
-    "pages/logs/logs"
+    "pages/msgDetails/msgDetails"
   ],
   "window": {
     "backgroundTextStyle": "light",
