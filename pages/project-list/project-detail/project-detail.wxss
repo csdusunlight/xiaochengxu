@@ -1,5 +1,5 @@
 page {
-  background-color: #a8ced9;
+  background: url('http://test.51fanshu.com/static/images/quicksub-4.jpg') center center /cover no-repeat;
 }
 .title-txt,.item-txt {
   padding: 0 60rpx;
