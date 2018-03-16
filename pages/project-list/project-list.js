@@ -168,6 +168,9 @@ Page({
     url_page = 1;
     var url = get_project_data_url + '&page=' + 1 + '&pageSize=4';
     util.http(url, 'get', '', function (res) {
+      that.setData({
+        noDataShow: false
+      })
       wx.stopPullDownRefresh();
       projectListData = [];
       url_page = 1;
