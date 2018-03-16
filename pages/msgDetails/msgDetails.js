@@ -1,9 +1,8 @@
-// pages/msgDetails/msgDetails.js
 var settings = require('../../settings.js');
 var app = getApp();
 var server_domain = app.globalData.server_domain;
-var pages;     //设置分页
-var pageSize = 6; //加载数据的条数
+var pages;    
+var pageSize = 6; 
 var app = getApp();
 Page({
 
@@ -25,7 +24,6 @@ Page({
     let that = this;
     pages = 1;
     var token = wx.getStorageSync("token");
-    //判断是否能获取到用户信息，如果不能获取到用户信息，把array设置为空，如果能获取到用户信息，则更新array
     if (!app.globalData.userInfo.nickName) {
       that.setData({
         array: ''
@@ -86,8 +84,8 @@ Page({
     var that = this;
     wx.showNavigationBarLoading();
     that.loading();
-    wx.stopPullDownRefresh() //停止下拉刷新
-    wx.hideNavigationBarLoading() //完成停止加载
+    wx.stopPullDownRefresh()
+    wx.hideNavigationBarLoading() 
   },
 
   /**
@@ -98,7 +96,6 @@ Page({
     wx.hideNavigationBarLoading();
     var token = wx.getStorageSync('token');
     var that = this;
-    console.log("下拉loading~");
     wx.request({
       url: server_domain + '?page=' + pages + '&pageSize=' + pageSize,
       method: "get",
@@ -125,10 +122,4 @@ Page({
     })
   },  
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })
