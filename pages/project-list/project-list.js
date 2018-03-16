@@ -106,6 +106,10 @@ Page({
     if (!this.data.listBoxShow) {
       return;
     }
+    if (this.data.noDataShow) {
+      return;
+    }
+    
     wx.showLoading({
       title: '正在加载...'
     })

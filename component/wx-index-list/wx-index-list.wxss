@@ -64,7 +64,7 @@
 .list-logo {
   width: 120rpx;
   height: 50rpx;
-  margin-right: 30rpx;
+  margin-right: 50rpx;
   margin-top: 2rpx;
 }
 
