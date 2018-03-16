@@ -1,4 +1,6 @@
+var settings = require('../../settings.js');
 var app = getApp();
+var url = app.globalData.server_domain;
 var pages;     //设置分页
 var pageSize = 12; //加载数据的条数
 Page({
@@ -32,7 +34,7 @@ Page({
       success: function (event) {
         if (event.confirm) {
           wx.request({
-            url: 'http://test.51fanshu.com/xcx/investlogs/' + dId,
+            url: url + dId,
             method: "delete",
             data: {
               // id:dId
@@ -102,7 +104,8 @@ Page({
       })
     } else {
       wx.request({
-        url: 'http://test.51fanshu.com/xcx/investlogs/?page=' + pages + '&pageSize=' + pageSize,
+        // url: 'http://test.51fanshu.com/xcx/investlogs/?page=' + pages + '&pageSize=' + pageSize,
+        url: url + '/xcx/investlogs/?page=' + pages + '&pageSize=' + pageSize,
         method: "get",
         header: {
           'app-id': app.globalData.app_id,
@@ -120,7 +123,7 @@ Page({
           wx.stopPullDownRefresh() //停止下拉刷新
         },
         fail: function () {
-          console.log(error);
+          console.log()
         }
       })
     }

@@ -1,6 +1,8 @@
 // pages/accountBind/accountBind.js
+var settings = require('../../settings.js');
 var app = getApp();
 var token = wx.getStorageSync("token");
+var url = app.globalData.server_domain;
 Page({
 
 	/**
@@ -26,13 +28,13 @@ Page({
         bind_qq: true
       })
     }
-		if (app.globalData.userInfo.zhifubao) {
+		if (!app.globalData.userInfo.zhifubao) {
 			that.setData({
-				bindAlipay: true
+				bindAlipay: false
 			})
 		}else{
       that.setData({
-        bindAlipay: false
+        bindAlipay: true
       })
     }
 	},

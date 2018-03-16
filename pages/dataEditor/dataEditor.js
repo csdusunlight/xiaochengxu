@@ -1,6 +1,8 @@
 // pages/dataEditor/dataEditor.js
+var settings = require('../../settings.js');
 var app = getApp();
 var token = wx.getStorageSync('token');
+var url = app.globalData.server_domain;
 var pageId;
 Page({
   /**
@@ -16,7 +18,8 @@ Page({
     pageId = options.id; //获取该条数据的id
     var that = this;
     wx.request({
-      url: 'http://test.51fanshu.com/xcx/investlogs/' + pageId,
+      // url: 'http://test.51fanshu.com/xcx/investlogs/' + pageId,
+      url: url + "/xcx/investlogs/" + pageId,
       method: "get",
       header: {
         'app-id': app.globalData.app_id,

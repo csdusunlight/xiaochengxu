@@ -1,24 +1,33 @@
+var settings = require('../../settings.js');
 var app = getApp();
-var token = wx.getStorageSync("token");
+var url = app.globalData.server_domain;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+      zhifubao:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    if (app.globalData.userInfo.zhifubao){
+      that.setData({
+        zhifubao: app.globalData.userInfo.zhifubao
+      })
+    }
   },
   submit: function (e) {
+    let that = this;
+    var token = wx.getStorageSync("token");
     let Alipay = e.detail.value.qq;
     wx.request({
-      url: 'http://test.51fanshu.com/xcx/update_userinfo/ ',
+      // url: 'http://test.51fanshu.com/xcx/update_userinfo/ ',
+      url: url + /xcx/update_userinfo /'',
       data: {
         zhifubao:Alipay
       },
@@ -30,10 +39,19 @@ Page({
       method: 'post',
       success: function (res) {
         console.log(res);
-          wx.showModal({
-            title: '提示',
-            content: '修改成功',
-          })
+        wx.showModal({
+          title: '提示',
+          content: '修改成功！',
+          success: function (event) {
+            if (event.confirm) {
+              wx.navigateBack({
+                delta: 2
+              })
+            } else if (event.cancel) {
+              console.log("取消");
+            }
+          }
+        })
           app.globalData.userInfo.zhifubao = Alipay;
       },
       fail: function () {
