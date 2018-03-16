@@ -1,5 +1,6 @@
+var settings = require('../../settings.js');
 var app = getApp();
-var server_domain = app.globalData.server_domain;
+var url = app.globalData.server_domain;
 Page({
 
   /**
@@ -25,7 +26,8 @@ Page({
     var token = wx.getStorageSync("token");
     let Alipay = e.detail.value.qq;
     wx.request({
-      url: server_domain + '/xcx/update_userinfo/',
+      // url: 'http://test.51fanshu.com/xcx/update_userinfo/ ',
+      url: url + '/xcx/update_userinfo /',
       data: {
         zhifubao:Alipay
       },

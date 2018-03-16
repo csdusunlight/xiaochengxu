@@ -1,4 +1,3 @@
-// pages/projectdetail/projectdetail.js
 var id='';
 var title = '';
 var project = '';
@@ -34,12 +33,8 @@ Page({
   },
 
   onSubmit: function (event) {
-    // var projectId = event.currentTarget.dataset.id;
-    // var need_str = event.currentTarget.dataset.needs;
-    // var yuyue = event.currentTarget.dataset.yuyue;
     wx.navigateTo({
       url: "../../project-submit/project-submit?id=" + id + "&title=" + title + "&project=" + project + "&need_str=" + needs + "&isfutou=" + isfutou
-      // url: "./project-detail/project-detail?id=" + projectId + "&need_str=" + need_str
     })
   }
 })
