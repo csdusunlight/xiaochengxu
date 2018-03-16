@@ -103,6 +103,9 @@ Page({
     })
   },
   onReachBottom: function () {
+    if (!this.data.listBoxShow) {
+      return;
+    }
     wx.showLoading({
       title: '正在加载...'
     })
@@ -160,6 +163,9 @@ Page({
     wx.hideLoading();
   },
   onPullDownRefresh: function() {
+    if (!this.data.listBoxShow) {
+      return;
+    }
     wx.showNavigationBarLoading();
     wx.showLoading({
       title: '正在刷新...'
