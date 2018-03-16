@@ -25,6 +25,10 @@
     </view>
   </view>
   <view wx:if='{{listBoxShow}}'>
+    <view class='banner-box'>
+      <image class='banner' src='/images/xcx/banner.jpg'></image>
+      <text class='banner-txt'>全网最高返</text>
+    </view>
     <block wx:for="{{listData}}" wx:for-item="item" wx:for-index="idx">
       <view bindtap='onProjectTab' data-id='{{item.id}}' data-title='{{item.title}}' data-needs='{{item.necessary_fields}}' data-yuyue='{{item.yuyue}}' data-project='{{item.project}}' data-isfutou='{{item.isfutou}}'>
         <template is='project' data='{{...item}}'></template>
