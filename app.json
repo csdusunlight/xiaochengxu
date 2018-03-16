@@ -12,8 +12,7 @@
     "pages/user/user",
     "pages/msgCenter/msgCenter",
     "pages/msgDetails/msgDetails",
-    "pages/logs/logs",
-    "pages/project-submitdata/project-submitdata"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",

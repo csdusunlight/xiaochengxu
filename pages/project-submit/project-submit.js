@@ -3,6 +3,9 @@ var util = require('../../utils/util.js')
 var app = getApp();
 var submit_arr = [];
 var project_id;
+var isDate;
+var isQQ;
+var isZfb;
 Page({
 
   /**
@@ -23,12 +26,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    isDate = false;
+    isQQ = false;
+    isZfb = false;
+    submit_arr = options.need_str.split(',');
+    console.log(submit_arr);
+    for (var j = 0; j < submit_arr.length; j++) {
+      if (submit_arr[j] == 3) {
+        isDate = true;
+      } else if (submit_arr[j] == 4) {
+        isZfb = true;
+      } else if (submit_arr[j] == 7) {
+        isQQ = true;
+      }
+    }
+    console.log(isDate);
+    console.log(isZfb);
+    console.log(isQQ);
     console.log(options);
     wx.setNavigationBarTitle({
       title: options.title
     })
     project_id = options.project;
-    submit_arr = options.need_str.split(',');
     var itemShow_02 = [false, false, false, false, false, false, false, false, false];
 
     for (var i = 0; i < itemShow_02.length; i++) {
@@ -40,6 +59,13 @@ Page({
     }
     var submitData_02 = this.data.submitData;
     submitData_02[3] = this.getNowFormatDate();
+    if (isZfb) {
+      submitData_02[4] = app.globalData.userInfo.zhifubao;
+    }
+    if (isQQ) {
+      submitData_02[7] = app.globalData.userInfo.qq_number;
+    }
+    
     this.setData({
       itemShow: itemShow_02,
       submit_date: this.getNowFormatDate(),
@@ -66,6 +92,7 @@ Page({
     var formType = event.currentTarget.dataset.type;
     var formKey = Number(event.currentTarget.dataset.key);
     var formValue = event.detail.value;
+    console.log(formValue);
     var itemClass_02 = this.data.itemClass;
 
     var regNum = /^[0-9]*$/;
@@ -149,19 +176,25 @@ Page({
     })
   },
   getNowFormatDate: function () {
-    var date = new Date();
-    var seperator1 = "-";
-    var year = date.getFullYear();
-    var month = date.getMonth() + 1;
-    var strDate = date.getDate();
-    if (month >= 1 && month <= 9) {
-      month = "0" + month;
+
+    if (isDate) {
+      var date = new Date();
+      var seperator1 = "-";
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      var strDate = date.getDate();
+      if (month >= 1 && month <= 9) {
+        month = "0" + month;
+      }
+      if (strDate >= 0 && strDate <= 9) {
+        strDate = "0" + strDate;
+      }
+      var currentdate = year + seperator1 + month + seperator1 + strDate;
+      return currentdate;
+    } else {
+      return '';
     }
-    if (strDate >= 0 && strDate <= 9) {
-      strDate = "0" + strDate;
-    }
-    var currentdate = year + seperator1 + month + seperator1 + strDate;
-    return currentdate;
+
   },
   chooseImage: function () {
     var that = this
@@ -177,9 +210,9 @@ Page({
         if (res.tempFilePaths) {
           console.log('图片张数' + res.tempFilePaths.length)
           // for (var i=0; i<res.tempFilePaths.length; i++) {
-            // 缩放图片
-            
-            that.prodImageOpt(1, res.tempFilePaths.length, res.tempFilePaths);
+          // 缩放图片
+
+          that.prodImageOpt(1, res.tempFilePaths.length, res.tempFilePaths);
           // }
         }
       }
@@ -233,7 +266,7 @@ Page({
       title: '处理中...',
     })
 
-    
+
     var submit_url = app.globalData.server_domain + '/submitOrder/';
     var submit_data = {
       project: project_id,
@@ -272,6 +305,7 @@ Page({
             that.uploadImg(investlog_id, that.data.canvasImgUrl, successUp, failUp, i, length)
           } else {
             wx.hideLoading();
+            wx.showToast({ title: '提交成功！' });
           }
         } else {
           wx.showModal({
@@ -291,7 +325,7 @@ Page({
       }
     })
   },
-  prodImageOpt: function (i,length,files) {
+  prodImageOpt: function (i, length, files) {
     console.log(i);
     console.log(length);
     console.log(files[i - 1]);
@@ -299,11 +333,11 @@ Page({
     console.log('prodImageOpt');
     var that = this;
     const ctx = wx.createCanvasContext('attendCanvasId');
-    ctx.drawImage(files[i-1], 0, 0, 50, 90);
+    ctx.drawImage(files[i - 1], 0, 0, 50, 90);
     // ctx.draw();
     ctx.draw(false, function (e) {
-      
-      
+
+
       wx.canvasToTempFilePath({
         canvasId: 'attendCanvasId',
         success: function success(res) {
@@ -316,7 +350,7 @@ Page({
           that.setData({
             canvasImgUrl: canvasImgUrl_02
           });
-          if (i<=length) {
+          if (i <= length) {
             that.prodImageOpt(i, length, files);
           } else {
             return;
@@ -327,8 +361,8 @@ Page({
         }
       });
     })
-    
-    
+
+
   },
   uploadImg: function (investlog_id, filePaths, successUp, failUp, i, length) {
     var that = this;
@@ -345,7 +379,7 @@ Page({
       },
       formData: { 'id': investlog_id },
       success: function (res) {
-        
+
         var data = JSON.parse(res.data);
         if (data.code == 0) {
           successUp++;
@@ -354,7 +388,7 @@ Page({
           failUp++;
           console.log('fail');
         }
-        
+
       },
       fail: function (res) {
         failUp++;
@@ -365,7 +399,7 @@ Page({
         i++;
         if (i == length) {
           wx.hideLoading();
-          wx.showToast({ title: '' + successUp + '成功,' + failUp + '失败！' });
+          wx.showToast({ title: '' + '成功！截图：' + successUp });
         } else { //递归调用uploadDIY函数 
           that.uploadImg(investlog_id, filePaths, successUp, failUp, i, length);
         }

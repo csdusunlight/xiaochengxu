@@ -1,7 +1,6 @@
 // pages/demo/demo.js
 var util = require('../../utils/util.js')
 var app = getApp();
-let projectListData = require('../../data/projectListData.js');
 
 Page({
 
