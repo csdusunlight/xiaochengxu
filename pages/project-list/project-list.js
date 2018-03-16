@@ -1,5 +1,3 @@
-var projectsData = require('../../data/project-data.js')
-var projectsSearchData = require('../../data/project-search-data.js')
 var util = require('../../utils/util.js')
 var app =  getApp();
 console.log(app.globalData);
