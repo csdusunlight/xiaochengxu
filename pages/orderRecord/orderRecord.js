@@ -45,12 +45,13 @@ Page({
               wx.showToast({
                 title: '删除成功！',
               })
+              that.onPullDownRefresh();//删除成功后调用刷新方法
             },
           })
         } else if (event.cancel) {
           console.log("取消");
         }
-
+        
       }
 
     })
