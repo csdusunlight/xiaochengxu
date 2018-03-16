@@ -83,7 +83,7 @@ page {
  .btn {
   width: 750rpx;
   height: 100%;
-  border: none;
+  opacity: 0;
   font-size: 14px;
   position: absolute;
   top: 0;
@@ -95,4 +95,8 @@ page {
   top: 20rpx;
   left: 30rpx;
   z-index: 9;
+}
+.login{
+  opacity: 0;
+  
 }

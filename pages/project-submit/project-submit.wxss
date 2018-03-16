@@ -36,6 +36,17 @@
   height: 100rpx;
   background-color: red;
 }
+.submit-item-box-radio {
+  margin: 20px 0;
+}
+.type-item {
+  width: 50%;
+  display:inline-block;
+  text-align:center;
+}
+.type-radio {
+  margin-right: 10px;
+}
 
 /* 上传图片部分 */
 .weui-uploader__hd {
@@ -121,6 +132,7 @@
  canvas {
   width: 50px;
   height: 90px;
+  margin-left: -200px;
   opacity: 0;
   visibility: hidden;
 } 

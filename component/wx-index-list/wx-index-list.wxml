@@ -1,14 +1,14 @@
 <wxs src="config.wxs" module="config" />
 
 <view class='list-warpper'>
-  <!-- <view wx:if="{{config.search}}" class='list-search'>
+   <!-- <view wx:if="{{config.search}}" class='list-search'>
     <view class='list-search-box'>
       <icon type="search" size="15" />
       <input placeholder="输入您要搜索的城市" bindinput='input' />
     </view>
     <button class='search-button' catchtap='searchMt'>搜索</button>
-  </view> -->
-  <view class="page__bd">
+  </view>  -->
+   <view class="page__bd">
     <view class="weui-search-bar">
       <view class="weui-search-bar__form">
         <view class="weui-search-bar__box">
@@ -25,7 +25,7 @@
       </view>
       <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
     </view>
-  </view>
+  </view> 
   <block wx:if="{{list.length != 0 }}">
     <scroll-view class='list-scroll {{config.search?"top":""}}' scroll-y="true" scroll-into-view="{{jumpNum}}" scroll-with-animation="{{config.animation}}" bindscrolltoupper="onPullDownRefresh">
 

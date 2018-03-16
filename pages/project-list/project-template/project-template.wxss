@@ -16,7 +16,6 @@
   height: auto; 
 }
 .project__title {
-  padding-left: 30px;
   margin: 0 auto;
   width: 708rpx;
   height: 80rpx;

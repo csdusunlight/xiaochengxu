@@ -25,15 +25,21 @@
     "list": [
       {
         "pagePath": "pages/project-list/project-list",
-        "text": "项目列表"
+        "text": "项目列表",
+        "iconPath": "images/tab/projectlist.png",
+        "selectedIconPath": "images/tab/projectlist_02.png"
       },
       {
         "pagePath": "pages/project-quicksubmit/project-quicksubmit",
-        "text": "快速交单"
+        "text": "快速交单",
+        "iconPath": "images/tab/quicksubmit.png",
+        "selectedIconPath": "images/tab/quicksubmit_02.png"
       },
       {
         "pagePath": "pages/user/user",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "images/tab/me.png",
+        "selectedIconPath": "images/tab/me_02.png"
       }
     ]
   }

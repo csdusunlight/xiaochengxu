@@ -3,9 +3,10 @@
     <view class='topBox'>
         <view class='headPic'>
             <image wx:if="{{show}}" src="{{avatarUrl}}"></image>
-            <image wx:if="{{!show}}" src='../../image/no-login.png'></image>
+            <image wx:if="{{!show}}" src='../../images/no-login.png'></image>
         </view>
         <text wx:if="{{show}}" class='userName'>{{nickName}}</text>
+        <text wx:if="{{!show}}" class='userName'>登陆</text>
         <button wx:if="{{!show}}" class='userName login' open-type="getUserInfo" bindgetuserinfo='login'>登陆</button>
     </view>
 
@@ -13,19 +14,19 @@
         <view class='listBox' bindtap='tapOlder'>
             <view class='go'>
                 <text>交单记录</text>
-                <image class='pic' src="/image/r-icon.png" />
+                <image class='pic' src="/images/r-icon.png" />
             </view>
         </view>
         <!-- <view class='listBox' bindtap='tapMsg'>
       <view class='go'>
         <text>通知公告</text>
-        <image class='pic' src="/image/r-icon.png" />
+        <image class='pic' src="/images/r-icon.png" />
       </view>
     </view>  -->
         <view class='listBox' bindtap='notice'>
             <view class='go msg'>
                 <text>通知公告</text>
-                <image class='pic' src="/image/r-icon.png" />
+                <image class='pic' src="/images/r-icon.png" />
             </view>
         </view>
     </view>
@@ -33,14 +34,14 @@
         <view class='listBox' bindtap='bindUser'>
             <view class='go'>
                 <text>账号绑定</text>
-                <image class='pic' src="/image/r-icon.png" />
+                <image class='pic' src="/images/r-icon.png" />
             </view>
         </view>
         <view class='listBox' bindtap='service'>
             <!-- <view class='go'> -->
             <text>联系客服</text>
             <button class='btn' open-type="contact"></button>
-            <image class='pic' src="/image/r-icon.png" />
+            <image class='pic' src="/images/r-icon.png" />
             <!-- </view> -->
         </view>
     </view>

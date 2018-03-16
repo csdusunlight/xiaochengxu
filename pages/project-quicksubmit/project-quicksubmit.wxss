@@ -1,7 +1,9 @@
 /* pages/dome/dome.wxss */
 
 .wrapper {
+  position: relative;
   height: 100vh;
+  /* margin-top: 48px; */
 }
 /* 关闭滚动条  */
 ::-webkit-scrollbar{

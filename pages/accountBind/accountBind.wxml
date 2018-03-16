@@ -2,22 +2,22 @@
 <view class='wrapper'>
   <view class='list '>
     <view class='qqBox' bindtap='qqbind'>
-       <image src='../../image/QQ.png'></image> 
+       <image src='../../images/QQ.png'></image> 
       <text class='qq'>QQ</text>
       <text wx:if="{{bind_qq}}" class='bind'>未绑定</text>
 	  <block wx:else ="{{!bind_qq}}">
 	  	<text class='bind1'>已绑定</text>
 	  </block>
-      <image src='../../image/r-icon.png' class='r-icon'></image>
+      <image src='../../images/r-icon.png' class='r-icon'></image>
     </view>
   </view>
   <view class='list'>
       <view class='aliBox' bindtap='alibind'>
-        <image src='../../image/Alipay.png'></image>
-        <text class='qq'>支付宝</text>
+        <image src='../../images/Alipay.png'></image>
+        <text class='zhifubao'>支付宝</text>
         <text wx:if="{{bindAlipay}}" class='aliBind'>未绑定</text>
 		<text wx:else="{{!bindAlipay}}" class='yzhifubao'>已绑定</text>
-        <image src='../../image/r-icon.png' class='r-icon'></image>
+        <image src='../../images/r-icon.png' class='r-icon'></image>
       </view>
   </view>
 </view>
