@@ -1,7 +1,7 @@
 // pages/msgDetails/msgDetails.js
 var settings = require('../../settings.js');
 var app = getApp();
-var url = app.globalData.server_domain;
+var server_domain = app.globalData.server_domain;
 var pages;     //设置分页
 var pageSize = 6; //加载数据的条数
 var app = getApp();
@@ -32,8 +32,7 @@ Page({
       })
     } else {
       wx.request({
-        // url: 'http://test.51fanshu.com/restapi/notice?page=' + pages + '&pageSize=' + pageSize,
-        url: url + "/restapi/notice?page=" + pages + '&pageSize=' + pageSize,
+        url:server_domain + "/restapi/notice?page=" + pages + '&pageSize=' + pageSize,
         data: {},
         header: {
           'app-id': app.globalData.app_id,
@@ -97,7 +96,7 @@ Page({
     var that = this;
     console.log("下拉loading~");
     wx.request({
-      url: 'http://test.51fanshu.com/restapi/notice/?page=' + pages + '&pageSize=' + pageSize,
+      url: server_domain + '?page=' + pages + '&pageSize=' + pageSize,
       method: "get",
       header: {
         'app-id': app.globalData.app_id,

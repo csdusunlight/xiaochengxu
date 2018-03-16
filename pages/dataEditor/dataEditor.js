@@ -1,8 +1,7 @@
 // pages/dataEditor/dataEditor.js
-var settings = require('../../settings.js');
 var app = getApp();
 var token = wx.getStorageSync('token');
-var url = app.globalData.server_domain;
+var server_domain = app.globalData.server_domain;
 var pageId;
 Page({
   /**
@@ -18,8 +17,7 @@ Page({
     pageId = options.id; //获取该条数据的id
     var that = this;
     wx.request({
-      // url: 'http://test.51fanshu.com/xcx/investlogs/' + pageId,
-      url: url + "/xcx/investlogs/" + pageId,
+      url: server_domain + "/xcx/investlogs/" + pageId,
       method: "get",
       header: {
         'app-id': app.globalData.app_id,
@@ -65,7 +63,7 @@ Page({
       return;
     }
     wx: wx.request({
-      url: 'http://test.51fanshu.com/xcx/investlogs/' + pageId,
+      url: server_domain + '/xcx/investlogs/' + pageId,
       data: {
         submit_time: sub_time,
         project_title: project_title,
@@ -83,8 +81,6 @@ Page({
       dataType: 'json',
       responseType: 'text',
       success: function (res) {
-
-
         wx.showModal({
           title: '提示',
           content: '是否修改该数据',
@@ -100,15 +96,6 @@ Page({
           }
 
         })
-        // wx.showToast({
-        //   title: '提交成功',
-        // })
-        // that.setData({
-        //   'array.invest_amount': "",
-        //   "array.invest_term": "",
-        //   "array.return_amount": "",
-        //   "array.invest_mobile": "",
-        // })
       },
     })
   },
