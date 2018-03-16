@@ -46,6 +46,9 @@
   padding-left: 30rpx;
   color: #999;
 }
+.list-txt {
+  font-size: 16px;
+}
 .list-name:active {
   background-color: #f0f0f0;
 }
@@ -59,9 +62,10 @@
   background: #f5f5f5;
 }
 .list-logo {
-  width: 89rpx;
-  height: 37rpx;
+  width: 120rpx;
+  height: 50rpx;
   margin-right: 30rpx;
+  margin-top: 2rpx;
 }
 
 .list-right-wrapper {
@@ -78,7 +82,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 6rpx 14rpx;
+  padding: 4rpx 14rpx;
   font-size: 30rpx;
   color: #666;
 }

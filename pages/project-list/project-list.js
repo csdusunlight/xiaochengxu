@@ -60,6 +60,9 @@ Page({
       searchData: []
     });
     wx.showNavigationBarLoading();
+    wx.showLoading({
+      title: '正在加载...'
+    })
     var url = get_project_data_url + '&project_title_contains=' + e.detail.value;
     util.http(url, 'get', '', function (res) {
       that.HandleData(res.results, 'searchData')
@@ -86,6 +89,7 @@ Page({
   onSearchInput: function (event) {
     var that = this;
     wx.showNavigationBarLoading();
+    
     var url = get_project_data_url + '&project_title_contains=' + event.detail.value;
     util.http(url, 'get', '', function (res) {
       that.HandleData(res.results,'searchData')
@@ -101,6 +105,9 @@ Page({
     })
   },
   onReachBottom: function () {
+    wx.showLoading({
+      title: '正在加载...'
+    })
     wx.showNavigationBarLoading();
     var that = this;
     var url = get_project_data_url + '&page=' + url_page + '&pageSize=4';
@@ -152,8 +159,13 @@ Page({
       })
     }
     wx.hideNavigationBarLoading();
+    wx.hideLoading();
   },
   onPullDownRefresh: function() {
+    wx.showNavigationBarLoading();
+    wx.showLoading({
+      title: '正在刷新...'
+    })
     var that = this;
     url_page = 1;
     var url = get_project_data_url + '&page=' + 1 + '&pageSize=4';

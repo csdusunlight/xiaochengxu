@@ -23,6 +23,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(app.globalData.userInfo);
+    console.log(app.globalData.userInfo.zhifubao)
+    console.log(app.globalData.userInfo.qq_number)
     console.log(options);
     wx.setNavigationBarTitle({
       title: options.title
@@ -40,6 +43,8 @@ Page({
     }
     var submitData_02 = this.data.submitData;
     submitData_02[3] = this.getNowFormatDate();
+    submitData_02[4] = app.globalData.userInfo.zhifubao;
+    submitData_02[7] = app.globalData.userInfo.qq_number;
     this.setData({
       itemShow: itemShow_02,
       submit_date: this.getNowFormatDate(),
@@ -66,6 +71,7 @@ Page({
     var formType = event.currentTarget.dataset.type;
     var formKey = Number(event.currentTarget.dataset.key);
     var formValue = event.detail.value;
+    console.log(formValue);
     var itemClass_02 = this.data.itemClass;
 
     var regNum = /^[0-9]*$/;
@@ -272,6 +278,7 @@ Page({
             that.uploadImg(investlog_id, that.data.canvasImgUrl, successUp, failUp, i, length)
           } else {
             wx.hideLoading();
+            wx.showToast({ title: '提交成功！' });
           }
         } else {
           wx.showModal({
@@ -365,7 +372,7 @@ Page({
         i++;
         if (i == length) {
           wx.hideLoading();
-          wx.showToast({ title: '' + successUp + '成功,' + failUp + '失败！' });
+          wx.showToast({ title: '' + '成功！截图：' + successUp });
         } else { //递归调用uploadDIY函数 
           that.uploadImg(investlog_id, filePaths, successUp, failUp, i, length);
         }
