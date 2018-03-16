@@ -69,7 +69,10 @@
     position: absolute;
     top: 25rpx;
 }
-
+.zhifubao{
+    margin-left: 35rpx;
+    font-size: 16px;
+}
 .yzhifubao {
     display: inline;
     color: #898989;
