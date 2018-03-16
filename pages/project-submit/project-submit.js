@@ -333,7 +333,7 @@ Page({
     console.log('prodImageOpt');
     var that = this;
     const ctx = wx.createCanvasContext('attendCanvasId');
-    ctx.drawImage(files[i - 1], 0, 0, 50, 90);
+    ctx.drawImage(files[i - 1], 0, 0, 75, 133);
     // ctx.draw();
     ctx.draw(false, function (e) {
 
