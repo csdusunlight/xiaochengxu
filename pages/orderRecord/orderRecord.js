@@ -19,14 +19,13 @@ Page({
     var that = this;
     that.loadMore();
   },
+  
   //删除数据
   delete: function (e) {
     console.log(e);
-
     let that = this;
     var token = wx.getStorageSync('token');//获取token
     var dId = e.currentTarget.id;//获取当前数据的id
-    // console.log("-- did --",dId);
     wx.showModal({
       title: '提示',
       content: '是否要删除该条数据？',

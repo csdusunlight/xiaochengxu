@@ -27,7 +27,6 @@ Page({
         let dataList = res.data;
         let submit_time = dataList.submit_time.split("T")[0];//截取提交时间T前面的字符串
         console.log(dataList);
-        // let sub_time = dataList.submit_time.substring(0,10);
         that.setData({
           array: dataList,
           "array.submit_time": submit_time
@@ -47,7 +46,6 @@ Page({
   click: function (e) {
     var that = this;
     console.log("pid:", pageId);//由全局变量传过来的pageId
-    //获取input的值
     var project_title = e.detail.value.project_title; //获取项目标题
     var sub_time = e.detail.value.submit_time; //获取提交时间
     var term_val = e.detail.value.term;  //获取标期
