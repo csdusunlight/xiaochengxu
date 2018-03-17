@@ -1,18 +1,17 @@
 {
   "pages":[
-    "pages/project-list/project-list",
+    "pages/index/index",
     "pages/project-submit/project-submit",
     "pages/QQ/QQ",
     "pages/Alipay/Alipay",
-    "pages/project-list/project-detail/project-detail",
+    "pages/index/project-detail/project-detail",
     "pages/project-quicksubmit/project-quicksubmit",
     "pages/accountBind/accountBind",
     "pages/orderRecord/orderRecord",
     "pages/dataEditor/dataEditor",
     "pages/user/user",
     "pages/msgCenter/msgCenter",
-    "pages/msgDetails/msgDetails",
-    "pages/logs/logs"
+    "pages/msgDetails/msgDetails"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,7 +22,7 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/project-list/project-list",
+        "pagePath": "pages/index/index",
         "text": "项目列表",
         "iconPath": "images/tab/projectlist.png",
         "selectedIconPath": "images/tab/projectlist_02.png"
