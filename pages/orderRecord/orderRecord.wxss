@@ -68,9 +68,9 @@
 }
 .derc{
     width: 750rpx;
-    height: 150rpx;
+    height: 75rpx;
     text-align: center;
-    line-height: 150rpx;
+    line-height: 75rpx;
 }
 .del{
   display: inline;
