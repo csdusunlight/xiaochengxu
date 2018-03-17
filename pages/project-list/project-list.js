@@ -22,7 +22,7 @@ Page({
     wx.setNavigationBarTitle({
       title: app.globalData.app_name
     })
-    var url = get_project_data_url + '&page=' + url_page + '&pageSize=4';
+    var url = get_project_data_url + '&page=' + url_page + '&pageSize=6';
     var that = this;
     wx.showNavigationBarLoading();
     util.http(url, 'get', '', function (res) {
@@ -111,7 +111,7 @@ Page({
     })
     wx.showNavigationBarLoading();
     var that = this;
-    var url = get_project_data_url + '&page=' + url_page + '&pageSize=4';
+    var url = get_project_data_url + '&page=' + url_page + '&pageSize=8';
     util.http(url, 'get','', function (res) {
       that.HandleData(res.results,'listData')
     });
@@ -175,7 +175,7 @@ Page({
     })
     var that = this;
     url_page = 1;
-    var url = get_project_data_url + '&page=' + 1 + '&pageSize=4';
+    var url = get_project_data_url + '&page=' + 1 + '&pageSize=8';
     util.http(url, 'get', '', function (res) {
       that.setData({
         noDataShow: false

@@ -9,8 +9,22 @@ page {
   width: 750rpx;
   z-index: 10;
 }
-.project-box {
-  margin-top: 48px;
+.banner-box {
+  position: relative;
+}
+.banner {
+  width: 750rpx;
+  height: 340rpx;
+}
+.banner-txt {
+  display: block;
+  position: absolute;
+  top: 170rpx;
+  width: 100%;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  /* font-weight: bold; */
 }
 .search {
   display: flex;
@@ -43,3 +57,15 @@ page {
   margin: 20rpx 0;
   color: #666;
 }
+/* 样式覆盖 */
+.weui-search-bar {
+  background-color: transparent;
+  border: none;
+}
+/* .weui-search-bar__cancel-btn {
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px;
+  font-size: 12px;
+  padding: 0 20rpx;
+  color: #fff;
+} */
