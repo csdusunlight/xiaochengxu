@@ -138,7 +138,9 @@ Page({
           img_url: data[i].project_picture,
           marks: data[i].marks
         }
-        
+        if (temp.img_url.indexOf('http') !== 0) {
+          temp.img_url = app.globalData.server_domain + temp.img_url
+        }
         if (settleKey == 'listData') {
           projectListData.push(temp);
         } else if (settleKey == 'searchData') {

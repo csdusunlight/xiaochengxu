@@ -1,6 +1,5 @@
 // pages/dataEditor/dataEditor.js
 var app = getApp();
-var token = wx.getStorageSync('token');
 var server_domain = app.globalData.server_domain;
 var pageId;
 Page({
@@ -14,7 +13,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var token = wx.getStorageSync('token');
     pageId = options.id; //获取该条数据的id
+    console.log(pageId);
     var that = this;
     wx.request({
       url: server_domain + "/xcx/investlogs/" + pageId,
@@ -26,6 +27,7 @@ Page({
       success: function (res) {
         let dataList = res.data;
         let submit_time = dataList.submit_time.split("T")[0];//截取提交时间T前面的字符串
+        // let submit_time = dataList.submit_time;
         console.log(dataList);
         that.setData({
           array: dataList,
