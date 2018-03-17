@@ -1,7 +1,6 @@
 // pages/accountBind/accountBind.js
 var settings = require('../../settings.js');
 var app = getApp();
-var token = wx.getStorageSync("token");
 var url = app.globalData.server_domain;
 Page({
 
