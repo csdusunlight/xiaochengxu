@@ -19,6 +19,15 @@ Page({
     });
   },
   HandleData: function(res) {
+    for(var i in res){
+      var items = res[i].item;
+      for(var j in items){
+        var logo = items[j].logo
+        if (logo.indexOf('http')!==0){
+          items[j].logo = app.globalData.server_domain + logo
+        }
+      }
+    }
     this.setData({
       projectListData: res
     })

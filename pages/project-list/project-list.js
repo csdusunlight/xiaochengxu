@@ -137,7 +137,9 @@ Page({
           isfutou: data[i].project_is_multisub_allowed,
           img_url: data[i].project_picture
         }
-        
+        if(temp.img_url.indexOf('http')!==0){
+          temp.img_url = app.globalData.server_domain + temp.img_url
+        }
         if (settleKey == 'listData') {
           projectListData.push(temp);
         } else if (settleKey == 'searchData') {
