@@ -238,6 +238,13 @@ Page({
         if (index != 8 && !this.data.submitData[index]) {
           formFlag = false
         }
+        if (!this.data.submitData[index]) {
+          var itemClass_02 = this.data.itemClass;
+          itemClass_02[index] = 'no';
+          this.setData({
+            itemClass: itemClass_02
+          })
+        }
       }
     }
     if (!formFlag) {
@@ -305,7 +312,10 @@ Page({
             that.uploadImg(investlog_id, that.data.canvasImgUrl, successUp, failUp, i, length)
           } else {
             wx.hideLoading();
-            wx.showToast({ title: '提交成功！' });
+            wx.showModal({
+              title: '提示',
+              content: '提交成功！',
+            })
           }
         } else {
           wx.showModal({
@@ -399,7 +409,10 @@ Page({
         i++;
         if (i == length) {
           wx.hideLoading();
-          wx.showToast({ title: '' + '成功！截图：' + successUp });
+          wx.showModal({
+            title: '提示',
+            content: '' + '成功！截图：' + successUp,
+          })
         } else { //递归调用uploadDIY函数 
           that.uploadImg(investlog_id, filePaths, successUp, failUp, i, length);
         }
