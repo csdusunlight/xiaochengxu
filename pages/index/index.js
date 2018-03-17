@@ -22,7 +22,7 @@ Page({
     wx.setNavigationBarTitle({
       title: app.globalData.app_name
     })
-    var url = get_project_data_url + '&page=' + url_page + '&pageSize=6';
+    var url = get_project_data_url + '&page=' + url_page + '&pageSize=8';
     var that = this;
     wx.showNavigationBarLoading();
     util.http(url, 'get', '', function (res) {
