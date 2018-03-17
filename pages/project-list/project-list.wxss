@@ -13,6 +13,7 @@ page {
   position: relative;
 }
 .banner {
+  display: block;
   width: 750rpx;
   height: 340rpx;
 }
@@ -62,10 +63,3 @@ page {
   background-color: transparent;
   border: none;
 }
-/* .weui-search-bar__cancel-btn {
-  background: rgba(0,0,0,0.2);
-  border-radius: 8px;
-  font-size: 12px;
-  padding: 0 20rpx;
-  color: #fff;
-} */
