@@ -1,23 +1,50 @@
-<!--pages/accountBind/accountBind.wxml-->
-<view class='wrapper'>
+<!-- <view class='wrapper'>
   <view class='list '>
     <view class='qqBox' bindtap='qqbind'>
-       <image src='../../images/QQ.png'></image> 
+      <image src='../../images/QQ.png'></image>
       <text class='qq'>QQ</text>
       <text wx:if="{{!bind_qq}}" class='bind'>未绑定</text>
-	  <block wx:else ="{{bind_qq}}">
-	  	<text class='bind1'>已绑定</text>
-	  </block>
+      <block wx:else="{{bind_qq}}">
+        <text class='bind1'>已绑定</text>
+      </block>
       <image src='../../images/r-icon.png' class='r-icon'></image>
     </view>
   </view>
   <view class='list'>
-      <view class='aliBox' bindtap='alibind'>
-        <image src='../../images/Alipay.png'></image>
-        <text class='zhifubao'>支付宝</text>
-        <text wx:if="{{!bindAlipay}}" class='aliBind'>未绑定</text>
-		<text wx:else="{{bindAlipay}}" class='yzhifubao'>已绑定</text>
-        <image src='../../images/r-icon.png' class='r-icon'></image>
+    <view class='aliBox' bindtap='alibind'>
+      <image src='../../images/Alipay.png'></image>
+      <text class='zhifubao'>支付宝</text>
+      <text wx:if="{{!bindAlipay}}" class='aliBind'>未绑定</text>
+      <text wx:else="{{bindAlipay}}" class='yzhifubao'>已绑定</text>
+      <image src='../../images/r-icon.png' class='r-icon'></image>
+    </view>
+  </view>
+</view> -->
+<view class='wrapper'>
+  <view class='qqBox' bindtap='qqbind'>
+    <view class='qq'>
+      <image src='../../images/QQ.png'></image>
+      <text class='txt'>QQ</text>
+    </view>
+    <view class='bind'>
+      <text wx:if="{{!bind_qq}}" class='bind'>未绑定</text>
+      <block wx:else="{{bind_qq}}">
+        <text class='bind1'>已绑定</text>
+      </block>
+      <image src='../../images/r-icon.png' class='r-icon'></image>
+    </view>
+  </view>
+  <view class='alipayBox' bindtap='alibind'>
+      <view class='alipay'>
+         <image src='../../images/Alipay.png'></image>
+         <text class='txt'>支付宝</text>
       </view>
+      <view class='bind'>
+      <text wx:if="{{!bind_qq}}" class='bind'>未绑定</text>
+      <block wx:else="{{bind_qq}}">
+        <text class='bind1'>已绑定</text>
+      </block>
+      <image src='../../images/r-icon.png' class='r-icon'></image>
+    </view>
   </view>
 </view>

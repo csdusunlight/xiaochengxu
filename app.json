@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/accountBind/accountBind",
     "pages/user/user",
     "pages/orderRecord/orderRecord",
     "pages/check/check",
@@ -9,7 +10,6 @@
     "pages/Alipay/Alipay",
     "pages/index/project-detail/project-detail",
     "pages/project-quicksubmit/project-quicksubmit",
-    "pages/accountBind/accountBind",
     "pages/dataEditor/dataEditor",
     "pages/msgCenter/msgCenter",
     "pages/msgDetails/msgDetails"
