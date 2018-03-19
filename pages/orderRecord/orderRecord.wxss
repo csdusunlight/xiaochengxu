@@ -1,6 +1,6 @@
 /* pages/orderRecord/orderRecord.wxss */
 
-.wrapper {
+/* .wrapper {
   width: 100%;
   display: flex;
 }
@@ -9,7 +9,6 @@
   width: 150rpx;
   height: 100rpx;
   background: #91c11d;
-  /* float: left; */
   font-size: 14px;
   color: white;
 }
@@ -77,4 +76,141 @@
 }
 .edt{
   display: inline;
+} */
+
+page {
+  background: #f4f4f4;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.dataBox {
+  width: 720rpx;
+  background: white;
+  margin: 20rpx auto;
+  border-radius: 8px;
+}
+
+.header {
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #f9f9f9;
+}
+
+.project {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 40rpx;
+}
+
+.amount {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.term {
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.return_money {
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.state {
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+}
+
+.refuse {
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.agree {
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.derc {
+  display: flex;
+  padding:15rpx 0; 
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.state2{
+  color: #fe2121;
+  margin-right: 20rpx;
+}
+.state1{
+  color: #ffc317;
+  margin-right: 20rpx;
+}
+.state0{
+  color: #b0d35e;
+  margin-right: 20rpx;
+}
+.refuseBox {
+  padding: 15rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #35cc38;
+}
+
+.wait {
+  width: 100%;
+  padding: 15rpx 0;
+  display: flex;
+  font-size: 14px;
+}
+
+.delete {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.edt {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #45d147;
+}
+
+.agree{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.check{
+  color: #5dd85f;
+}
+.rightItem{
+  margin-right: 20rpx;
 }

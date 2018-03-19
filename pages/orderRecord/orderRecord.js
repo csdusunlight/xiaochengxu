@@ -19,7 +19,41 @@ Page({
     var that = this;
     that.loadMore();
   },
-  
+  loadMore: function () {
+    var that = this;
+    pages = 1;
+    var token = wx.getStorageSync('token');
+    //判断用户是否登录，没有登陆，设置array没空；登陆了则进行request请求
+    if (!app.globalData.userInfo.nickName) {
+      that.setData({
+        array: ""
+      })
+    } else {
+      wx.request({
+        url: server_domain + '/xcx/investlogs/?page=' + pages + '&pageSize=' + pageSize,
+        method: "get",
+        header: {
+          'app-id': app.globalData.app_id,
+          'AUTHORIZATION': token
+        },
+        success: (res) => {
+          let dataList = res.data.results;
+          console.log("---dataList---:", dataList);
+          dataList.forEach((item) => {
+            item.submit_time = item.submit_time.substring(0, 10);
+          })
+          that.setData({
+            array: dataList,
+          })
+          // wx.stopPullDownRefresh() //停止下拉刷新
+          // wx.hideNavigationBarLoading() //完成停止加载
+        },
+        fail: function () {
+          console.log(1111111)
+        }
+      })
+    }
+  },
   //删除数据
   delete: function (e) {
     console.log(e);
@@ -32,7 +66,7 @@ Page({
       success: function (event) {
         if (event.confirm) {
           wx.request({
-            url: server_domain +'/xcx/investlogs/' + dId,
+            url: server_domain + '/xcx/investlogs/' + dId,
             method: "delete",
             data: {
               // id:dId
@@ -51,9 +85,7 @@ Page({
         } else if (event.cancel) {
           console.log("取消");
         }
-        
       }
-
     })
   },
   /**
@@ -90,41 +122,8 @@ Page({
     console.log("update");
     wx.showNavigationBarLoading();
     this.loadMore();
-  },
-  loadMore: function () {
-    var that = this;
-    pages = 1;
-    var token = wx.getStorageSync('token');
-    //判断用户是否登录，没有登陆，设置array没空；登陆了则进行request请求
-    if (!app.globalData.userInfo.nickName) {
-      that.setData({
-        array: ""
-      })
-    } else {
-      wx.request({
-        url: server_domain + '/xcx/investlogs/?page=' + pages + '&pageSize=' + pageSize,
-        method: "get",
-        header: {
-          'app-id': app.globalData.app_id,
-          'AUTHORIZATION': token
-        },
-        success: (res) => {
-          let dataList = res.data.results;
-          console.log("---dataList---:",dataList);
-          dataList.forEach((item) => {
-            item.submit_time = item.submit_time.substring(0, 10);
-          })
-          that.setData({
-            array: dataList,
-          })
-          wx.stopPullDownRefresh() //停止下拉刷新
-          wx.hideNavigationBarLoading() //完成停止加载
-        },
-        fail: function () {
-          console.log(1111111)
-        }
-      })
-    }
+    wx.stopPullDownRefresh() //停止下拉刷新
+    wx.hideNavigationBarLoading() //完成停止加载
   },
 
   /**

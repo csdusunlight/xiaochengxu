@@ -46,6 +46,7 @@ Page({
   },
   //提交数据
   click: function (e) {
+    var token = wx.getStorageSync('token');
     var that = this;
     console.log("pid:", pageId);//由全局变量传过来的pageId
     var project_title = e.detail.value.project_title; //获取项目标题
