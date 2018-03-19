@@ -1,54 +1,10 @@
-<!--pages/orderRecord/orderRecord.wxml-->
-<!-- <view class="wrapper">
-  <view class="leftBox">
-    <view class="proHeader">项目名称</view>
-    <block wx:for="{{array}}" data-id='{{index}}' wx:key="{{id}}">
-      <view class="proList">
-        {{item.project_title}}
-      </view>
-    </block>
-  </view>
-  <scroll-view scroll-x="true" class='r-header'>
-    <view class="dataList1">
-      <view class='headData'>提交时间</view>
-      <view class="headData">投资手机号</view>
-      <view class="headData">金额</view>
-      <view class="headData">返现金额</view>
-      <view class="headData">审核状态</view>
-      <view class="headData">投资日期</view>
-      <view class='headData'>标期</view>
-      <view class="headData">操作</view>
-    </view>
-    <block wx:for="{{array}}" wx:key="{{id}}">
-      <view class="dataList">
-        <view class="data">{{item.submit_time}}</view>
-        <view class="data">{{item.invest_mobile}}</view>
-        <view class="data">{{item.invest_amount}}</view>
-        <view class="data">{{item.return_amount}}</view>
-        <block>
-          <view class="data" wx:if="{{item.audit_state==2}}">审核未通过</view>
-          <view class="data" wx:elif="{{item.audit_state==1}}">待审核</view>
-          <view class="data" wx:else="{{item.audit_state==0}}">审核通过</view>
-        </block>
-        <view class="data">{{item.invest_date}}</view>
-       
-        <view class="data">{{item.invest_term}}</view>
-        <view class="data">
-          <text bindtap='delete' id="{{item.id}}">删除</text>
-          <text>/</text>
-          <navigator class='edt' url='../dataEditor/dataEditor?id={{item.id}}'>编辑</navigator>
-        </view>
-      </view>
-    </block>
-  </scroll-view>
-</view> -->
 <view class='wrapper'>
   <block wx:for="{{array}}" data-id='{{index}}' wx:key="{{id}}">
     <view class='dataBox'>
       <!-- 顶部 -->
       <view class='header list'>
-        <text class='project item'>{{item.project_title}}</text>
-        <text class='amount item rightItem'>￥{{item.invest_amount}}</text>
+        <text class='project item txtsize'>{{item.project_title}}</text>
+        <text class='amount item rightItem txtsize'>￥{{item.invest_amount}}</text>
       </view>
       <!-- 标期 返现金额 审核状态 -->
       <block>
@@ -95,7 +51,8 @@
           </view>
           <view class='wait' wx:if="{{item.audit_state==1}}">
             <view bindtap='delete' class='delete' id="{{item.id}}">删除</view>
-            <navigator class='edt' url='../dataEditor/dataEditor?id={{item.id}}'>编辑</navigator>
+            <!-- <navigator class='edt' url='../dataEditor/dataEditor?id={{item.id}}'>编辑</navigator> -->
+            <view class='edt' id="{{item.id}}" catchtap='editor'>编辑</view>
           </view>
           <view class='agree' wx:if="{{item.audit_state==0}}">
             <navigator class='check' url='../check/check?id={{item.id}}'>查看</navigator>

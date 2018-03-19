@@ -1,83 +1,3 @@
-/* pages/orderRecord/orderRecord.wxss */
-
-/* .wrapper {
-  width: 100%;
-  display: flex;
-}
-
-.leftBox {
-  width: 150rpx;
-  height: 100rpx;
-  background: #91c11d;
-  font-size: 14px;
-  color: white;
-}
-
-.proHeader {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 100rpx;
-}
-
-.proList {
-  display: flex;
-  color: #a6a6a6;
-  width: 150rpx;
-  height: 100rpx;
-   align-items:center; 
-   justify-content:center;
-   text-align: center;
-}
-
-.r-header {
-  width: 600rpx;
-  color: #fff;
-  white-space: nowrap;
-  font-size: 14px;
-  display: flex;
-}
-
-.dataList1 {
-  display: flex;
-  width: 1600rpx;
-}
-
-.headData {
-  width: 200rpx;
-  height: 100rpx;
-  text-align: center;
-  line-height: 100rpx;
-  color: #fff;
-   background: #91c11d; 
-}
-
-.dataList {
-  display: flex;
-  width: 1600rpx;
-  color: #888;
-}
-.data {
-  display: inline-block;
-  width: 200rpx;
-  height: 100rpx;
-  line-height: 100rpx;
-  text-align: center;
-  background: #fff;
-}
-.derc{
-    width: 750rpx;
-    height: 75rpx;
-    text-align: center;
-    line-height: 75rpx;
-}
-.del{
-  display: inline;
-}
-.edt{
-  display: inline;
-} */
-
 page {
   background: #f4f4f4;
 }
@@ -95,10 +15,10 @@ page {
 
 .header {
   width: 100%;
-  height: 70rpx;
+  padding: 15rpx 0;
   display: flex;
   justify-content: space-between;
-  border: 1px solid #f9f9f9;
+  border: 1px solid #e5e5e5;
 }
 
 .project {
@@ -117,19 +37,23 @@ page {
   justify-content: flex-end;
 }
 
+.txtsize{
+  font-size: 16px;
+}
+
 .term {
   width: 100%;
-  height: 70rpx;
+  height: 50rpx;
   display: flex;
   justify-content: space-between;
 }
 
 .return_money {
   width: 100%;
-  height: 70rpx;
+  height: 50rpx;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #f9f9f9;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .state {
@@ -192,6 +116,7 @@ page {
   justify-content: center;
   align-items: center;
   text-align: center;
+  border-right: 1px solid #e5e5e5; 
 }
 
 .edt {
