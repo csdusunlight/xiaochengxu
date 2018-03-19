@@ -27,7 +27,6 @@ Page({
       success: function (res) {
         let dataList = res.data;
         let submit_time = dataList.submit_time.split("T")[0];//截取提交时间T前面的字符串
-        // let submit_time = dataList.submit_time;
         console.log(dataList);
         that.setData({
           array: dataList,

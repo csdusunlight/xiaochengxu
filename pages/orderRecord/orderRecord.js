@@ -2,7 +2,7 @@ var settings = require('../../settings.js');
 var app = getApp();
 var server_domain = app.globalData.server_domain;
 var pages;     //设置分页
-var pageSize = 12; //加载数据的条数
+var pageSize = 5; //加载数据的条数
 Page({
   /**
    * 页面的初始数据
@@ -42,6 +42,7 @@ Page({
           dataList.forEach((item) => {
             item.submit_time = item.submit_time.substring(0, 10);
           })
+          pages ++;
           that.setData({
             array: dataList,
           })
@@ -136,7 +137,7 @@ Page({
     var that = this;
     console.log("下拉loading~");
     wx.request({
-      url: server_domain + '?page=' + pages + '&pageSize=' + pageSize,
+      url: server_domain + '/xcx/investlogs/?page=' + pages + '&pageSize=' + pageSize,
       method: "get",
       header: {
         'app-id': app.globalData.app_id,
@@ -153,6 +154,7 @@ Page({
             that.data.array.push(dataList[i])
           }
           pages++;
+          console.log("pages:",pages)
           that.setData({
             array: that.data.array
           })

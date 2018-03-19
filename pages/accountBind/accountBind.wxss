@@ -1,6 +1,4 @@
-/* pages/accountBind/accountBind.wxss */
-
-.wrapper {
+ .wrapper {
     width: 100%;
     background: white;
 }
@@ -13,8 +11,8 @@
 .qqBox {
     width: 720rpx;
     height: 80rpx;
-    margin-left: 30rpx;
-    position: relative;
+     margin-left: 30rpx; 
+     position: relative; 
     line-height: 75rpx;
     border-bottom: 1px solid #f2f2f2;
 }
@@ -22,8 +20,8 @@
 .qqBox>image {
     width: 29rpx;
     height: 33rpx;
-    position: absolute;
-    top: 25rpx;
+     position: absolute;
+    top: 25rpx; 
 }
 
 .qq {
@@ -46,7 +44,7 @@
 .r-icon {
     width: 14rpx;
     height: 14rpx;
-    margin-left: 10rpx;
+     margin-left: 10rpx; 
 }
 
 .aliBind {
@@ -66,8 +64,8 @@
 .aliBox>image {
     width: 35rpx;
     height: 35rpx;
-    position: absolute;
-    top: 25rpx;
+     position: absolute;
+    top: 25rpx; 
 }
 .zhifubao{
     margin-left: 40rpx;
@@ -78,4 +76,4 @@
     color: #898989;
     font-size: 16px;
     margin-left: 425rpx;
-}
+} 

@@ -58,21 +58,24 @@
             <text class='project item'>标期</text>
             <text class='amount item rightItem'>{{item.invest_term}}</text>
           </view>
-           <!-- 提交时间  -->
-          <block wx:if="{{item.audit_state==1}}"><!-- 待审核状态 -->
+          <!-- 提交时间  -->
+          <block wx:if="{{item.audit_state==1}}">
+            <!-- 待审核状态 -->
             <view class='term'>
               <text class='project item'>提交时间</text>
               <text class='amount item rightItem'>{{item.submit_time}}</text>
             </view>
           </block>
-          <block wx:elif="{{item.audit_state==2}}"><!-- 审核未通过 -->
+          <block wx:elif="{{item.audit_state==2}}">
+            <!-- 审核未通过 -->
             <view class='refuse'>
               <text class='project item'>拒绝原因</text>
               <text class='amount item rightItem'>{{item.return_amount}}</text>
             </view>
           </block>
-          <block wx:else="{{item.audit_state==0}}"><!-- 审核通过 -->
-             <view class='agree'>
+          <block wx:else="{{item.audit_state==0}}">
+            <!-- 审核通过 -->
+            <view class='agree'>
               <text class='project item'>返现金额</text>
               <text class='amount item rightItem'>{{item.return_amount}}</text>
             </view>
@@ -86,16 +89,16 @@
               <text class='state0' wx:else="{{item.audit_state==0}}">审核通过</text>
             </view>
           </view>
-           <!-- 按钮部分 -->
+          <!-- 按钮部分 -->
           <view class='refuseBox' wx:if="{{item.audit_state==2}}">
-                 <navigator class='check' url='../check/check?id={{item.id}}'>查看</navigator>
+            <navigator class='check' url='../check/check?id={{item.id}}'>查看</navigator>
           </view>
           <view class='wait' wx:if="{{item.audit_state==1}}">
-                 <view bindtap='delete' class='delete' id="{{item.id}}">删除</view>
-                 <navigator class='edt' url='../dataEditor/dataEditor?id={{item.id}}'>编辑</navigator>
+            <view bindtap='delete' class='delete' id="{{item.id}}">删除</view>
+            <navigator class='edt' url='../dataEditor/dataEditor?id={{item.id}}'>编辑</navigator>
           </view>
           <view class='agree' wx:if="{{item.audit_state==0}}">
-                <navigator class='check' url='../check/check?id={{item.id}}'>查看</navigator>
+            <navigator class='check' url='../check/check?id={{item.id}}'>查看</navigator>
           </view>
         </view>
       </block>
@@ -103,5 +106,5 @@
   </block>
 </view>
 
- <view wx:if="{{!array.length}}" class="derc">—— 暂无数据!——</view> 
+<view wx:if="{{!array.length}}" class="derc">—— 暂无数据!——</view>
 <view wx:if="{{xianshi}}" class="derc">—— 没有更多数据! ——</view>
