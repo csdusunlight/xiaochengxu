@@ -9,7 +9,11 @@ Page({
   data: {
     projectId: '',
     needs: '',
-    project: ''
+    project: '',
+    interest: '',
+    price: '',
+    term: '',
+    range: ''
   },
 
   onLoad: function (options) {
@@ -28,6 +32,10 @@ Page({
       project: options.project,
       needs: options.need_str,
       yuyue: options.yuyue,
+      intrest: options.intrest,
+      price: options.price,
+      term: options.term,
+      range: options.range
     })
 
   },

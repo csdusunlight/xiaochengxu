@@ -2,7 +2,6 @@
   <view class='project' data-test='{{yuyue}}'>
     <image wx:if='{{yuyue && project_state != 20}}' class='project__state' mode='widthFix' src='/images/bg-state-yuyue.png'></image>
     <image wx:elif='{{project_state == 20}}' class='project__state' mode='widthFix' src='/images/bg-state-end.png'></image>
-    <!-- <text class='project__title'>{{title}}</text> -->
     <view class='top-box'>
       <image class='project__img' src='{{img_url}}'></image>
       <view wx:if='{{marks}}' class='marks'>
@@ -25,12 +24,12 @@
       </view>
       <view class='project__term project__item'>
         <text class='project__item-txt'>投资标期</text>
-        <text class='project__item-num'>{{range}}</text>
+        <text class='project__item-num'>{{term}}</text>
 
       </view>
       <view class='project__range project__item'>
         <text class='project__item-txt'>投标区间</text>
-        <text class='project__item-num'>{{term}}</text>
+        <text class='project__item-num'>{{range}}</text>
       </view>
     </view>
   </view>

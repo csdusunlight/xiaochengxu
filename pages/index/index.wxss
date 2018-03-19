@@ -1,7 +1,9 @@
 @import "./project-template/project-template.wxss";
+
 page {
   background-color: #f0eff5;
 }
+
 .page__bd {
   position: fixed;
   top: 0;
@@ -9,64 +11,79 @@ page {
   width: 750rpx;
   z-index: 10;
 }
+
 .banner-box {
   position: relative;
 }
+
 .banner {
   display: block;
   width: 750rpx;
   height: 340rpx;
 }
+
 .banner-txt {
-  display: block;
+   display: table; 
   position: absolute;
   top: 140rpx;
   left: 218rpx;
   width: 314rpx;
   height: 132rpx;
-  line-height: 132rpx;
   background-color: rgba(255, 255, 255, 0.7);
-  text-align: center;
+  border-radius: 4px;
+}
+
+.banner-detailtxt {
+  display: table-cell;
+  vertical-align: middle;
   color: rgba(0, 0, 0, 0.7);
   font-size: 18px;
-  border-radius: 4px;
-  /* font-weight: bold; */
+  text-align: center;
 }
+
 .search {
   display: flex;
   flex-direction: row;
   width: 750rpx;
   height: 40px;
 }
+
 .search__input {
   width: 600rpx;
   height: 100%;
   margin-left: 20px;
-  
 }
+
 .placeholder {
   font-size: 12px;
 }
+
 .search__icon {
   margin: auto 0 auto 20px;
 }
+
 .search__cancel {
   margin: auto 10px auto 10px;
 }
+
 .project-box {
   background-color: #f0eff5;
   height: 1200rpx;
 }
+
 .search-wrapper {
   padding-top: 46px;
 }
+
 .no-data {
   display: block;
   text-align: center;
   margin: 20rpx 0;
   color: #666;
 }
+
 /* 样式覆盖 */
+
 .weui-search-bar {
   background-color: transparent;
   border: none;

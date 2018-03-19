@@ -73,8 +73,12 @@ Page({
     var yuyue = event.currentTarget.dataset.yuyue;
     var project = event.currentTarget.dataset.project;
     var isfutou = event.currentTarget.dataset.isfutou;
+    var intrest = event.currentTarget.dataset.intrest;
+    var price = event.currentTarget.dataset.price;
+    var term = event.currentTarget.dataset.term;
+    var range = event.currentTarget.dataset.range;
     wx.navigateTo({
-      url: "./project-detail/project-detail?id=" + projectId + "&title=" + title + "&project=" + project + "&need_str=" + need_str + "&yuyue=" + yuyue + "&isfutou=" + isfutou
+      url: "./project-detail/project-detail?id=" + projectId + "&title=" + title + "&project=" + project + "&need_str=" + need_str + "&yuyue=" + yuyue + "&isfutou=" + isfutou + "&intrest=" + intrest + "&price=" + price + "&term=" + term + "&range=" + range
     })
   },
   onSearchFocus: function () {

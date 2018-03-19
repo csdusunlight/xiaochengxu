@@ -1,21 +1,35 @@
 page {
   background: url('http://test.51fanshu.com/static/images/quicksub-0.jpg') center center /cover no-repeat;
 }
+text {
+  font-size: 16px;
+}
+.project-detail {
+  margin-top: 20px;
+}
+.project-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 60rpx;
+  color: #fff;
+  line-height: 36px;
+}
 .title-txt,.item-txt {
   padding: 0 60rpx;
   display: block;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   color: #fff;
 }
 .title-txt {
-  margin: 20px 0;
+  margin: 20px 0 10px;
 }
 .item-txt {
-  margin: 15px 0;
+  margin: 10px 0;
 }
 .btn-wrapper {
-  margin-top: 200rpx;
+  margin-top: 150rpx;
 }
 .btn {
   width: 690rpx;

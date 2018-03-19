@@ -27,10 +27,13 @@
   <view wx:if='{{listBoxShow}}'>
     <view class='banner-box'>
       <image class='banner' src='/images/xcx/banner.jpg'></image>
-      <text class='banner-txt'>全网最高返</text>
+      <view class='banner-txt'>
+        <text class='banner-detailtxt'>全网最高返</text>
+      </view>
     </view>
     <block wx:for="{{listData}}" wx:for-item="item" wx:for-index="idx">
-      <view bindtap='onProjectTab' data-id='{{item.id}}' data-title='{{item.title}}' data-needs='{{item.necessary_fields}}' data-yuyue='{{item.yuyue}}' data-project='{{item.project}}' data-isfutou='{{item.isfutou}}'>
+      <view bindtap='onProjectTab' data-id='{{item.id}}' data-title='{{item.title}}' data-needs='{{item.necessary_fields}}' data-yuyue='{{item.yuyue}}' data-project='{{item.project}}' data-isfutou='{{item.isfutou}}' data-intrest='{{item.year}}' data-price='{{item.return_amount}}'
+        data-term='{{item.term}}' data-range='{{item.range}}'>
         <template is='project' data='{{...item}}'></template>
       </view>
     </block>
@@ -38,7 +41,8 @@
   </view>
   <view wx:if='{{searchBoxShow}}' class='search-wrapper'>
     <block wx:for="{{searchData}}" wx:for-item="item" wx:for-index="idx">
-      <view bindtap='onProjectTab' data-id='{{item.id}}' data-title='{{item.title}}' data-needs='{{item.necessary_fields}}' data-yuyue='{{item.yuyue}}' data-project='{{item.project}}' data-isfutou='{{item.isfutou}}'>
+      <view bindtap='onProjectTab' data-id='{{item.id}}' data-title='{{item.title}}' data-needs='{{item.necessary_fields}}' data-yuyue='{{item.yuyue}}' data-project='{{item.project}}' data-isfutou='{{item.isfutou}}' data-intrest='{{item.year}}' data-price='{{item.return_amount}}'
+        data-term='{{item.term}}' data-range='{{item.range}}'>
         <template is='project' data='{{...item}}'></template>
       </view>
     </block>

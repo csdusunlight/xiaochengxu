@@ -28,7 +28,7 @@
   </view>
   <view wx:if='{{itemShow[4]}}' class='submit-item-box {{itemClass}}'>
     <text class='submit-item-txt'>收款信息<text class='submit-item-mark'>*</text></text>
-    <input bindblur='formTest' data-type='need' data-key='4' class='submit-item pass-{{itemClass[4]}}' placeholder='请输入收款信息' value='{{submitData[4]}}'></input>
+    <input id='zfb' bindblur='formTest' bindfocus='goBind' data-type='need' data-key='4' class='submit-item pass-{{itemClass[4]}}' placeholder='请输入收款信息' value='{{submitData[4]}}'></input>
     <text class='submit-item-tips' wx:if='{{itemClass[4] == "no"}}'>不能为空</text>
   </view>
   <view wx:if='{{itemShow[6]}}' class='submit-item-box'>
@@ -38,7 +38,7 @@
   </view>
   <view wx:if='{{itemShow[7]}}' class='submit-item-box'>
     <text class='submit-item-txt'>QQ<text class='submit-item-mark'>*</text></text>
-    <input bindblur='formTest' type='number' data-type='need' data-key='7' class='submit-item  pass-{{itemClass[7]}}' placeholder='请输入qq号码' value='{{submitData[7]}}'></input>
+    <input id='qq' bindblur='formTest' bindfocus='goBind' type='number' data-type='need' data-key='7' class='submit-item  pass-{{itemClass[7]}}' placeholder='请输入qq号码' value='{{submitData[7]}}'></input>
     <text class='submit-item-tips' wx:if='{{itemClass[7] == "no"}}'>您输入的qq号码不正确</text>
   </view>
   <view wx:if='{{isfutou}}' class='submit-item-box submit-item-box-radio'>
