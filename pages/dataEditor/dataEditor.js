@@ -17,6 +17,9 @@ Page({
     pageId = options.id; //获取该条数据的id
     console.log(pageId);
     var that = this;
+    wx.showLoading({
+      title: '正在加载',
+    })
     wx.request({
       url: server_domain + "/xcx/investlogs/" + pageId,
       method: "get",
@@ -32,6 +35,7 @@ Page({
           array: dataList,
           "array.submit_time": submit_time
         })
+        wx.hideLoading();
       }
     })
   },

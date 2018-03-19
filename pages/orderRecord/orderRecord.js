@@ -121,18 +121,25 @@ Page({
    */
   onPullDownRefresh: function () {
     console.log("update");
+    wx.showLoading({
+      title: '正在刷新',
+    })
     wx.showNavigationBarLoading();
     this.loadMore();
     wx.stopPullDownRefresh() //停止下拉刷新
     wx.hideNavigationBarLoading() //完成停止加载
+    wx.hideLoading();
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    wx.showNavigationBarLoading();
-    wx.hideNavigationBarLoading()
+    // wx.showNavigationBarLoading();
+    // wx.hideNavigationBarLoading()
+    wx.showLoading({
+      title: '正在加载',
+    })
     var token = wx.getStorageSync('token');
     var that = this;
     console.log("下拉loading~");
@@ -163,6 +170,7 @@ Page({
             xianshi: true
           })
         }
+        wx.hideLoading();
       }
     })
   },
