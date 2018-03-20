@@ -21,7 +21,7 @@ Page({
       title: '正在刷新',
     })
     wx.request({
-      url: server_domain + "/xcx/investlogs/" + pageId,
+      url: server_domain + "/xcx/investlogs/" + pageId +'/',
       method: "get",
       header: {
         'app-id': app.globalData.app_id,

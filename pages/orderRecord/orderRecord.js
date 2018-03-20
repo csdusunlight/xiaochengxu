@@ -61,7 +61,6 @@ Page({
     let that = this;
     var token = wx.getStorageSync('token');//获取token
     var dId = e.currentTarget.id;//获取当前数据的id
-    console.log("-----url:",url);
     wx.showModal({
       title: '提示',
       content: '是否要删除该条数据？',

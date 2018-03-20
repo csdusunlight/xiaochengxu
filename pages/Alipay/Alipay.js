@@ -25,6 +25,13 @@ Page({
     let that = this;
     var token = wx.getStorageSync("token");
     let Alipay = e.detail.value.qq;
+    if(!Alipay){
+      wx.showModal({
+        title: '提示',
+        content: '输入框不能为空',
+      })
+      return;
+    }
     wx.request({
       // url: 'http://test.51fanshu.com/xcx/update_userinfo/ ',
       url: url + '/xcx/update_userinfo/',
