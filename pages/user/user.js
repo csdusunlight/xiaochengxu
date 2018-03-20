@@ -45,6 +45,16 @@ Page({
           avatarUrl: avatarUrl,
           show:true
         });
+        var token = wx.getStorageSync('token')
+        wx.request({
+          url: app.globalData.server_domain + '/xcx/update_userinfo/',
+          data: res.userInfo,
+          method: 'POST',
+          header: {
+            'app-id': app.globalData.app_id,
+            'AUTHORIZATION': token
+          },
+        })
       }
     })
   },
