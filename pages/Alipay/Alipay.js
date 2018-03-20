@@ -49,20 +49,30 @@ Page({
       dataType: JSON,
       method: 'post',
       success: function (res) {
-        console.log(res);
-        wx.showModal({
-          title: '提示',
-          content: '修改成功！',
-          success: function (event) {
-            if (event.confirm) {
-              wx.navigateBack({
-                delta: 1
-              })
-            } else if (event.cancel) {
-              console.log("取消");
+        console.log(res.data);
+         //判断res.data是不是对象 不是的话转成对象
+        var jsonStr = res.data;
+        if (typeof jsonStr != 'object') {
+          jsonStr = jsonStr.replace(/\ufeff/g, "");//重点
+          var jj = JSON.parse(jsonStr);
+          res.data = jj;
+        }
+        console.log(res.data.code);
+        if(res.data.code == 0){
+          wx.showModal({
+            title: '提示',
+            content: '修改成功！',
+            success: function (event) {
+              if (event.confirm) {
+                wx.navigateBack({
+                  delta: 1
+                })
+              } else if (event.cancel) {
+                console.log("取消");
+              }
             }
-          }
-        })
+          })
+        }
           app.globalData.userInfo.zhifubao = Alipay;
       },
       fail: function () {

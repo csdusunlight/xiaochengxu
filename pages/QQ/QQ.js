@@ -27,48 +27,57 @@ Page({
     var token = wx.getStorageSync("token");
     let qq = e.detail.value.qq;
     let regx = /^[1-9]\d{4,9}$/;
-     if(!regx.test(qq)){
+    if (!regx.test(qq)) {
+      wx.showModal({
+        title: '提示',
+        content: '请输入正确的QQ号码',
+      })
+      return;
+    }
+    wx.request({
+      url: server_domain + "/xcx/update_userinfo/",
+      data: {
+        qq_number: qq
+      },
+      header: {
+        'app-id': app.globalData.app_id,
+        'AUTHORIZATION': token
+      },
+      dataType: JSON,
+      method: 'post',
+      success: function (res) {
+        //判断res.data是不是对象 不是的话转成对象
+        let jsonStr = res.data;
+        if (typeof jsonStr != 'object') {
+          jsonStr = jsonStr.replace(/\ufeff/g, "");//重点
+          var jj = JSON.parse(jsonStr);
+          res.data = jj;
+        }
+        console.log("-----------",res.data)
+        if (res.data.code == 0) {
+          wx.showModal({
+            title: '提示',
+            content: '修改成功！',
+            success: function (event) {
+              if (event.confirm) {
+                wx.navigateBack({
+                  delta: 1
+                })
+              } else if (event.cancel) {
+                console.log("取消");
+              }
+            }
+          })
+        }
+        app.globalData.userInfo.qq_number = qq;
+      },
+      fail: function () {
         wx.showModal({
           title: '提示',
-          content: '请输入正确的QQ号码',
-        })
-        return;
-     }
-     wx.request({
-       url: server_domain + "/xcx/update_userinfo/",
-       data: {
-         qq_number:qq
-       },
-       header: {
-         'app-id': app.globalData.app_id,
-         'AUTHORIZATION': token
-       },
-       dataType:JSON,
-       method: 'post',
-       success: function(res) {
-         console.log(res);
-         wx.showModal({
-           title: '提示',
-           content: '修改成功！',
-           success: function (event) {
-             if (event.confirm) {
-               wx.navigateBack({
-                 delta: 1
-               })
-             } else if (event.cancel) {
-               console.log("取消");
-             }
-           }
-         })
-         app.globalData.userInfo.qq_number = qq;
-       },
-       fail:function(){
-         wx.showModal({
-           title: '提示',
-           content: '修改失败',
-         });
-       }
-     })
+          content: '修改失败',
+        });
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

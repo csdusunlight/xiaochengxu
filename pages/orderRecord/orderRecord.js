@@ -91,6 +91,7 @@ Page({
       }
     })
   },
+  //跳转到编辑页面
   editor:function(e){
     let eId = e.currentTarget.id;//获取当条数据的id
     wx.navigateTo({
