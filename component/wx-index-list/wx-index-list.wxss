@@ -83,7 +83,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rpx 14rpx;
+  padding: 0rpx 14rpx;
   font-size: 30rpx;
   color: #666;
 }

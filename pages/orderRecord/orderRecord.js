@@ -60,6 +60,7 @@ Page({
     console.log(e);
     let that = this;
     var token = wx.getStorageSync('token');//获取token
+    console.log('token----------', token)
     var dId = e.currentTarget.id;//获取当前数据的id
     wx.showModal({
       title: '提示',
@@ -67,7 +68,7 @@ Page({
       success: function (event) {
         if (event.confirm) {
           wx.request({
-            url: server_domain + '/xcx/investlogs/' + dId+"/",
+            url: server_domain + '/xcx/investlogs/' + dId +'/',
             method: "delete",
             data: {
               // id:dId
@@ -76,11 +77,12 @@ Page({
               'app-id': app.globalData.app_id,
               'AUTHORIZATION': token
             },
-            success: function (e) {
+            success: function (res) {
+              console.log(res);
               wx.showToast({
                 title: '删除成功！',
               })
-              that.onPullDownRefresh();//删除成功后调用刷新方法
+              // that.onPullDownRefresh();//删除成功后调用刷新方法
             },
           })
         } else if (event.cancel) {

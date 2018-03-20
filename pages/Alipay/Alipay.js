@@ -52,7 +52,7 @@ Page({
           success: function (event) {
             if (event.confirm) {
               wx.navigateBack({
-                delta: 2
+                delta: 1
               })
             } else if (event.cancel) {
               console.log("取消");

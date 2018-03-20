@@ -65,7 +65,7 @@ Page({
     if (isQQ) {
       submitData_02[7] = app.globalData.userInfo.qq_number;
     }
-    
+
     this.setData({
       itemShow: itemShow_02,
       submit_date: this.getNowFormatDate(),
@@ -86,6 +86,21 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var submitData_02 = this.data.submitData;
+    var itemClass_02 = this.data.itemClass;
+    if (isZfb) {
+      submitData_02[4] = app.globalData.userInfo.zhifubao;
+      itemClass_02[4] = 'yes';
+    }
+    if (isQQ) {
+      submitData_02[7] = app.globalData.userInfo.qq_number;
+      itemClass_02[7] = 'yes';
+    }
+
+    this.setData({
+      submitData: submitData_02,
+      itemClass: itemClass_02
+    })
 
   },
   formTest: function (event) {
@@ -418,5 +433,42 @@ Page({
         }
       },
     });
+  },
+  goBind: (e) => {
+    var key = e.currentTarget.id
+    if (key == 'zfb') {
+      console.log('zfb');
+      if (!app.globalData.userInfo.zhifubao) {
+        wx.showModal({
+          title: '提示',
+          content: '检测到您没有绑定支付宝账号，是否前往绑定？',
+          success: function (res) {
+            if (res.confirm) {
+              wx.navigateTo({
+                url: "/pages/Alipay/Alipay"
+              })
+            } else if (res.cancel) {
+              return;
+            }
+          }
+
+        })
+      }
+    } else if (key == 'qq') {
+      console.log('qq');
+      if (!app.globalData.userInfo.qq_number) {
+        wx.showModal({
+          title: '提示',
+          content: '检测到您没有绑定QQ账号，是否前往绑定？',
+          success: function (res) {
+            if (res.confirm) {
+              wx.navigateTo({
+                url: "/pages/QQ/QQ"
+              })
+            }
+          }
+        })
+      }
+    }
   }
 })

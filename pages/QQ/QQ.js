@@ -34,41 +34,41 @@ Page({
         })
         return;
      }
-    wx.request({
-      url: server_domain + "/xcx/update_userinfo/",
-      data: {
-        qq_number: qq
-      },
-      header: {
-        'app-id': app.globalData.app_id,
-        'AUTHORIZATION': token
-      },
-      dataType: JSON,
-      method: 'post',
-      success: function (res) {
-        console.log(res);
-        wx.showModal({
-          title: '提示',
-          content: '修改成功！',
-          success: function (event) {
-            if (event.confirm) {
-              wx.navigateBack({
-                delta: 2
-              })
-            } else if (event.cancel) {
-              console.log("取消");
-            }
-          }
-        })
-        app.globalData.userInfo.qq_number = qq;
-      },
-      fail: function () {
-        wx.showModal({
-          title: '提示',
-          content: '修改失败',
-        });
-      }
-    })
+     wx.request({
+       url: server_domain + "/xcx/update_userinfo/",
+       data: {
+         qq_number:qq
+       },
+       header: {
+         'app-id': app.globalData.app_id,
+         'AUTHORIZATION': token
+       },
+       dataType:JSON,
+       method: 'post',
+       success: function(res) {
+         console.log(res);
+         wx.showModal({
+           title: '提示',
+           content: '修改成功！',
+           success: function (event) {
+             if (event.confirm) {
+               wx.navigateBack({
+                 delta: 1
+               })
+             } else if (event.cancel) {
+               console.log("取消");
+             }
+           }
+         })
+         app.globalData.userInfo.qq_number = qq;
+       },
+       fail:function(){
+         wx.showModal({
+           title: '提示',
+           content: '修改失败',
+         });
+       }
+     })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
