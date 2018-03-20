@@ -1,80 +1,141 @@
-/* pages/orderRecord/orderRecord.wxss */
+page {
+  background: #f4f4f4;
+}
 
 .wrapper {
   width: 100%;
-  display: flex;
 }
 
-.leftBox {
-  width: 150rpx;
-  height: 100rpx;
-  background: #91c11d;
-  /* float: left; */
-  font-size: 14px;
-  color: white;
+.dataBox {
+  width: 720rpx;
+  background: white;
+  margin: 20rpx auto;
+  border-radius: 8px;
 }
 
-.proHeader {
+.header {
   width: 100%;
+  padding: 15rpx 0;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e5e5e5;
+}
+
+.project {
+  width: 50%;
   height: 100%;
-  text-align: center;
-  line-height: 100rpx;
-}
-
-.proList {
   display: flex;
-  color: #a6a6a6;
-  width: 150rpx;
-  height: 100rpx;
-   align-items:center; 
-   justify-content:center;
-   text-align: center;
+  align-items: center;
+  margin-left: 40rpx;
 }
 
-.r-header {
-  width: 600rpx;
-  color: #fff;
-  white-space: nowrap;
+.amount {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.txtsize{
+  font-size: 16px;
+}
+
+.term {
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.return_money {
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.state {
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+}
+
+.refuse {
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.agree {
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.derc {
+  display: flex;
+  padding:15rpx 0; 
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
+}
+.state2{
+  color: #fe2121;
+  margin-right: 20rpx;
+}
+.state1{
+  color: #ffc317;
+  margin-right: 20rpx;
+}
+.state0{
+  color: #b0d35e;
+  margin-right: 20rpx;
+}
+.refuseBox {
+  padding: 15rpx 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #35cc38;
 }
 
-.dataList1 {
+.wait {
+  width: 100%;
+  padding: 15rpx 0;
   display: flex;
-  width: 1600rpx;
+  font-size: 14px;
 }
 
-.headData {
-  width: 200rpx;
-  height: 100rpx;
+.delete {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  line-height: 100rpx;
-  color: #fff;
-   background: #91c11d; 
+  border-right: 1px solid #e5e5e5; 
 }
 
-.dataList {
-  display: flex;
-  width: 1600rpx;
-  color: #888;
-}
-.data {
-  display: inline-block;
-  width: 200rpx;
-  height: 100rpx;
-  line-height: 100rpx;
+.edt {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background: #fff;
+  color: #45d147;
 }
-.derc{
-    width: 750rpx;
-    height: 150rpx;
-    text-align: center;
-    line-height: 150rpx;
+
+.agree{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
 }
-.del{
-  display: inline;
+.check{
+  color: #5dd85f;
 }
-.edt{
-  display: inline;
+.rightItem{
+  margin-right: 20rpx;
 }

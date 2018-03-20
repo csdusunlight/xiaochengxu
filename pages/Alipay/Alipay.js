@@ -27,7 +27,7 @@ Page({
     let Alipay = e.detail.value.qq;
     wx.request({
       // url: 'http://test.51fanshu.com/xcx/update_userinfo/ ',
-      url: url + '/xcx/update_userinfo /',
+      url: url + '/xcx/update_userinfo/',
       data: {
         zhifubao:Alipay
       },

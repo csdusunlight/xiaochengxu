@@ -6,7 +6,7 @@
             <image wx:if="{{!show}}" src='../../images/no-login.png'></image>
         </view>
         <text wx:if="{{show}}" class='userName'>{{nickName}}</text>
-        <text wx:if="{{!show}}" class='userName'>登陆</text>
+        <text wx:if="{{!show}}" class='userName'>微信登录</text>
         <button wx:if="{{!show}}" class='userName login' open-type="getUserInfo" bindgetuserinfo='login'>登陆</button>
     </view>
 

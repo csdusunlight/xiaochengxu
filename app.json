@@ -1,15 +1,16 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/orderRecord/orderRecord",
+    "pages/accountBind/accountBind",
+    "pages/user/user",
+    "pages/check/check",
     "pages/project-submit/project-submit",
     "pages/QQ/QQ",
     "pages/Alipay/Alipay",
     "pages/index/project-detail/project-detail",
     "pages/project-quicksubmit/project-quicksubmit",
-    "pages/accountBind/accountBind",
-    "pages/orderRecord/orderRecord",
     "pages/dataEditor/dataEditor",
-    "pages/user/user",
     "pages/msgCenter/msgCenter",
     "pages/msgDetails/msgDetails"
   ],

@@ -1,81 +1,66 @@
-/* pages/accountBind/accountBind.wxss */
-
 .wrapper {
-    width: 100%;
-    background: white;
-}
-
-.list {
-    width: 100%;
-    height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .qqBox {
-    width: 720rpx;
-    height: 80rpx;
-    margin-left: 30rpx;
-    position: relative;
-    line-height: 75rpx;
-    border-bottom: 1px solid #f2f2f2;
-}
-
-.qqBox>image {
-    width: 29rpx;
-    height: 33rpx;
-    position: absolute;
-    top: 25rpx;
+  width: 720rpx;
+  height: 80rpx;
+  border-bottom: 1px solid #efefef;
+  margin-left: 30rpx;
+  display: flex;
+  justify-content: space-between;
 }
 
 .qq {
-    margin-left: 45rpx;
-    font-size: 16px;
+  width: 200rpx;
+  height: 80rpx;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  text-align: center;
+}
+
+.qq > image {
+  width: 29rpx;
+  height: 33rpx;
+}
+
+.txt {
+  margin-left: 15rpx;
 }
 
 .bind {
-    margin-left: 470rpx;
-    font-size: 16px;
-    color: #888;
+  width: 148rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #939393;
 }
-
-.bind1 {
-    margin-left: 470rpx;
-    font-size: 16px;
-    color: #888;
-}
-
 .r-icon {
-    width: 14rpx;
-    height: 14rpx;
-    margin-left: 10rpx;
+    width: 30rpx;
+    height: 30rpx;
+}
+.alipayBox {
+  width: 720rpx;
+  height: 80rpx;
+  margin-left: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.alipay{
+  width: 200rpx;
+  height: 80rpx;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  text-align: center;
 }
 
-.aliBind {
-    margin-left: 420rpx;
-    font-size: 16px;
-    color: #888;
-}
-
-.aliBox {
-    width: 720rpx;
-    height: 80rpx;
-    margin-left: 30rpx;
-    position: relative;
-    line-height: 75rpx;
-}
-
-.aliBox>image {
-    width: 35rpx;
-    height: 35rpx;
-    position: absolute;
-    top: 25rpx;
-}
-.zhifubao{
-    margin-left: 40rpx;
-    font-size: 16px;
-}
-.yzhifubao {
-    display: inline;
-    color: #898989;
-    font-size: 16px;
-    margin-left: 425rpx;
+.alipay > image{
+  width: 35rpx;
+  height: 35rpx;
 }

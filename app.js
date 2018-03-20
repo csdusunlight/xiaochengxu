@@ -10,7 +10,9 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
+    var token = ''
+    var hasToken = false
+    var hasUserInfo = false
     // 登录
     wx.login({
       success: res => {
@@ -27,12 +29,26 @@ App({
           success: res => {
             console.log(res);
             if (res.data.code == 0){
+              token = res.data.token
               wx.setStorage({
                 key: "token",
-                data: res.data.token
+                data: token
               })
               // console.log("---this.globalData---", res.data)
               util.extend(this.globalData.userInfo, res.data)
+              hasToken = true 
+              if (hasUserInfo) {
+                console.log("updateuserinfo------------------")
+                wx.request({
+                  url: this.globalData.server_domain + '/xcx/update_userinfo/',
+                  data: this.globalData.userInfo,
+                  method: 'POST',
+                  header: {
+                    'app-id': this.globalData.app_id,
+                    'AUTHORIZATION': token
+                  },
+                })
+              }
               console.log("---this.globalData2---", this.globalData.userInfo)
             }
             else{
@@ -59,6 +75,20 @@ App({
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
               }
+              hasUserInfo = true
+              if(hasToken){
+                console.log("updateuserinfo------------------")
+                wx.request({
+                  url: this.globalData.server_domain + '/xcx/update_userinfo/',
+                  data: res.userInfo,
+                  method: 'POST',
+                  header: {
+                    'app-id': this.globalData.app_id,
+                    'AUTHORIZATION': token
+                  },
+                })
+              }
+              
             }
           })
         // }

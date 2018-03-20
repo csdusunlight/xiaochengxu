@@ -15,7 +15,6 @@
     <text class='remark'>投资日期</text>
     <view>
       <picker mode="date" bindchange='changeDate' value='{{array.invest_date}}' start="2018-1-1" end="{{2099-1-1}}">
-        <!-- <text class='picker'>{{array.invest_date}}</text>    -->
         <input class='ipt' type='text' name="date" value='{{array.invest_date}}' style='font-size:14px;'></input>
       </picker>
     </view>

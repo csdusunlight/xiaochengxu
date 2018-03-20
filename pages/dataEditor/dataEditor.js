@@ -17,8 +17,11 @@ Page({
     pageId = options.id; //获取该条数据的id
     console.log(pageId);
     var that = this;
+    wx.showLoading({
+      title: '正在加载',
+    })
     wx.request({
-      url: server_domain + "/xcx/investlogs/" + pageId,
+      url: server_domain + "/xcx/investlogs/" + pageId +'/',
       method: "get",
       header: {
         'app-id': app.globalData.app_id,
@@ -27,12 +30,12 @@ Page({
       success: function (res) {
         let dataList = res.data;
         let submit_time = dataList.submit_time.split("T")[0];//截取提交时间T前面的字符串
-        // let submit_time = dataList.submit_time;
         console.log(dataList);
         that.setData({
           array: dataList,
           "array.submit_time": submit_time
         })
+        wx.hideLoading();
       }
     })
   },
@@ -46,6 +49,7 @@ Page({
   },
   //提交数据
   click: function (e) {
+    var token = wx.getStorageSync('token');
     var that = this;
     console.log("pid:", pageId);//由全局变量传过来的pageId
     var project_title = e.detail.value.project_title; //获取项目标题
@@ -63,7 +67,7 @@ Page({
       return;
     }
     wx: wx.request({
-      url: server_domain + '/xcx/investlogs/' + pageId,
+      url: server_domain + '/xcx/investlogs/' + pageId + '/',
       data: {
         submit_time: sub_time,
         project_title: project_title,
