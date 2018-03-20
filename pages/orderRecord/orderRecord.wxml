@@ -3,59 +3,87 @@
     <view class='dataBox'>
       <!-- 顶部 -->
       <view class='header list'>
-        <text class='project item txtsize' style='color:#7e7e7e;'>{{item.project_title}}</text>
-        <text class='amount item rightItem txtsize' style='color:#4c4c4c;'>￥{{item.invest_amount}}</text>
+        <text class='project item txtsize' style='color:#9b9b9b;'>{{item.project_title}}</text>
+        <text class='amount item rightItem txtsize' style='color:black;'>￥{{item.invest_amount}}</text>
       </view>
       <!-- 标期 返现金额 审核状态 -->
       <block>
         <view class='main'>
           <!-- 标期 -->
           <view class='term'>
-            <text class='project item' style='color:#7e7e7e'>标期</text>
+            <text class='project item' style='color:#9b9b9b'>标期</text>
             <text class='amount item rightItem' style='color:#4c4c4c;'>{{item.invest_term}}</text>
           </view>
           <!-- 提交时间  -->
           <block wx:if="{{item.audit_state==1}}">
             <!-- 待审核状态 -->
             <view class='term'>
-              <text class='project item' style='color:#7e7e7e'>提交时间</text>
+              <text class='project item' style='color:#9b9b9b'>提交时间</text>
               <text class='amount item rightItem' style='color:#4c4c4c;'>{{item.submit_time}}</text>
             </view>
           </block>
           <block wx:elif="{{item.audit_state==2}}">
             <!-- 审核未通过 -->
-            <view class='refuse' style='color:#7e7e7e'>
+            <view class='refuse' style='color:#9b9b9b'>
               <text class='project item'>拒绝原因</text>
+                <text class='amount item rightItem' style='color:#4c4c4c;'>{{item.audit_reason}}</text>  
+            </view>
+          </block>
+          <block wx:elif="{{item.audit_state==0}}">
+            <!-- 审核通过 -->
+            <view class='agree'>
+              <text class='project item' style='color:#9b9b9b;'>返现金额</text>
               <text class='amount item rightItem' style='color:#4c4c4c;'>{{item.return_amount}}</text>
             </view>
           </block>
-          <block wx:else="{{item.audit_state==0}}">
-            <!-- 审核通过 -->
+          <!-- 异常状态 -->
+          <block wx:elif="{{item.audit_state==3}}">
             <view class='agree'>
-              <text class='project item' style='color:#7e7e7e'>返现金额</text>
-              <text class='amount item rightItem' style='color:#4c4c4c;'>{{item.return_amount}}</text>
+              <text class='project item' style='color:#9b9b9b'>提交时间</text>
+              <text class='amount item rightItem' style='color:#4c4c4c;'>{{item.submit_time}}</text>
+            </view>
+          </block>
+          <!-- 申诉状态 -->
+          <block wx:elif="{{item.audit_state==4}}">
+            <view class='agree'>
+              <text class='project item' style='color:#9b9b9b'>提交时间</text>
+              <text class='amount item rightItem' style='color:#4c4c4c;'>{{item.submit_time}}</text>
             </view>
           </block>
           <!-- 审核状态 -->
           <view class='return_money'>
-            <text class='project item' style='color:#7e7e7e'>审核状态</text>
+            <text class='project item' style='color:#9b9b9b'>审核状态</text>
             <view class='state'>
-              <text class='state2' wx:if="{{item.audit_state==2}}">审核未通过</text>
+              <text class='state4' wx:if="{{item.audit_state==4}}">申诉</text>
+              <text class='state3' wx:elif="{{item.audit_state==3}}">异常</text>
+              <text class='state2' wx:elif="{{item.audit_state==2}}">审核未通过</text>
               <text class='state1' wx:elif="{{item.audit_state==1}}">待审核</text>
               <text class='state0' wx:else="{{item.audit_state==0}}">审核通过</text>
             </view>
           </view>
           <!-- 按钮部分 -->
+          <!-- 审核不通过 -->
           <view class='refuseBox' wx:if="{{item.audit_state==2}}">
             <navigator class='check' url='../check/check?id={{item.id}}'>查看</navigator>
           </view>
+          <!-- 待审核 -->
           <view class='wait' wx:if="{{item.audit_state==1}}">
-            <view bindtap='delete' class='delete' id="{{item.id}}">删除</view>
+            <view bindtap='delete' class='delete' id="{{item.id}}" style='color:#9b9b9b;'>删除</view>
             <!-- <navigator class='edt' url='../dataEditor/dataEditor?id={{item.id}}'>编辑</navigator> -->
             <view class='edt' id="{{item.id}}" catchtap='editor'>编辑</view>
           </view>
+          <!-- 审核通过 -->
           <view class='agree' wx:if="{{item.audit_state==0}}">
             <navigator class='check' url='../check/check?id={{item.id}}'>查看</navigator>
+          </view>
+          <!-- 异常 -->
+          <view class='abnormal' wx:if="{{item.audit_state==3}}">
+            <navigator class='check' url='../check/check?id={{item.id}}'>查看</navigator>
+          </view>
+          <!-- 申诉 -->
+          <view class='complaint' wx:if="{{item.audit_state==4}}">
+            <view bindtap='delete' class='delete' id="{{item.id}}" style='color:#9b9b9b;'>删除</view>
+            <view class='edt' id="{{item.id}}" catchtap='editor'>编辑</view>
           </view>
         </view>
       </block>
