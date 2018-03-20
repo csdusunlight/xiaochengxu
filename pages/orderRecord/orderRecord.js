@@ -62,6 +62,7 @@ Page({
     var token = wx.getStorageSync('token');//获取token
     console.log('token----------', token)
     var dId = e.currentTarget.id;//获取当前数据的id
+    console.log("-----url:",url);
     wx.showModal({
       title: '提示',
       content: '是否要删除该条数据？',
@@ -89,6 +90,12 @@ Page({
           console.log("取消");
         }
       }
+    })
+  },
+  editor:function(e){
+    let eId = e.currentTarget.id;//获取当条数据的id
+    wx.navigateTo({
+      url: '../dataEditor/dataEditor?id='+eId+'/',
     })
   },
   /**

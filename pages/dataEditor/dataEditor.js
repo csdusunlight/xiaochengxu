@@ -21,7 +21,7 @@ Page({
       title: '正在加载',
     })
     wx.request({
-      url: server_domain + "/xcx/investlogs/" + pageId,
+      url: server_domain + "/xcx/investlogs/" + pageId +'/',
       method: "get",
       header: {
         'app-id': app.globalData.app_id,
@@ -67,7 +67,7 @@ Page({
       return;
     }
     wx: wx.request({
-      url: server_domain + '/xcx/investlogs/' + pageId,
+      url: server_domain + '/xcx/investlogs/' + pageId + '/',
       data: {
         submit_time: sub_time,
         project_title: project_title,
