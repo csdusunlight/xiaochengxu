@@ -1,4 +1,11 @@
 @import"../../style/weui.wxss";
+page{
+  background: #f4f4f4;
+}
+.page{
+  margin: 20rpx auto;
+  background: white;
+}
 .delete {
   width: 50%;
   justify-content: center;

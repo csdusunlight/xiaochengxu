@@ -93,13 +93,13 @@
       <view class="weui-form-preview__hd">
         <view class="weui-form-preview__item">
           <view class="weui-form-preview__label" style='color:#000000;'>{{item.project_title}}</view>
-          <view class="weui-form-preview__value_in-hd">{{item.invest_amount}}</view>
+          <view class="weui-form-preview__value_in-hd">￥{{item.invest_amount}}</view>
         </view>
       </view>
       <view class="weui-form-preview__bd">
         <view class="weui-form-preview__item">
           <view class="weui-form-preview__label">标期</view>
-          <view class="weui-form-preview__value">{{item.invest_term}}</view>
+          <view class="weui-form-preview__value">{{item.invest_term}}天</view>
         </view>
         <view class="weui-form-preview__item">
         <!-- 根据audit_state来渲染 -->
