@@ -1,12 +1,12 @@
 <view class='wrapper'>
   <form bindsubmit='submit'>
     <view class='containerBox'>
-      <view class='qqBox'>支付宝</view>
+      <view class='qqBox'>收款信息</view>
       <view class='txtBox'>
         <input type='text' name="qq" value='{{zhifubao}}'></input>
       </view>
     </view>
-    <text class='desc'>该支付宝用于交单时自动填入。</text>
+    <text class='desc'>该收款信息用于交单时自动填入。</text>
     <button class='btn' form-type='submit' size='default'>确认修改</button>
   </form>
 </view>

@@ -1,15 +1,15 @@
 <view class='wrapper'>
   <form bindsubmit='click'>
-    <text class='descText'>项目名称</text>
-      <input class='ipt' disabled='disabled' value='{{array.project_title}}' name="project_title"></input>
-    <text class='descText'>提交时间</text>
-      <input class='ipt' disabled='disabled' value='{{array.submit_time}}' name="sub_time"></input>
+    <text class='descText '>项目名称</text>
+      <input class='ipt project' disabled='disabled' value='{{array.project_title}}' name="project_title"></input>
+    <!-- <text class='descText'>提交时间</text>
+      <input class='ipt' disabled='disabled' value='{{array.submit_time}}' name="sub_time"></input> -->
     <text class='descText'>投资标期</text>
     <input class='ipt' type='text' placeholder='请输入投资标期' value='{{array.invest_term}}' name="term"></input>
     <text class='descText'>金额</text>
     <input class='ipt' placeholder='请输入金额' type='text' value='{{array.invest_amount}}' bindblur='checkAomunt' name="amount"></input>
-    <text class='descText'>返现金额</text>
-    <input class='ipt' placeholder='请输入返现金额'  value='{{array.return_amount}}' type='text' bindblur='checkMoney' name="return_amount"></input>
+    <!-- <text class='descText'>返现金额</text>
+    <input class='ipt' placeholder='请输入返现金额'  value='{{array.return_amount}}' type='text' bindblur='checkMoney' name="return_amount"></input> -->
     <text class='remark'>投资手机号</text>
     <input class='ipt' placeholder='请输入投资手机号' type='text' bindblur='checkNum' value='{{array.invest_mobile}}' name="phone_num"></input>
     <text class='remark'>投资日期</text>

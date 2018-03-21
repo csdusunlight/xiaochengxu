@@ -56,10 +56,10 @@ Page({
     var sub_time = e.detail.value.submit_time; //获取提交时间
     var term_val = e.detail.value.term;  //获取标期
     var amount_val = e.detail.value.amount; //获取金额
-    var return_amount = e.detail.value.return_amount; //获取返现金额
+    // var return_amount = e.detail.value.return_amount; //获取返现金额
     var phone = e.detail.value.phone_num; //获取手机号
     var date_val = e.detail.value.date; //获取投资日期
-    if (!term_val || !amount_val || !return_amount || !phone) {
+    if (!term_val || !amount_val || !phone) {
       wx.showModal({
         title: '提示',
         content: '输入框不能为空',
@@ -73,7 +73,6 @@ Page({
         project_title: project_title,
         invest_term: term_val,
         invest_amount: amount_val,
-        return_amount: return_amount,
         invest_mobile: phone,
         invest_date: date_val
       },

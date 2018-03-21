@@ -25,17 +25,17 @@ Page({
     let that = this;
     var token = wx.getStorageSync("token");
     let Alipay = e.detail.value.qq;
-    if (/^0?(13[0-9]|15[012356789]|18[0123456789]|14[0123456789]|17[0123456789])[0-9]{8}$/.test(Alipay)){
-        console.log("支付宝为数字");
-    } else if (/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(Alipay)){
-        console.log("支付宝为邮箱");
-    }else{
-      wx.showModal({
-        title: '提示',
-        content: '请输入正确的格式',
-      })
-      return;
-    }
+    // if (/^0?(13[0-9]|15[012356789]|18[0123456789]|14[0123456789]|17[0123456789])[0-9]{8}$/.test(Alipay)){
+    //     console.log("收款信息为数字");
+    // } else if (/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(Alipay)){
+    //     console.log("收款信息为邮箱");
+    // }else{
+    //   wx.showModal({
+    //     title: '提示',
+    //     content: '请输入正确的格式',
+    //   })
+    //   return;
+    // }
     wx.request({
       // url: 'http://test.51fanshu.com/xcx/update_userinfo/ ',
       url: url + '/xcx/update_userinfo/',

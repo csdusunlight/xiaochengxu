@@ -49,3 +49,6 @@
   background: #09ba07;
   color: white;
 }
+.project{
+  border: none;
+}
