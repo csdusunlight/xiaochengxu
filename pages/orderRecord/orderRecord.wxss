@@ -29,3 +29,18 @@ page{
   align-items: center;
   font-size: 14px;
 }
+.state2{
+    color: #fe0001;
+}
+.state1{
+    color: #fecb33;
+}
+.state0{
+    color: #9ec946;
+}
+.state3{
+    color: #ffbe00;
+}
+.state4{
+    color: #ffbe00;
+}
