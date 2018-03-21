@@ -50,5 +50,5 @@
   color: white;
 }
 .project{
-  border: none;
+   border-color: #dcdcdc;
 }

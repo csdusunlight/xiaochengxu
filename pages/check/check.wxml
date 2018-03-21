@@ -15,5 +15,9 @@
   <view>
     <input disabled='disabled' class='ipt' type='text' name="date" value='{{array.invest_date}}' style='font-size:14px;'></input>
   </view>
+  <text class='descText'>收款信息</text>
+  <input class='ipt project' disabled='disabled' value="{{array.zhifubao}}"></input>
+  <text class='descText'>QQ</text>
+  <input class='ipt project' disabled='disabled' value="{{array.qq_number}}"></input>
   <button size='default' class='btn' bindtap='retrun'>确定</button>
 </view>

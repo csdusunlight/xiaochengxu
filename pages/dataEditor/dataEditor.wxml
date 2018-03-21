@@ -2,8 +2,8 @@
   <form bindsubmit='click'>
     <text class='descText '>项目名称</text>
       <input class='ipt project' disabled='disabled' value='{{array.project_title}}' name="project_title"></input>
-    <!-- <text class='descText'>提交时间</text>
-      <input class='ipt' disabled='disabled' value='{{array.submit_time}}' name="sub_time"></input> -->
+     <text class='descText'>提交时间</text>
+      <input class='ipt' disabled='disabled' value='{{array.submit_time}}' name="sub_time"></input> 
     <text class='descText'>投资标期</text>
     <input class='ipt' type='text' placeholder='请输入投资标期' value='{{array.invest_term}}' name="term"></input>
     <text class='descText'>金额</text>
@@ -18,6 +18,10 @@
         <input class='ipt' type='text' name="date" value='{{array.invest_date}}' style='font-size:14px;'></input>
       </picker>
     </view>
+    <text class='descText'>收款信息</text>
+    <input class='ipt project' disabled='disabled' value="{{array.zhifubao}}"></input>
+    <text class='descText'>QQ</text>
+    <input class='ipt project' disabled='disabled' value="{{array.qq_number}}"></input>
     <button size='default' class='btn' form-type='submit' id="{{array.id}}">确定</button>
   </form>
 </view>
