@@ -1,0 +1,7 @@
+<!--pages/projectDetails/projectDetails.wxml-->
+<view class='wrapper'>
+  <p class="title">合时代一期</p>
+  <p>平台背景：</p>
+  <span class="desc">线下四大巨头之一的东方银谷旗下子品牌，大量真实投资客户群体，日成交额位于行业钱20名。总交易额近300亿。西安银行之恋存管。多部热播网络剧进行广告冠名或植入，近期播出的由范冰冰主演的赢天下将会看到银谷的植入。</span>
+
+</view>

@@ -46,8 +46,8 @@ Page({
           that.setData({
             array: dataList,
           })
-          // wx.stopPullDownRefresh() //停止下拉刷新
-          // wx.hideNavigationBarLoading() //完成停止加载
+          wx.stopPullDownRefresh() //停止下拉刷新
+          wx.hideNavigationBarLoading() //完成停止加载
         },
         fail: function () {
           console.log(1111111)
@@ -135,8 +135,8 @@ Page({
     })
     wx.showNavigationBarLoading();
     this.loadMore();
-    wx.stopPullDownRefresh() //停止下拉刷新
-    wx.hideNavigationBarLoading() //完成停止加载
+    // wx.hideNavigationBarLoading() //完成停止加载
+    // wx.stopPullDownRefresh() //停止下拉刷新
     wx.hideLoading();
   },
 

@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/Information/Information",
+    "pages/projectDetails/projectDetails",
     "pages/orderRecord/orderRecord",
     "pages/accountBind/accountBind",
     "pages/user/user",
