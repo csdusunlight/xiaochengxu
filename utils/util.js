@@ -35,6 +35,23 @@ function http(url,method,data,callBack) {
   })
 }
 
+function getAuditeState(that) {
+  const app = getApp();
+  if (app.globalData.userInfo.is_on_audite) {
+    that.setData({
+      is_on_audite: app.globalData.userInfo.is_on_audite
+    })
+  } else {
+    // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+    // 所以此处加入 callback 以防止这种情况
+    app.userInfoChangeCallback = res => {
+      that.setData({
+        is_on_audite: app.globalData.userInfo.is_on_audite
+      })
+    }
+  }
+}
+
 //extend方法
 function extend(des, src, override) {
   if (src instanceof Array) {
@@ -56,5 +73,6 @@ function extend(des, src, override) {
 module.exports = {
   formatTime: formatTime,
   http: http,
+  getAuditeState: getAuditeState,
   extend:extend
 }

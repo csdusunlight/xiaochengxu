@@ -28,7 +28,7 @@
     <view class='banner-box'>
       <image class='banner' src='/images/xcx/banner.jpg'></image>
       <view class='banner-txt'>
-        <text class='banner-detailtxt'>全网最高返</text>
+        <text class='banner-detailtxt'>网贷投资攻略助手</text>
       </view>
     </view>
     <block wx:for="{{listData}}" wx:for-item="item" wx:for-index="idx">

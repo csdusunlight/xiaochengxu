@@ -36,6 +36,11 @@ App({
               })
               // console.log("---this.globalData---", res.data)
               util.extend(this.globalData.userInfo, res.data)
+              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+              // 所以此处加入 callback 以防止这种情况
+              if (this.userInfoChangeCallback) {
+                this.userInfoChangeCallback(res)
+              }
               hasToken = true 
               if (hasUserInfo) {
                 console.log("updateuserinfo------------------")

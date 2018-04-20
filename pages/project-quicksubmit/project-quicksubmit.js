@@ -1,7 +1,6 @@
 // pages/demo/demo.js
 var util = require('../../utils/util.js')
 var app = getApp();
-
 Page({
 
   data: {
@@ -13,6 +12,7 @@ Page({
     })
     wx.showNavigationBarLoading();
     var that = this;
+    util.getAuditeState(this);
     var url = app.globalData.server_domain + '/xcx/get_project_list/';
     util.http(url, 'get', '', function (res) {
       that.HandleData(res);
