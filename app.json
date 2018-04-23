@@ -32,7 +32,7 @@
       },
       {
         "pagePath": "pages/project-quicksubmit/project-quicksubmit",
-        "text": "快速交单",
+        "text": "发现",
         "iconPath": "images/tab/quicksubmit.png",
         "selectedIconPath": "images/tab/quicksubmit_02.png"
       },

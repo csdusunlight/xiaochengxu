@@ -1,6 +1,5 @@
 var util = require('../../utils/util.js')
 var app =  getApp();
-console.log(app.globalData);
 var get_project_data_url = app.globalData.server_domain + '/restapi/sub/?is_on=true';
 var projectListData = [];
 var searchListData = [];
@@ -15,15 +14,35 @@ Page({
     searchData: [],
     listBoxShow: true,
     searchBoxShow: false,
-    noDataShow: false
+    noDataShow: false,
   },
 
   onLoad: function (options) {
     wx.setNavigationBarTitle({
       title: app.globalData.app_name
     })
-    var url = get_project_data_url + '&page=' + url_page + '&pageSize=8';
     var that = this;
+    util.getAuditeState(this);
+    var url = get_project_data_url + '&page=' + url_page + '&pageSize=8';
+    // if (this.data.is_on_audite) {
+    //   console.log(true)
+    //   url = get_project_data_url + '&page=' + url_page + '&pageSize=8' + '&is_official=3';
+    // } else {
+    //   console.log(false)
+    // }
+    // if (app.globalData.userInfo.is_on_audite) {
+    //   this.setData({
+    //     is_on_audite: app.globalData.userInfo.is_on_audite
+    //   })
+    // } else {
+    //   // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+    //   // 所以此处加入 callback 以防止这种情况
+    //   app.userInfoChangeCallback = res => {
+    //     this.setData({
+    //       is_on_audite: app.globalData.userInfo.is_on_audite
+    //     })
+    //   }
+    // }
     wx.showNavigationBarLoading();
     util.http(url, 'get', '', function (res) {
       that.HandleData(res.results,'listData')
@@ -140,7 +159,8 @@ Page({
           necessary_fields: data[i].necessary_fields,
           isfutou: data[i].project_is_multisub_allowed,
           img_url: data[i].project_picture,
-          marks: data[i].marks
+          marks: data[i].marks,
+          is_on_audite: that.data.is_on_audite
         }
         if (temp.img_url.indexOf('http') !== 0) {
           temp.img_url = app.globalData.server_domain + temp.img_url
