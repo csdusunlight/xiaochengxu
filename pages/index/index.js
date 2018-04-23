@@ -21,9 +21,15 @@ Page({
     wx.setNavigationBarTitle({
       title: app.globalData.app_name
     })
-    var url = get_project_data_url + '&page=' + url_page + '&pageSize=8';
     var that = this;
     util.getAuditeState(this);
+    var url = get_project_data_url + '&page=' + url_page + '&pageSize=8';
+    // if (this.data.is_on_audite) {
+    //   console.log(true)
+    //   url = get_project_data_url + '&page=' + url_page + '&pageSize=8' + '&is_official=3';
+    // } else {
+    //   console.log(false)
+    // }
     // if (app.globalData.userInfo.is_on_audite) {
     //   this.setData({
     //     is_on_audite: app.globalData.userInfo.is_on_audite
@@ -37,7 +43,6 @@ Page({
     //     })
     //   }
     // }
-    console.log(this.data.is_on_audite);
     wx.showNavigationBarLoading();
     util.http(url, 'get', '', function (res) {
       that.HandleData(res.results,'listData')

@@ -1,3 +1,4 @@
+var util = require('../../../utils/util.js')
 var id='';
 var title = '';
 var project = '';
@@ -24,6 +25,9 @@ Page({
     yuyue = options.yuyue;
     isfutou = options.isfutou;
     console.log(options);
+
+    util.getAuditeState(this);
+
     wx.setNavigationBarTitle({
       title: title
     })

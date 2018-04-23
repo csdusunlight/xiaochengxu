@@ -1,29 +1,34 @@
 <!--pages/projectdetail/projectdetail.wxml-->
-<view class='project-detail'>
-  <view class='project-item'>
-    <text>预计最高年化</text>
-    <text>{{intrest}}%</text>
-  </view>
-  <view class='project-item'>
-    <text>返现价格</text>
-    <text>{{price}}</text>
-  </view>
-  <view class='project-item'>
-    <text>投资标期</text>
-    <text>{{term}}</text>
-  </view>
-  <view class='project-item'>
-    <text>投标区间</text>
-    <text>{{range}}</text>
-  </view>
+<view wx:if="{{is_on_audite}}">
+  <text>内容</text>
 </view>
-<view class='text-wrapper'>
-  <text class='title-txt'>交单注意事项</text>
-  <text class='item-txt'>1、请严格按照实际投资时间、金额、标期、电话进行填写。</text>
-  <text class='item-txt'>2、投资金额、投资标期只能为纯数字。</text>
-  <text class='item-txt'>3、请严格按照攻略交单要求填写相关信息。</text>
-</view>
-<view class='btn-wrapper'>
-  <button class='btn' type="primary" open-type="contact" session-from="project_{{project}}">查看攻略</button>
-  <button bindtap='onSubmit' class='btn' data-id='{{id}}' data-needs='{{needs}}' data-yuyue='{{yuyue}}' type="primary" plain="true">交单</button>
+<view wx:else>
+  <view class='project-detail'>
+    <view class='project-item'>
+      <text>预计最高年化</text>
+      <text>{{intrest}}%</text>
+    </view>
+    <view class='project-item'>
+      <text>返现价格</text>
+      <text>{{price}}</text>
+    </view>
+    <view class='project-item'>
+      <text>投资标期</text>
+      <text>{{term}}</text>
+    </view>
+    <view class='project-item'>
+      <text>投标区间</text>
+      <text>{{range}}</text>
+    </view>
+  </view>
+  <view class='text-wrapper'>
+    <text class='title-txt'>交单注意事项</text>
+    <text class='item-txt'>1、请严格按照实际投资时间、金额、标期、电话进行填写。</text>
+    <text class='item-txt'>2、投资金额、投资标期只能为纯数字。</text>
+    <text class='item-txt'>3、请严格按照攻略交单要求填写相关信息。</text>
+  </view>
+  <view class='btn-wrapper'>
+    <button class='btn' type="primary" open-type="contact" session-from="project_{{project}}">查看攻略</button>
+    <button bindtap='onSubmit' class='btn' data-id='{{id}}' data-needs='{{needs}}' data-yuyue='{{yuyue}}' type="primary" plain="true">交单</button>
+  </view>
 </view>

@@ -1,10 +1,12 @@
 // pages/demo/demo.js
 var util = require('../../utils/util.js')
+var dataList = require("../../data/data.js")
 var app = getApp();
 Page({
 
   data: {
-    projectListData: []
+    projectListData: [],
+    auditeData: []
   },
   onLoad: function (options) {
     wx.setNavigationBarTitle({
@@ -12,6 +14,10 @@ Page({
     })
     wx.showNavigationBarLoading();
     var that = this;
+    var auditeData = dataList.listData.results;
+    this.setData({
+      auditeData: auditeData
+    })
     util.getAuditeState(this);
     var url = app.globalData.server_domain + '/xcx/get_project_list/';
     util.http(url, 'get', '', function (res) {
