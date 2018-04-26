@@ -1,6 +1,8 @@
 <!--pages/projectdetail/projectdetail.wxml-->
 <view wx:if="{{is_on_audite}}">
-  <text>内容</text>
+    <view class='details_box'>
+       <text>{{desc}}</text>
+    </view>
 </view>
 <view wx:else>
   <view class='project-detail'>
