@@ -1,0 +1,9 @@
+<!--pages/projectDetails/projectDetails.wxml-->
+<view wx:if='{{detailData}}'>
+  <view class='content'>
+    <text>{{detailData.text}}</text>
+  </view>
+</view>
+<view wx:else>
+  <text>出现了点小问题</text>
+</view>

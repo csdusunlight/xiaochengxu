@@ -35,3 +35,8 @@ text {
   width: 690rpx;
   margin-bottom: 26px;
 }
+.details_box{
+  width: 90%;
+  color: white;
+  margin: 60rpx auto;
+}

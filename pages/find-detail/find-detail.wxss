@@ -1,0 +1,5 @@
+/* pages/projectDetails/projectDetails.wxss */
+.content {
+  margin: 30px 20rpx 20px;
+  font-size: 16px;
+}

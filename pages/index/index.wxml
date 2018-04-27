@@ -7,9 +7,9 @@
         <text class='banner-detailtxt'>网贷投资攻略助手</text>
       </view>
     </view>
-    <block wx:for="{{listData}}" wx:for-item="item" wx:for-index="idx">
-      <view bindtap='onProjectTab' data-id='{{item.id}}' data-title='{{item.title}}' data-needs='{{item.necessary_fields}}' data-yuyue='{{item.yuyue}}' data-project='{{item.project}}' data-isfutou='{{item.isfutou}}' data-intrest='{{item.year}}' data-price='{{item.return_amount}}'
-        data-term='{{item.term}}' data-range='{{item.range}}'>
+    <block wx:for="{{projectData}}" wx:for-item="item" wx:for-index="idx">
+      <view bindtap='projectTab' data-id='{{item.id}}' data-title='{{item.title}}' data-needs='{{item.necessary_fields}}' data-yuyue='{{item.yuyue}}' data-project='{{item.project}}' data-isfutou='{{item.isfutou}}' data-intrest='{{item.year}}' data-price='{{item.return_amount}}'
+        data-term='{{item.term}}' data-range='{{item.range}}' data-desc='{{item.desc}}'>
         <template is='project' data='{{...item}}'></template>
       </view>
     </block>

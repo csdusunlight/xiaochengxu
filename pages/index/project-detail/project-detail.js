@@ -5,6 +5,7 @@ var project = '';
 var needs = '';
 var yuyue = '';
 var isfutou = '';
+var desc = ''
 Page({
 
   data: {
@@ -14,7 +15,8 @@ Page({
     interest: '',
     price: '',
     term: '',
-    range: ''
+    range: '',
+    desc:''
   },
 
   onLoad: function (options) {
@@ -24,6 +26,7 @@ Page({
     needs = options.need_str;
     yuyue = options.yuyue;
     isfutou = options.isfutou;
+    desc = options.desc
     console.log(options);
 
     util.getAuditeState(this);
@@ -39,7 +42,8 @@ Page({
       intrest: options.intrest,
       price: options.price,
       term: options.term,
-      range: options.range
+      range: options.range,
+      desc : options.desc
     })
 
   },

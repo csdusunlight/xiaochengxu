@@ -1,4 +1,5 @@
 var util = require('../../utils/util.js')
+var dataList = require("../../data/projectData.js");
 var app =  getApp();
 var get_project_data_url = app.globalData.server_domain + '/restapi/sub/?is_on=true';
 var projectListData = [];
@@ -15,6 +16,7 @@ Page({
     listBoxShow: true,
     searchBoxShow: false,
     noDataShow: false,
+    projectData:[]
   },
 
   onLoad: function (options) {
@@ -24,6 +26,9 @@ Page({
     var that = this;
     util.getAuditeState(this);
     var url = get_project_data_url + '&page=' + url_page + '&pageSize=8';
+    that.setData({
+      projectData: dataList.projectData.results
+    })
     // if (this.data.is_on_audite) {
     //   console.log(true)
     //   url = get_project_data_url + '&page=' + url_page + '&pageSize=8' + '&is_official=3';
@@ -84,6 +89,23 @@ Page({
     util.http(url, 'get', '', function (res) {
       that.HandleData(res.results, 'searchData')
     });
+  },
+  //跳转
+  projectTab: function (event){
+    var projectId = event.currentTarget.dataset.id;
+    var title = event.currentTarget.dataset.title;
+    var need_str = event.currentTarget.dataset.needs;
+    var yuyue = event.currentTarget.dataset.yuyue;
+    var project = event.currentTarget.dataset.project;
+    var isfutou = event.currentTarget.dataset.isfutou;
+    var intrest = event.currentTarget.dataset.intrest;
+    var price = event.currentTarget.dataset.price;
+    var term = event.currentTarget.dataset.term;
+    var range = event.currentTarget.dataset.range;
+    var desc = event.currentTarget.dataset.desc
+    wx.navigateTo({
+      url: "./project-detail/project-detail?id=" + projectId + "&title=" + title + "&project=" + project + "&need_str=" + need_str + "&yuyue=" + yuyue + "&isfutou=" + isfutou + "&intrest=" + intrest + "&price=" + price + "&term=" + term + "&range=" + range + "&desc="+desc
+    })
   },
   onProjectTab: function (event) {
     var projectId = event.currentTarget.dataset.id;

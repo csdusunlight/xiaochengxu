@@ -1,8 +1,9 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/find/find",
     "pages/Information/Information",
-    "pages/projectDetails/projectDetails",
+    "pages/find-detail/find-detail",
     "pages/orderRecord/orderRecord",
     "pages/accountBind/accountBind",
     "pages/user/user",
@@ -31,7 +32,7 @@
         "selectedIconPath": "images/tab/projectlist_02.png"
       },
       {
-        "pagePath": "pages/project-quicksubmit/project-quicksubmit",
+        "pagePath": "pages/find/find",
         "text": "发现",
         "iconPath": "images/tab/quicksubmit.png",
         "selectedIconPath": "images/tab/quicksubmit_02.png"
