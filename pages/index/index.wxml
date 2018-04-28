@@ -40,8 +40,12 @@
       <view class='banner-box'>
         <image class='banner' src='/images/xcx/banner.jpg'></image>
         <view class='banner-txt'>
-          <text class='banner-detailtxt'>网贷投资攻略助手12</text>
+          <text class='banner-detailtxt'>网贷投资攻略助手</text>
         </view>
+      </view>
+      <view class='btnBox'>
+          <navigator url='../project-quicksubmit/project-quicksubmit' class='btn'>快速交单</navigator>
+          <navigator url='../orderRecord/orderRecord' class='btn'>交单记录</navigator>
       </view>
       <block wx:for="{{listData}}" wx:for-item="item" wx:for-index="idx">
         <view bindtap='onProjectTab' data-id='{{item.id}}' data-title='{{item.title}}' data-needs='{{item.necessary_fields}}' data-yuyue='{{item.yuyue}}' data-project='{{item.project}}' data-isfutou='{{item.isfutou}}' data-intrest='{{item.year}}' data-price='{{item.return_amount}}'
