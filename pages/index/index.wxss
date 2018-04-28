@@ -41,6 +41,26 @@ page {
   text-align: center;
 }
 
+.btnBox{
+  width: 100%;
+  height: 135rpx;
+  background: #fcfaff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn{
+  width: 268rpx;
+  height: 70rpx;
+  background: #91c11d;
+  border-radius:5px; 
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  line-height: 70rpx;
+}
+
 .search {
   display: flex;
   flex-direction: row;
