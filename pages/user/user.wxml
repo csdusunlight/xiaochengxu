@@ -11,12 +11,12 @@
     </view>
 
     <view class='list'>
-        <view class='listBox' bindtap='tapOlder'>
+        <!-- <view class='listBox' bindtap='tapOlder'>
             <view class='go'>
                 <text>交单记录</text>
                 <image class='pic' src="/images/r-icon.png" />
             </view>
-        </view>
+        </view> -->
         <!-- <view class='listBox' bindtap='tapMsg'>
       <view class='go'>
         <text>通知公告</text>
