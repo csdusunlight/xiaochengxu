@@ -18,7 +18,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      console.log(data.listData.results);
       let _that = this;
       _that.setData({
         dataList: data.listData.results
@@ -63,14 +62,40 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作   
    */
   onPullDownRefresh: function () {
-
+        console.log("rua");
+        // wx.hideNavigationBarLoading()
+        // console.log(data.listData.results)
+        wx.showLoading({
+          title: '正在刷新~~~',
+        })
+        setTimeout(function () {
+          wx.hideLoading()
+          wx.stopPullDownRefresh();
+        }, 1500)
+        let _that = this;
+        _that.setData({
+          dataList:data.listData.results
+        });
+        
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+    let data = data.listData.results.push(data.listData.results);
+    let _that = this;
+    console.log(data)
+    wx.showLoading({
+      title: '正在加载~~~',
+    })
+    setTimeout(function () {
+      wx.hideLoading()
+      wx.stopPullDownRefresh();
+    }, 1500)
+    _that.setData({
+      dataList: data
+    });
   },
 
   /**

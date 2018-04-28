@@ -1,8 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/find/find",
     "pages/Information/Information",
+    "pages/find/find",
     "pages/find-detail/find-detail",
     "pages/orderRecord/orderRecord",
     "pages/accountBind/accountBind",

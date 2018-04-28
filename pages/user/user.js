@@ -62,9 +62,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setNavigationBarTitle({
-      title: app.globalData.app_name
-    })
+    // wx.setNavigationBarTitle({
+    //   title: app.globalData.app_name
+    // })
     console.log("------nickName----",app.globalData);
     var that = this;
     if (app.globalData.userInfo.nickName) {
