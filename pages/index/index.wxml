@@ -40,7 +40,7 @@
       <view class='banner-box'>
         <image class='banner' src='/images/xcx/banner.jpg'></image>
         <view class='banner-txt'>
-          <text class='banner-detailtxt'>网贷投资攻略助手</text>
+          <text class='banner-detailtxt'>网贷投资攻略助手12</text>
         </view>
       </view>
       <view class='btnBox'>
