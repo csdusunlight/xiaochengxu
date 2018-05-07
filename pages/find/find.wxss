@@ -1,1 +1,123 @@
 /* pages/find/find.wxss */
+  page {
+  background: #f5f5f5;
+  position: relative;
+} 
+
+.swiper-tab {
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  background: #fff;
+}
+
+.swiper-tab-list {
+  font-size: 16px;
+  display: inline-block;
+  width: 25%;
+  color: #666;
+}
+
+.on {
+  color: #91c11d;
+  border-bottom: 5rpx solid #91c11d;
+}
+
+.swiper-box {
+  margin-top: 10rpx;
+  display: block;
+  width: 100%;
+  min-height: 2600rpx;
+}
+
+.listBox {
+  width: 100%;
+  color: #6b6b6b;
+}
+
+.listItem {
+  width: 100%;
+  height: 202rpx;
+  background: white;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #f5f5f5;
+}
+
+.item {
+  width: 630rpx;
+  height: 100%;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.idx {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.project {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.desc {
+  width: 55%;
+  height: 100%;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.descTop {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  padding-top:60rpx; 
+}
+
+.descTop > view {
+  width: 100%;
+  height: 38rpx;
+  border-radius: 5px;
+  border: 1px solid #b7b7b7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.descBtm {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+
+.bLeft {
+  padding: 5rpx 5rpx;
+  height: 38rpx;
+  border-radius: 5px;
+  border: 1px solid #b7b7b7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bRight {
+  padding: 5rpx 5rpx;
+  height: 38rpx;
+  border-radius: 5px;
+  border: 1px solid #b7b7b7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 

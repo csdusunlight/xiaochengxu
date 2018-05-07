@@ -1,5 +1,5 @@
 <import src="./project-template/project-template.wxml" />
-<view wx:if='{{!is_on_audite}}'>
+<view wx:if='{{is_on_audite}}'>
  <view wx:if='{{listBoxShow}}'>
     <view class='banner-box'>
       <image class='banner' src='/images/xcx/banner.jpg'></image>

@@ -1,15 +1,98 @@
-<view class="weui-panel weui-panel_access">
-  <view class="weui-panel__bd">
-    <block wx:for="{{findData}}" wx:key="{{id}}">
-      <navigator url="../find-detail/find-detail?id={{item.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-          <image class="weui-media-box__thumb" src='{{item.imgSrc}}' />
-        </view>
-        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-          <view class="weui-media-box__title"> {{item.title}}</view>
-          <view class="weui-media-box__desc">{{item.description}}</view>
-        </view>
-      </navigator>
-    </block>
-  </view>
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">网贷之家</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">网贷天眼</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">贷罗盘</view>
+  <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">融360</view>
 </view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+
+  <swiper-item>
+    <block wx:for="{{data}}" wx:key="{{idx}}">
+      <view class='listBox'>
+        <view class='listItem'>
+          <view class='item'>
+            <view class='idx'>{{item.idx}}</view>
+            <view class='project'>{{item.project}}</view>
+            <view class='desc'>
+              <view class='descTop'>
+                <view>{{item.desc}}</view>
+              </view>
+              <view class='descBtm'>
+                <view class='bLeft'>{{item.brand}}</view>
+                <view class='bRight'>{{item.transparency}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </swiper-item>
+
+  <swiper-item>
+    <block wx:for="{{data}}" wx:key="{{idx}}">
+      <view class='listBox'>
+        <view class='listItem'>
+          <view class='item'>
+            <view class='idx'>{{item.idx}}</view>
+            <view class='project'>{{item.project1}}</view>
+            <view class='desc'>
+              <view class='descTop'>
+                <view>{{item.desc1}}</view>
+              </view>
+              <view class='descBtm'>
+                <view class='bLeft'>{{item.brand1}}</view>
+                <view class='bRight'>{{item.transparency}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </swiper-item>
+  
+  <swiper-item>
+    <block wx:for="{{data}}" wx:key="{{idx}}">
+      <view class='listBox'>
+        <view class='listItem'>
+          <view class='item'>
+            <view class='idx'>{{item.idx}}</view>
+            <view class='project'>{{item.project2}}</view>
+            <view class='desc'>
+              <view class='descTop'>
+                <view>{{item.desc2}}</view>
+              </view>
+              <view class='descBtm'>
+                <view class='bLeft'>{{item.brand2}}</view>
+                <view class='bRight'>{{item.transparency}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </swiper-item>
+  
+  <swiper-item>
+    <block wx:for="{{data}}" wx:key="{{idx}}">
+      <view class='listBox'>
+        <view class='listItem'>
+          <view class='item'>
+            <view class='idx'>{{item.idx}}</view>
+            <view class='project'>{{item.project3}}</view>
+            <view class='desc'>
+              <view class='descTop'>
+                <view>{{item.desc3}}</view>
+              </view>
+              <view class='descBtm'>
+                <view class='bLeft'>{{item.brand3}}</view>
+                <view class='bRight'>{{item.transparency}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </swiper-item>
+
+</swiper>
