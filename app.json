@@ -12,6 +12,7 @@
     "pages/QQ/QQ",
     "pages/Alipay/Alipay",
     "pages/index/project-detail/project-detail",
+    "pages/index/project-details/project-details",
     "pages/project-quicksubmit/project-quicksubmit",
     "pages/dataEditor/dataEditor",
     "pages/msgCenter/msgCenter",
@@ -33,7 +34,7 @@
       },
       {
         "pagePath": "pages/find/find",
-        "text": "发现",
+        "text": "评级",
         "iconPath": "images/tab/quicksubmit.png",
         "selectedIconPath": "images/tab/quicksubmit_02.png"
       },

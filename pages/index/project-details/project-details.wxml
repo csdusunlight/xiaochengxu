@@ -1,0 +1,3 @@
+  <view class='details_box'>
+    <text>{{desc}}</text>
+  </view>

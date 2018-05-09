@@ -30,7 +30,7 @@ Page({
     console.log(options);
 
     util.getAuditeState(this);
-
+    
     wx.setNavigationBarTitle({
       title: title
     })

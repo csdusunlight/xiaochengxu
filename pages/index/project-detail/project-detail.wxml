@@ -1,11 +1,10 @@
 <!--pages/projectdetail/projectdetail.wxml-->
-<view wx:if="{{is_on_audite}}">
-
-    <view class='details_box'>
-       <text>{{desc}}</text>
-    </view>
-</view>
-<view wx:else>
+<!-- <block wx:if="{{is_on_audite}}">
+  <view class='details_box'>
+    <text>{{desc}}</text>
+  </view>
+</block>
+<block wx:else> -->
   <view class='project-detail'>
     <view class='project-item'>
       <text>预计最高年化</text>
@@ -34,4 +33,4 @@
     <button class='btn' type="primary" open-type="contact" session-from="project_{{project}}">查看攻略</button>
     <button bindtap='onSubmit' class='btn' data-id='{{id}}' data-needs='{{needs}}' data-yuyue='{{yuyue}}' type="primary" plain="true">交单</button>
   </view>
-</view>
+<!-- </block> -->

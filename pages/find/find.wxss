@@ -9,6 +9,9 @@
   text-align: center;
   line-height: 80rpx;
   background: #fff;
+  position:fixed;
+  top: 0;
+  z-index: 9;
 }
 
 .swiper-tab-list {
@@ -24,7 +27,9 @@
 }
 
 .swiper-box {
-  margin-top: 10rpx;
+   margin-top: 20rpx; 
+  position: absolute;
+  top: 80rpx;
   display: block;
   width: 100%;
   min-height: 2600rpx;
@@ -68,9 +73,9 @@
 }
 
 .desc {
-  width: 55%;
-  height: 100%;
-  font-size: 14px;
+  width: 340rpx;
+  height: 136rpx;
+  font-size: 12px;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -81,18 +86,19 @@
   height: 50%;
   display: flex;
   justify-content: center;
-  padding-top:60rpx; 
+ align-items: center;
 }
 
-.descTop > view {
+ .descTop > view {
   width: 100%;
   height: 38rpx;
+  padding: 5px 5px;
   border-radius: 5px;
   border: 1px solid #b7b7b7;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} 
 
 .descBtm {
   width: 100%;
@@ -103,8 +109,8 @@
 }
 
 .bLeft {
-  padding: 5rpx 5rpx;
-  height: 38rpx;
+ width: 180rpx;
+ height: 42rpx;
   border-radius: 5px;
   border: 1px solid #b7b7b7;
   display: flex;
@@ -113,11 +119,13 @@
 }
 
 .bRight {
-  padding: 5rpx 5rpx;
-  height: 38rpx;
+  /* padding: 5rpx 5rpx; */
+  width: 140rpx;
+  height: 42rpx;
   border-radius: 5px;
   border: 1px solid #b7b7b7;
   display: flex;
   justify-content: center;
   align-items: center;
 } 
+ 

@@ -8,9 +8,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // 页面配置 
-    winWidth: 0,
-    winHeight: 0,
     // tab切换  
     currentTab: 0,
     //数据

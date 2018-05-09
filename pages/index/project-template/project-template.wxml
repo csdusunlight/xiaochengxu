@@ -16,7 +16,7 @@
 
     <view class='project__content'>
       <view class='project__year project__item'>
-        <text class='project__item-txt project__year-txt'>预计最高年化{{is_on_audite}}</text>
+        <text class='project__item-txt project__year-txt'>预计最高年化</text>
         <text class='project__item-num project__year-line'><text class='project__year-num'>{{year}}</text>%</text>
       </view>
       <view wx:if='{{is_on_audite}}' class='project__return project__item'>

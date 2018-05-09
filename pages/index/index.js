@@ -104,7 +104,7 @@ Page({
     var range = event.currentTarget.dataset.range;
     var desc = event.currentTarget.dataset.desc
     wx.navigateTo({
-      url: "./project-detail/project-detail?id=" + projectId + "&title=" + title + "&project=" + project + "&need_str=" + need_str + "&yuyue=" + yuyue + "&isfutou=" + isfutou + "&intrest=" + intrest + "&price=" + price + "&term=" + term + "&range=" + range + "&desc="+desc
+      url: "./project-details/project-details?id=" + projectId + "&title=" + title + "&project=" + project + "&need_str=" + need_str + "&yuyue=" + yuyue + "&isfutou=" + isfutou + "&intrest=" + intrest + "&price=" + price + "&term=" + term + "&range=" + range + "&desc="+desc
     })
   },
   onProjectTab: function (event) {
